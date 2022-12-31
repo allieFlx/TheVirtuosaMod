@@ -1,0 +1,42 @@
+package theVirtuosa.variables;
+
+import basemod.abstracts.DynamicVariable;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import theVirtuosa.cards.AbstractVirtuosaCard;
+
+import static theVirtuosa.TheVirtuosa.makeID;
+
+public class VirtuosaSecondMagicNumber extends DynamicVariable {
+
+    //For in-depth comments, check the other variable(DefaultCustomVariable). It's nearly identical.
+
+    @Override
+    public String key() {
+        return makeID("SecondMagic");
+        // This is what you put between "!!" in your card strings to actually display the number.
+        // You can name this anything (no spaces), but please pre-phase it with your mod name as otherwise mod conflicts can occur.
+        // Remember, we're using makeID so it automatically puts "theDefault:" (or, your id) before the name.
+    }
+
+    @Override
+    public boolean isModified(AbstractCard card) {
+        return ((AbstractVirtuosaCard) card).isVirtuosaSecondMagicNumberModified;
+
+    }
+
+    @Override
+    public int value(AbstractCard card) {
+        return ((AbstractVirtuosaCard) card).virtuosaSecondMagicNumber;
+    }
+
+    @Override
+    public int baseValue(AbstractCard card) {
+        return ((AbstractVirtuosaCard) card).virtuosaBaseSecondMagicNumber;
+    }
+
+    @Override
+    public boolean upgraded(AbstractCard card) {
+        return ((AbstractVirtuosaCard) card).upgradedVirtuosaSecondMagicNumber;
+    }
+}

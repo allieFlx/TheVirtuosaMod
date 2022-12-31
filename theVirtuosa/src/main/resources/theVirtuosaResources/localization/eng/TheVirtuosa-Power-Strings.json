@@ -1,0 +1,46 @@
+{
+"theVirtuosa:VirtuosaBramblesPower": {
+        "NAME": "Brambles",
+        "DESCRIPTIONS": ["When you deal attack damage, the enemy loses #b", " #yStrength."]
+},
+"theVirtuosa:VirtuosaVengeancePower": {
+        "NAME": "Vengeance",
+        "DESCRIPTIONS": ["When you receive attack damage this turn, gain #b", " temporary #yStrength."]
+},
+"theVirtuosa:VirtuosaTrickeryPower": {
+        "NAME": "Trickery",
+        "DESCRIPTIONS": ["At the start of your turn, shuffle #b",
+                " card into your draw pile and draw #b",
+                " card.",
+                " cards into your draw pile and draw #b",
+                " cards."]
+},
+"theVirtuosa:VirtuosaMossShieldPower": {
+        "NAME": "Moss Barrier",
+        "DESCRIPTIONS": ["The next #b", " times you lose HP, lose half as much."]
+},
+"theVirtuosa:VirtuosaCodaPower": {
+        "NAME": "Coda",
+        "DESCRIPTIONS": ["Attacks cost #b0. When you play an attack, lose #b1 #yStrength."]
+},
+"theVirtuosa:VirtuosaSylvanFormPower": {
+        "NAME": "Sidhe Form",
+        "DESCRIPTIONS": ["Your max hand size is #b", ". When you play a card, draw a card."]
+},
+"theVirtuosa:VirtuosaDeenergizedPower": {
+        "NAME": "Deenergized",
+        "DESCRIPTIONS": ["At the start of next turn, lose #b", " [E] ."]
+},
+"theVirtuosa:VirtuosaResonancePower": {
+        "NAME": "Resonance",
+        "DESCRIPTIONS": ["At the end of your turn, deals #b", " damage to ALL enemies. NL When you take damage, reduce #yResonance by half."]
+},
+"theVirtuosa:CommonPower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+},
+"theVirtuosa:RarePower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+}
+}

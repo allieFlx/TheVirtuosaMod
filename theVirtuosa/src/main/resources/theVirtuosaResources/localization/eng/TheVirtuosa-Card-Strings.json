@@ -1,0 +1,234 @@
+{
+  "theVirtuosa:SpectralBasicAttack": {
+    "NAME": "Spectral Strike",
+    "DESCRIPTION": "thevirtuosa:Spectral. NL Deal !D! damage."
+  },
+  "theVirtuosa:SpectralSprite": {
+    "NAME": "Sprite",
+    "DESCRIPTION": "thevirtuosa:Spectral. NL Gain !M! thevirtuosa:Resonance. Draw a card."
+  },
+  "theVirtuosa:SpectralReverberatingStrike": {
+    "NAME": "Reverberating Strike",
+    "DESCRIPTION": "thevirtuosa:Spectral. NL Deal !D! damage."
+  },
+  "theVirtuosa:VirtuosaReverberatingStrike": {
+    "NAME": "Reverberating Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Fill your hand with thevirtuosa:Spectral copies of this card."
+  },
+  "theVirtuosa:VirtuosaStrike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "theVirtuosa:VirtuosaDefend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "theVirtuosa:VirtuosaAxeKick": {
+    "NAME": "Axe Kick",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block."
+  },
+  "theVirtuosa:VirtuosaCarve": {
+    "NAME": "Carve",
+    "DESCRIPTION": "Deal !D! damage. NL Remove !M! Weak."
+  },
+  "theVirtuosa:VirtuosaMutate": {
+    "NAME": "Mutate",
+    "DESCRIPTION": "Gain !B! Block. NL Transform a card in your hand into one that costs 1 less for the rest of combat.",
+    "EXTENDED_DESCRIPTION": ["Select a card to transform."]
+  },
+  "theVirtuosa:VirtuosaHearteningVerse": {
+    "NAME": "Heartening Verse",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! thevirtuosa:Resonance. NL Remove !M! Vulnerable."
+  },
+  "theVirtuosa:VirtuosaForebodingBlade": {
+    "NAME": "Foreboding Blade",
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! thevirtuosa:Spectral *Strikes into your draw pile."
+  },
+  "theVirtuosa:VirtuosaGrimRefrain": {
+    "NAME": "Refrain",
+    "DESCRIPTION": "Gain !M! thevirtuosa:Resonance. NL Apply 1 Weak to ALL enemies."
+  },
+  "theVirtuosa:VirtuosaOutForBlood": {
+    "NAME": "Bloodrush",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy does not intend to attack, apply 1 Vulnerable and draw a card."
+  },
+  "theVirtuosa:VirtuosaCursedArm": {
+    "NAME": "Cursed Arm",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Shuffle this card into your draw pile."
+  },
+  "theVirtuosa:VirtuosaSap": {
+    "NAME": "Sap",
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Slimed into your hand."
+  },
+  "theVirtuosa:VirtuosaLeavesOfThree": {
+    "NAME": "Leaves Of Three",
+    "DESCRIPTION": "Unplayable. NL When you draw this, deal !D! damage to a random enemy three times."
+  },
+  "theVirtuosa:VirtuosaSharpNote": {
+    "NAME": "Sharp Note",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! thevirtuosa:Resonance."
+  },
+  "theVirtuosa:VirtuosaLimbFromLimb": {
+    "NAME": "Limb From Limb",
+    "DESCRIPTION": "thevirtuosa:Reveal !M! cards. NL Deal !D! damage and repeat for each Attack thevirtuosa:Revealed."
+  },
+  "theVirtuosa:VirtuosaFortissimaul": {
+    "NAME": "Fortissimaul",
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, lose [E] ."
+  },
+  "theVirtuosa:VirtuosaShredder": {
+    "NAME": "Shredder",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Exhaust."
+  },
+  "theVirtuosa:VirtuosaArpeggio": {
+    "NAME": "Arpeggio",
+    "DESCRIPTION": "Draw a 1, 2, and 3 Cost card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw a 1, 2, and 3 Cost card."
+  },
+  "theVirtuosa:VirtuosaVengeance": {
+    "NAME": "Vengeance",
+    "DESCRIPTION": "Whenever you receive attack damage, gain 1 temporary Strength."
+  },
+  "theVirtuosa:VirtuosaFairyChorus": {
+    "NAME": "Fairy Chorus",
+    "DESCRIPTION": "Shuffle !M! *Sprites into your draw pile. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "Shuffle !M! *Sprites+ into your draw pile. NL Draw a card."
+  },
+  "theVirtuosa:VirtuosaCallForth": {
+    "NAME": "Call Forth",
+    "DESCRIPTION": "Unplayable. NL Whenever you gain thevirtuosa:Resonance whilst this is in your hand, gain an additional !M! thevirtuosa:Resonance."
+  },
+  "theVirtuosa:VirtuosaBrambles": {
+    "NAME": "Brambles",
+    "DESCRIPTION": "Each time you deal attack damage to an enemy this turn, they lose !M! Strength."
+  },
+  "theVirtuosa:VirtuosaImprovise": {
+    "NAME": "Improvise",
+    "DESCRIPTION": "Add a copy of a random card from your draw pile into your hand. NL It costs 0 this turn. NL Exhaust."
+  },
+  "theVirtuosa:VirtuosaRevealingLight": {
+    "NAME": "Revealing Light",
+    "DESCRIPTION": "thevirtuosa:Reveal !M! cards. NL Put !theVirtuosa:SecondMagic! into your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["Select cards to keep in hand."]
+  },
+  "theVirtuosa:VirtuosaTakeRoot": {
+    "NAME": "Take Root",
+    "DESCRIPTION": "Gain !M! Malleable."
+  },
+  "theVirtuosa:VirtuosaMossShield": {
+    "NAME": "Moss Barrier",
+    "DESCRIPTION": "The next !M! times you would lose HP, lose half as much."
+  },
+  "theVirtuosa:VirtuosaDissonance": {
+    "NAME": "Dissonance",
+    "DESCRIPTION": "Spend thevirtuosa:Resonance to deal !M! times as much damage to ALL enemies.",
+    "EXTENDED_DESCRIPTION": [" NL (Deals ", " damage.)"]
+  },
+  "theVirtuosa:VirtuosaBraceUpNoCopy": {
+    "NAME": "Brace Up",
+    "DESCRIPTION": "Gain !B! Block. NL Draw a card. NL When this is added to your deck, add an additional copy."
+  },
+  "theVirtuosa:VirtuosaQuestingBlade": {
+    "NAME": "Questing Blade",
+    "DESCRIPTION": "Deal !D! damage. NL When this is added to your deck, gain !M! gold."
+  },
+  "theVirtuosa:VirtuosaTollTheBell": {
+    "NAME": "Tolling Bell",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain thevirtuosa:Resonance equal to unblocked damage."
+  },
+  "theVirtuosa:VirtuosaAdaptiveGrowth": {
+    "NAME": "Adaptive Growth",
+    "DESCRIPTION": "Gain !M! Regen."
+  },
+  "theVirtuosa:VirtuosaPrelude": {
+    "NAME": "Prelude",
+    "DESCRIPTION": "Innate. Ethereal. NL Gain !M! thevirtuosa:Resonance. NL Exhaust."
+  },
+  "theVirtuosa:VirtuosaSequester": {
+    "NAME": "Sequester",
+    "DESCRIPTION": "Give a card in your hand Retain until it is played.",
+    "UPGRADE_DESCRIPTION": "Give !M! cards in your hand Retain until they are played.",
+    "EXTENDED_DESCRIPTION": ["Retain until played."]
+  },
+  "theVirtuosa:VirtuosaCoda": {
+    "NAME": "Coda",
+    "DESCRIPTION": "Grave. NL Attacks cost 0. NL When you play an attack, lose 1 Strength."
+  },
+  "theVirtuosa:VirtuosaTrickery": {
+    "NAME": "Trickery",
+    "DESCRIPTION": "At the start of your turn, shuffle a card into your draw pile and draw a card.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, shuffle !M! cards into your draw pile and draw !M! cards."
+  },
+  "theVirtuosa:VirtuosaSylvanForm": {
+    "NAME": "Sidhe Form",
+    "DESCRIPTION": "Set your maximum hand size to !M!. NL When you play a card, draw a card."
+  },
+  "theVirtuosa:VirtuosaFaeBargain": {
+    "NAME": "Soul Bargain",
+    "DESCRIPTION": "Choose one: NL Exhaust your discard pile, your hand, or your draw pile. NL Gain !B! Block for each card Exhausted. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [" NL (Gain ", " Block)"]
+  },
+  "theVirtuosa:BargainNoPast": {
+    "NAME": "No Past",
+    "DESCRIPTION": "Exhaust your discard pile."
+  },
+  "theVirtuosa:BargainNoPresent": {
+    "NAME": "No Present",
+    "DESCRIPTION": "Exhaust your hand."
+  },
+  "theVirtuosa:BargainNoFuture": {
+    "NAME": "No Future",
+    "DESCRIPTION": "Exhaust your draw pile."
+  },
+  "theVirtuosa:DefaultCommonAttack": {
+    "NAME": "Strike2",
+    "DESCRIPTION": "Deal !D! damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
+  },
+  "theVirtuosa:DefaultCommonSkill": {
+    "NAME": "Defend2",
+    "DESCRIPTION": "Gain !B! Block. NL thevirtuosa:Multiword_Keyword."
+  },
+  "theVirtuosa:DefaultCommonPower": {
+    "NAME": "Hold Place",
+    "DESCRIPTION": "Gain !M! thevirtuosa:Keyword.",
+    "UPGRADE_DESCRIPTION": "Gain !M! thevirtuosa:Keywords."
+  },
+  "theVirtuosa:DefaultUncommonAttack": {
+    "NAME": "Big slap",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "theVirtuosa:DefaultUncommonSkill": {
+    "NAME": "A Better Defend",
+    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
+  },
+  "theVirtuosa:DefaultUncommonPower": {
+    "NAME": "Weirdness",
+    "DESCRIPTION": "Gain X thevirtuosa:Keywords.",
+    "UPGRADE_DESCRIPTION": "Gain X +1 thevirtuosa:Keywords."
+  },
+  "theVirtuosa:DefaultRareAttack": {
+    "NAME": "TOUCH",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "theVirtuosa:DefaultRareSkill": {
+    "NAME": "For Each Loop x2",
+    "DESCRIPTION": "Apply !M! Vulnerable to all enemies, 2 times.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to all enemies, 3 times."
+  },
+  "theVirtuosa:DefaultRarePower": {
+    "NAME": "In-Progress Form",
+    "DESCRIPTION": "At the start of your turn, play a TOUCH."
+  },
+  "theVirtuosa:DefaultAttackWithVariable": {
+    "NAME": "Special Strike",
+    "DESCRIPTION": "Deal !D! damage [E] times. NL (Deal !theVirtuosa:ENERGY_DAMAGE! damage total.)"
+  },
+  "theVirtuosa:DefaultSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Apply !M! Vulnerable and !theVirtuosa:SecondMagic! poison to an enemy."
+  },
+  "theVirtuosa:OrbSkill": {
+    "NAME": "Get Orb",
+    "DESCRIPTION": "Channel 1 Default Orb."
+  }
+}
