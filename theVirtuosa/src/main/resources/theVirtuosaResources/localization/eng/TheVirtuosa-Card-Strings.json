@@ -54,7 +54,11 @@
   },
   "theVirtuosa:VirtuosaCursedArm": {
     "NAME": "Cursed Arm",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Shuffle this card into your draw pile."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL thevirtuosa:Reshuffle."
+  },
+  "theVirtuosa:VirtuosaSpitefulSlasher": {
+    "NAME": "Spiteful Slasher",
+    "DESCRIPTION": "Deal !D! damage. NL thevirtuosa:Reshuffle. When this is added to your deck, add *Leshy's *Curse and remove *Cursed *Arm."
   },
   "theVirtuosa:VirtuosaSap": {
     "NAME": "Sap",

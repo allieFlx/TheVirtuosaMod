@@ -1,5 +1,13 @@
 [
   {
+    "PROPER_NAME": "Reshuffle",
+    "NAMES": [
+      "Reshuffle",
+      "reshuffle"
+    ],
+    "DESCRIPTION": "Reshuffle cards are shuffled into your draw pile after you play them."
+  },
+  {
     "PROPER_NAME": "Spectral",
     "NAMES": [
       "Spectral",
