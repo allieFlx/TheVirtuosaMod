@@ -471,6 +471,7 @@ public class TheVirtuosa implements
     @Override
     public void receiveAddAudio(){
         BaseMod.addAudio(makeID("RESONANCE_1"), getModID() + "Resources/audio/sound/resonance01.ogg");
+        BaseMod.addAudio(makeID("VIRTUOSA_SELECT"), getModID() + "Resources/audio/sound/virtuosa_select.ogg");
     }
     
     // ================ LOAD THE KEYWORDS ===================
