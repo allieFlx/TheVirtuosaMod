@@ -58,7 +58,7 @@
   },
   "theVirtuosa:VirtuosaSpitefulSlasher": {
     "NAME": "Spiteful Slasher",
-    "DESCRIPTION": "Deal !D! damage. NL thevirtuosa:Reshuffle. When this is added to your deck, add *Leshy's *Curse and remove *Cursed *Arm."
+    "DESCRIPTION": "Deal !D! damage. NL thevirtuosa:Reshuffle this and an additional copy. NL Replaces *Cursed *Arm."
   },
   "theVirtuosa:VirtuosaSap": {
     "NAME": "Sap",

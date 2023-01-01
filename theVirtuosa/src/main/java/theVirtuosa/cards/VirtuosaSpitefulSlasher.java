@@ -16,8 +16,7 @@ public class VirtuosaSpitefulSlasher extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     *  Deal 16 (20) damage. Reshuffle.
-     *  When this is added to your deck, gain Leshy's Curse and remove Cursed Arm.
+     *  Deal 14 (18) damage. Reshuffle this and an additional copy. Replaces Cursed Arm.
      */
 
     // TEXT DECLARATION
@@ -36,7 +35,7 @@ public class VirtuosaSpitefulSlasher extends AbstractDynamicCard {
     public static final CardColor COLOR = TheVirtuosaCharacter.Enums.COLOR_BROWN;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 16;
+    private static final int DAMAGE = 14;
     private static final int UPGRADE_PLUS_DMG = 4;
 
     // /STAT DECLARATION/
