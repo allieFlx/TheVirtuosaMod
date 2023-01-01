@@ -205,7 +205,7 @@ public class TheVirtuosaCharacter extends CustomPlayer {
     // character Select screen effect
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.playA("VIRTUOSA_SELECT", 1.25f); // Sound Effect
+        CardCrawlGame.sound.playA(makeID("VIRTUOSA_SELECT"), -0.2F); // Sound Effect
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
                 false); // Screen Effect
     }
@@ -213,7 +213,7 @@ public class TheVirtuosaCharacter extends CustomPlayer {
     // character Select on-button-press sound effect
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        return "VIRTUOSA_SELECT";
+        return makeID("VIRTUOSA_SELECT");
     }
 
     // Should return how much HP your maximum HP reduces by when starting a run at
