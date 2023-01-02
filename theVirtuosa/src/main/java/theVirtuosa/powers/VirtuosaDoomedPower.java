@@ -40,19 +40,13 @@ public class VirtuosaDoomedPower extends AbstractPower implements CloneablePower
         type = PowerType.DEBUFF;
         this.amount = -1;
 
-        // We load those textures here.
-        /*
-        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
-
-         */
-
         updateDescription();
         this.loadRegion("end_turn_death");
     }
 
     public void atStartOfTurn() {
         this.flash();
+        // TODO: VFX other than lightning
         this.addToBot(new VFXAction(new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));
         this.addToBot(new LoseHPAction(this.owner, this.owner, 99999));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "VirtuosaDoomedPower"));
