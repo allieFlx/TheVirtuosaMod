@@ -21,7 +21,11 @@
 },
 "theVirtuosa:VirtuosaCodaPower": {
         "NAME": "Coda",
-        "DESCRIPTIONS": ["Attacks cost #b0. When you play an attack, lose #b1 #yStrength."]
+        "DESCRIPTIONS": ["Attacks cost #b0. At the start of your turn, become #yDoomed."]
+},
+"theVirtuosa:VirtuosaDoomedPower": {
+        "NAME": "Doomed",
+        "DESCRIPTIONS": ["At the start of your turn, die."]
 },
 "theVirtuosa:VirtuosaSylvanFormPower": {
         "NAME": "Sidhe Form",
