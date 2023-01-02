@@ -3,7 +3,9 @@
     "PROPER_NAME": "Reshuffle",
     "NAMES": [
       "Reshuffle",
-      "reshuffle"
+      "reshuffle",
+      "Reshuffled",
+      "reshuffled"
     ],
     "DESCRIPTION": "Reshuffle cards are shuffled into your draw pile after you play them."
   },

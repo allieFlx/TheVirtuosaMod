@@ -57,7 +57,7 @@
     "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL thevirtuosa:Reshuffle."
   },
   "theVirtuosa:VirtuosaSpitefulSlasher": {
-    "NAME": "Spiteful Slasher",
+    "NAME": "Hand Of Spite",
     "DESCRIPTION": "Deal !D! damage. NL thevirtuosa:Reshuffle this and an additional copy. NL Replaces *Cursed *Arm."
   },
   "theVirtuosa:VirtuosaSap": {
@@ -156,7 +156,7 @@
   },
   "theVirtuosa:VirtuosaCoda": {
     "NAME": "Coda",
-    "DESCRIPTION": "Grave. NL Attacks cost 0. NL When you play an attack, lose 1 Strength."
+    "DESCRIPTION": "Grave. NL Attacks cost 0. NL Die in 2 turns."
   },
   "theVirtuosa:VirtuosaTrickery": {
     "NAME": "Trickery",

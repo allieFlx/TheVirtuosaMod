@@ -19,11 +19,8 @@ public class VirtuosaCoda extends AbstractDynamicCard{
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Gain Malleable.
+     * Attacks cost 0. [When you play an Attack, lose 1 Strength] -> [Die in 2 turns.]
      */
-
-    // TODO attempting to upgrade this card crashes the game : fixed?
-    // TODO patching corruption-like effect into base game code (see VirtuosaCodaPower)
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(VirtuosaCoda.class.getSimpleName());
