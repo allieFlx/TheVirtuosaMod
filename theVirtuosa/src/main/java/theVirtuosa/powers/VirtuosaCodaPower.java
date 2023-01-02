@@ -64,7 +64,7 @@ public class VirtuosaCodaPower extends AbstractPower implements CloneablePowerIn
     @Override
     public void atStartOfTurn() {
         this.flash();
-        this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EndTurnDeathPower(this.owner)));
+        this.addToBot(new ApplyPowerAction(this.owner, this.owner, new VirtuosaDoomedPower(this.owner)));
     }
 
     @Override
