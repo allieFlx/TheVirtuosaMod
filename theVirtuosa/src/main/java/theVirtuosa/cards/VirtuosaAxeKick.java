@@ -23,7 +23,7 @@ public class VirtuosaAxeKick extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(VirtuosaAxeKick.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("VirtuosaAxeKick_BETA.png");
 
 
     // /TEXT DECLARATION/

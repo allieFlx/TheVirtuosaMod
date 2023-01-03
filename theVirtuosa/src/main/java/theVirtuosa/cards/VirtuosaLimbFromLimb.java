@@ -36,7 +36,7 @@ public class VirtuosaLimbFromLimb extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(VirtuosaLimbFromLimb.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("VirtuosaLimbFromLimb_BETA.png");
 
     // /TEXT DECLARATION/
 
