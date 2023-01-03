@@ -69,6 +69,7 @@ public class VirtuosaNocturne extends AbstractDynamicCard implements OnRevealCar
     @Override
     public void onRevealed() {
         this.addToTop(new GainEnergyAction(magicNumber));
+        // TODO short SFX?
     }
 
     @Override

@@ -52,7 +52,8 @@ public class RevealCardsAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.p.drawPile.isEmpty()) {
-            this.defaultCallback.accept(-1);
+            if (this.defaultCallback != null) {
+                this.defaultCallback.accept(-1);}
             this.isDone = true;
             return;
         }
