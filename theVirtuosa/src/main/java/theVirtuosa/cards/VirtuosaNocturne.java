@@ -71,6 +71,11 @@ public class VirtuosaNocturne extends AbstractDynamicCard implements OnRevealCar
         this.addToTop(new GainEnergyAction(magicNumber));
     }
 
+    @Override
+    public float revealEffectDelay() {
+        return 0.25F;
+    }
+
     //Upgraded stats.
     @Override
     public void upgrade() {

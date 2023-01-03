@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.relics.InkBottle;
 import com.megacrit.cardcrawl.vfx.combat.CardPoofEffect;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.actions.RevealCardsAction;
 import theVirtuosa.actions.ShowRevealedCardAction;
@@ -63,7 +65,6 @@ public class VirtuosaLimbFromLimb extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // TODO: bug fix for when NO matches are revealed as the final attack is currently ignored
         AbstractDungeon.actionManager.addToBottom(
                 new RevealCardsAction(magicNumber,
                         c -> c.type == CardType.ATTACK,
@@ -79,6 +80,12 @@ public class VirtuosaLimbFromLimb extends AbstractDynamicCard {
                                             new DamageInfo(p, damage, damageTypeForTurn),
                                             AbstractGameAction.AttackEffect.SLASH_DIAGONAL))
                             );
+                        },
+                        def ->
+                        {
+                            this.addToTop(new DamageAction(m,
+                                    new DamageInfo(p, damage, damageTypeForTurn),
+                                    AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
                         }
                 )
         );

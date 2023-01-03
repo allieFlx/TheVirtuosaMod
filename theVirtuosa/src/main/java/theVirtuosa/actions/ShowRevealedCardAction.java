@@ -22,8 +22,8 @@ public class ShowRevealedCardAction extends AbstractGameAction {
         this.card = card;
         this.flash = isFlash;
         this.actionType = ActionType.CARD_MANIPULATION;
-        // TODO increase start duration if card instanceof onRevealCard
         this.startDuration = Settings.FAST_MODE ? Settings.ACTION_DUR_FAST : 0.5F;
+        if (card instanceof OnRevealCard) { this.startDuration += ((OnRevealCard)card).revealEffectDelay(); }
         this.duration = this.startDuration;
     }
     

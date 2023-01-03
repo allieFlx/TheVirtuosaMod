@@ -5,4 +5,6 @@ public interface OnRevealCard {
     void onRevealed();
 
     default boolean isMovedOnReveal(){ return false; }
+
+    default float revealEffectDelay(){ return 0.0F; }
 }
