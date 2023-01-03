@@ -1,5 +1,6 @@
 package theVirtuosa.cards;
 
+import basemod.BaseMod;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -58,6 +59,7 @@ public class VirtuosaRevealingLight extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // TODO: check hand size before adding to hand
         AbstractDungeon.actionManager.addToBottom(
                 new RevealCardsAction(magicNumber, c -> true, cardGroup ->
                     this.addToTop(new SelectCardsAction(
@@ -67,10 +69,17 @@ public class VirtuosaRevealingLight extends AbstractDynamicCard {
                             true,
                             card -> true,
                             cards ->
+                            {
+                                int iniSize = cardGroup.size();
                                 cards.forEach(c -> {
-                                    p.drawPile.moveToHand(c);
-                                    cardGroup.remove(c);
-                                })
+                                    if (p.hand.size() < BaseMod.MAX_HAND_SIZE)
+                                    {
+                                        p.drawPile.moveToHand(c);
+                                        cardGroup.remove(c);
+                                    }
+                                });
+                                if (cardGroup.size() > iniSize - cards.size()) { p.createHandIsFullDialog(); }
+                            }
                     ))
                 )
         );

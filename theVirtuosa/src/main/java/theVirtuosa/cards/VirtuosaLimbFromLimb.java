@@ -63,6 +63,7 @@ public class VirtuosaLimbFromLimb extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // TODO: bug fix for when NO matches are revealed as the final attack is currently ignored
         AbstractDungeon.actionManager.addToBottom(
                 new RevealCardsAction(magicNumber,
                         c -> c.type == CardType.ATTACK,
