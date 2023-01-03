@@ -22,17 +22,17 @@ public class ShowRevealedCardAction extends AbstractGameAction {
         this.card = card;
         this.flash = isFlash;
         this.actionType = ActionType.CARD_MANIPULATION;
+        // TODO increase start duration if card instanceof onRevealCard
         this.startDuration = Settings.FAST_MODE ? Settings.ACTION_DUR_FAST : 0.5F;
         this.duration = this.startDuration;
     }
     
     @Override
     public void update() {
-        // TODO add onRevealed trigger for card
-        // TODO "cardRevealed" trigger for other cards
         if (this.duration == this.startDuration) {
 
             AbstractDungeon.effectsQueue.add(new ShowCardRevealEffect(this.card, this.flash));
+
             if (this.card instanceof OnRevealCard)
             {
                 ((OnRevealCard)this.card).onRevealed();

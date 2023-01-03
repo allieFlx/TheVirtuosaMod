@@ -80,6 +80,11 @@
     "NAME": "Fortissimaul",
     "DESCRIPTION": "Deal !D! damage. NL Next turn, lose [E] ."
   },
+  "theVirtuosa:VirtuosaNocturne": {
+    "NAME": "Nocturne",
+    "DESCRIPTION": "Gain !B! Block. NL When thevirtuosa:Revealed, NL gain [E] .",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL When thevirtuosa:Revealed, NL gain [E] [E] ."
+  },
   "theVirtuosa:VirtuosaShredder": {
     "NAME": "Shredder",
     "DESCRIPTION": "Deal !D! damage !M! times. NL Exhaust."

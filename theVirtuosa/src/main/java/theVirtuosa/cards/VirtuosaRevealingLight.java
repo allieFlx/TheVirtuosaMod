@@ -79,7 +79,8 @@ public class VirtuosaRevealingLight extends AbstractDynamicCard {
                                 });
                                 if (cardGroup.size() > iniSize - cards.size()) { p.createHandIsFullDialog(); }
                             }
-                    ))
+                    )),
+                        true
                 )
         );
     }
