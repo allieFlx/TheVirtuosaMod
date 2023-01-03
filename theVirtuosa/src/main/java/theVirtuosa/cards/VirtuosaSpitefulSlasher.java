@@ -1,17 +1,22 @@
 package theVirtuosa.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.characters.TheVirtuosaCharacter;
+import theVirtuosa.interfaces.OnAddCardEffect;
+
+import java.util.ArrayList;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
-public class VirtuosaSpitefulSlasher extends AbstractDynamicCard {
+public class VirtuosaSpitefulSlasher extends AbstractDynamicCard implements OnAddCardEffect, SpawnModificationCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -54,6 +59,18 @@ public class VirtuosaSpitefulSlasher extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+    }
+
+    @Override
+    public boolean canSpawn(ArrayList<AbstractCard> currentRewardCards) {
+        ArrayList<String> currentDeck = AbstractDungeon.player.masterDeck.getCardNames();
+        return currentDeck.contains(VirtuosaCursedArm.ID);
+    }
+
+    @Override
+    public void onAddToMasterDeck() {
+        // if there are multiple copies, it only replaces the first one
+        AbstractDungeon.player.masterDeck.removeCard(VirtuosaCursedArm.ID);
     }
 
     //Upgraded stats.

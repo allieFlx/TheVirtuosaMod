@@ -86,7 +86,7 @@
   },
   "theVirtuosa:VirtuosaArpeggio": {
     "NAME": "Arpeggio",
-    "DESCRIPTION": "Draw a 1, 2, and 3 Cost card. NL Exhaust.",
+    "DESCRIPTION": "Draw a 1, 2, and 3 cost card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Draw a 1, 2, and 3 Cost card."
   },
   "theVirtuosa:VirtuosaVengeance": {
