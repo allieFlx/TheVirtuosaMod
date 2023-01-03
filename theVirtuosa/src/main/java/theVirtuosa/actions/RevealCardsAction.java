@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import theVirtuosa.interfaces.OnRevealCard;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -45,6 +46,13 @@ public class RevealCardsAction extends AbstractGameAction {
         {
             card = this.p.drawPile.getNCardFromTop(i);
             revealList.add(card);
+
+            // TODO
+            //  if card instance OnRevealCard and card.isMovedOnReveal == true, dont add to a discard list
+            //  (but we might still want to act on it in the callback)
+            //  if both the effect that revealed it and the card itself want to move it upon reveal,
+            //  OnReveal effects take prescidence, therefore add a check when calling this action
+
             if (this.predicate.test(card))
             {
                 callbackList.add(card);
@@ -65,10 +73,10 @@ public class RevealCardsAction extends AbstractGameAction {
 
         Collections.reverse(revealList);
         revealList.forEach(c -> {
-            if (discardList.contains(c)) {
-                this.addToTop(new ShowRevealedCardAction(c, false));
-            } else {
+            if (!discardList.contains(c) || c instanceof OnRevealCard) {
                 this.addToTop(new ShowRevealedCardAction(c, true));
+            } else {
+                this.addToTop(new ShowRevealedCardAction(c, false));
             }
         });
 

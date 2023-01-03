@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.Soul;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theVirtuosa.interfaces.OnAddCardEffect;
+import theVirtuosa.interfaces.OnAddToDeckCard;
 
 @SpirePatch2(
         clz = Soul.class,
@@ -17,9 +17,9 @@ public class OnAddCardToDeckPatch {
     @SpirePrefixPatch
     public static void patch(AbstractCard card) {
         logger.info("OnAddCardToDeckPatch triggered");
-        if (card instanceof OnAddCardEffect)
+        if (card instanceof OnAddToDeckCard)
         {
-            ((OnAddCardEffect)card).onAddToMasterDeck();
+            ((OnAddToDeckCard)card).onAddToMasterDeck();
         }
     }
 }

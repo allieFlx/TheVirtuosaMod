@@ -3,15 +3,14 @@ package theVirtuosa.cards;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.vfx.FastCardObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.characters.TheVirtuosaCharacter;
-import theVirtuosa.interfaces.OnAddCardEffect;
+import theVirtuosa.interfaces.OnAddToDeckCard;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
-public class VirtuosaBraceUp extends VirtuosaBraceUpNoCopy implements OnAddCardEffect {
+public class VirtuosaBraceUp extends VirtuosaBraceUpNoCopy implements OnAddToDeckCard {
 
     /*
      Gain x block. When added, add an additional copy.

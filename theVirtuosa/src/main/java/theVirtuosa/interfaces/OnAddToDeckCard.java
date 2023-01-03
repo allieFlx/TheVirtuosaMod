@@ -1,5 +1,5 @@
 package theVirtuosa.interfaces;
 
-public interface OnAddCardEffect {
+public interface OnAddToDeckCard {
     void onAddToMasterDeck();
 }

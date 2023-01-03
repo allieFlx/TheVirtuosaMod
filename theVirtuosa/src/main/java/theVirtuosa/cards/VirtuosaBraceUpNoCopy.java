@@ -5,13 +5,9 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.characters.TheVirtuosaCharacter;
-import theVirtuosa.interfaces.OnAddCardEffect;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 @AutoAdd.Ignore

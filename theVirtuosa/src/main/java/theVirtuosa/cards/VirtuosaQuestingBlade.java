@@ -9,11 +9,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.characters.TheVirtuosaCharacter;
-import theVirtuosa.interfaces.OnAddCardEffect;
+import theVirtuosa.interfaces.OnAddToDeckCard;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
-public class VirtuosaQuestingBlade extends AbstractDynamicCard implements OnAddCardEffect {
+public class VirtuosaQuestingBlade extends AbstractDynamicCard implements OnAddToDeckCard {
 
     /*
      Deal X damage. When this is added to your deck, gain 30 (50) gold.

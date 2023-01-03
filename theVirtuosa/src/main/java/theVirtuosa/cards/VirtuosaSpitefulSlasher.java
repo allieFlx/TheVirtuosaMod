@@ -10,13 +10,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.characters.TheVirtuosaCharacter;
-import theVirtuosa.interfaces.OnAddCardEffect;
+import theVirtuosa.interfaces.OnAddToDeckCard;
 
 import java.util.ArrayList;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
-public class VirtuosaSpitefulSlasher extends AbstractDynamicCard implements OnAddCardEffect, SpawnModificationCard {
+public class VirtuosaSpitefulSlasher extends AbstractDynamicCard implements OnAddToDeckCard, SpawnModificationCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

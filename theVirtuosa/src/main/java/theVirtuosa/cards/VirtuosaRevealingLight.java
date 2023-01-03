@@ -19,7 +19,7 @@ public class VirtuosaRevealingLight extends AbstractDynamicCard {
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
      *
-     * Reveal 3 (4) cards and put 1 (2) into your hand.
+     * Reveal 3 (4) cards and put 1 (2) into your hand. Exhaust
      */
 
     // TEXT DECLARATION
@@ -59,7 +59,6 @@ public class VirtuosaRevealingLight extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // TODO: check hand size before adding to hand
         AbstractDungeon.actionManager.addToBottom(
                 new RevealCardsAction(magicNumber, c -> true, cardGroup ->
                     this.addToTop(new SelectCardsAction(
