@@ -431,7 +431,7 @@ public class TheVirtuosa implements
     public void receiveEditStrings() {
         logger.info("You seeing this?");
         logger.info("Beginning to edit strings for mod with ID: " + getModID());
-        
+
         // CardStrings
         BaseMod.loadCustomStringsFile(CardStrings.class,
                 getModID() + "Resources/localization/eng/TheVirtuosa-Card-Strings.json");

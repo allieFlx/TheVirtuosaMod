@@ -1,12 +1,15 @@
 package theVirtuosa.cards;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
+import theVirtuosa.cardmods.VirtuosaSpectralMod;
 import theVirtuosa.characters.TheVirtuosaCharacter;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
@@ -48,7 +51,10 @@ public class VirtuosaForebodingBlade extends AbstractDynamicCard {
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
 
-        this.cardsToPreview = new SpectralBasicAttack();
+        AbstractCard specStrike = new VirtuosaStrike();
+        CardModifierManager.addModifier(specStrike, new VirtuosaSpectralMod());
+
+        this.cardsToPreview = specStrike;
     }
 
     // Actions the card should do.
@@ -57,7 +63,10 @@ public class VirtuosaForebodingBlade extends AbstractDynamicCard {
         this.addToBot(new DamageAction(m,
                 new DamageInfo(p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        this.addToBot(new MakeTempCardInDrawPileAction(new SpectralBasicAttack(), magicNumber, true, true));
+
+        AbstractCard specStrike = new VirtuosaStrike();
+        CardModifierManager.addModifier(specStrike, new VirtuosaSpectralMod());
+        this.addToBot(new MakeTempCardInDrawPileAction(specStrike, magicNumber, true, true));
     }
 
     //Upgraded stats.
