@@ -5,7 +5,7 @@
   },
   "theVirtuosa:SpectralSprite": {
     "NAME": "Sprite",
-    "DESCRIPTION": "thevirtuosa:Spectral. NL Gain !M! thevirtuosa:Resonance. Draw a card."
+    "DESCRIPTION": "Gain !M! thevirtuosa:Resonance. Draw a card."
   },
   "theVirtuosa:SpectralReverberatingStrike": {
     "NAME": "Reverberating Strike",

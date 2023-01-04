@@ -17,7 +17,7 @@ public class SpectralSprite extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     *  Spectral. Gain 3 (5) Resonance. Draw a card.
+     *  Gain 3 (5) Resonance. Draw a card.
      */
 
     // TEXT DECLARATION
