@@ -1,16 +1,18 @@
 package theVirtuosa.cards;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
+import theVirtuosa.cardmods.VirtuosaSpectralMod;
 import theVirtuosa.patches.CustomTags;
 import theVirtuosa.powers.VirtuosaResonancePower;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
-public class SpectralSprite extends AbstractSpectralCard {
+public class SpectralSprite extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -45,6 +47,7 @@ public class SpectralSprite extends AbstractSpectralCard {
         baseMagicNumber = magicNumber = MAGIC;
 
         this.tags.add(CustomTags.GAIN_RESONANCE);
+        CardModifierManager.addModifier(this, new VirtuosaSpectralMod());
     }
 
     // Actions the card should do.
