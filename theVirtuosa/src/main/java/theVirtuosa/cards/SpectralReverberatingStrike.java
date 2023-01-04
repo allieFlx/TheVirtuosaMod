@@ -1,5 +1,6 @@
 package theVirtuosa.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -10,6 +11,8 @@ import theVirtuosa.characters.TheVirtuosaCharacter;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
+@AutoAdd.Ignore
+@Deprecated
 public class SpectralReverberatingStrike extends AbstractSpectralCard {
 
     /*

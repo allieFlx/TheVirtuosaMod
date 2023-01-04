@@ -1,5 +1,6 @@
 package theVirtuosa.cards;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -11,6 +12,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.actions.FillHandWithCopiesAction;
+import theVirtuosa.actions.FillHandWithSpecificCardAction;
+import theVirtuosa.cardmods.VirtuosaSpectralMod;
 import theVirtuosa.characters.TheVirtuosaCharacter;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
@@ -21,6 +24,7 @@ public class VirtuosaReverberatingStrike extends AbstractDynamicCard {
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
      *  Deal x damage. Fill your hand with Spectral copies of this card.
+     *  -> Add a Spectral copy of this card to your hand.
      */
 
     // TEXT DECLARATION
@@ -57,7 +61,14 @@ public class VirtuosaReverberatingStrike extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                         AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        this.addToBot(new FillHandWithCopiesAction(this, new SpectralReverberatingStrike()));
+
+        AbstractCard spectralCopy = this.makeStatEquivalentCopy();
+        CardModifierManager.addModifier(spectralCopy, new VirtuosaSpectralMod());
+
+        this.addToBot(new MakeTempCardInHandAction(spectralCopy));
+
+        // this.addToBot(new FillHandWithSpecificCardAction(spectralCopy));
+        // this.addToBot(new FillHandWithCopiesAction(this, new SpectralReverberatingStrike()));
     }
 
     //Upgraded stats.

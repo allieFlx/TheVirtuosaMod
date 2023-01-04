@@ -15,7 +15,7 @@
       "Spectral",
       "spectral"
     ],
-    "DESCRIPTION": "Spectral cards are exhausted when played or at the start of your turn."
+    "DESCRIPTION": "Spectral cards are exhausted when played or at the end of your turn."
   },
   {
     "PROPER_NAME": "Resonance",

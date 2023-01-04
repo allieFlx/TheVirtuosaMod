@@ -3,6 +3,7 @@ package theVirtuosa.cards;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+@Deprecated
 public abstract class AbstractSpectralCard extends AbstractDynamicCard {
 
     public AbstractSpectralCard(final String id,
@@ -18,11 +19,9 @@ public abstract class AbstractSpectralCard extends AbstractDynamicCard {
         this.exhaust = true;
     }
 
-    // TODO: VFX for spectral cards, glow pink / blue (pink for sequestered, blue for spectral)
 
     @Override
     public void atTurnStart() {
-        // TODO: VFX for spectral exhaust. should purge instead?
         if (AbstractDungeon.player.hand.contains(this))
         {
             AbstractDungeon.actionManager.addToTop(

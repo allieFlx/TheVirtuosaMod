@@ -2,14 +2,17 @@ package theVirtuosa.cardmods;
 
 import basemod.BaseMod;
 import basemod.abstracts.AbstractCardModifier;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
+import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import org.apache.commons.lang3.StringUtils;
 import theVirtuosa.TheVirtuosa;
+import theVirtuosa.actions.SpectralExhaustAction;
 import theVirtuosa.patches.CustomTags;
 
 public class VirtuosaSpectralMod extends AbstractCardModifier {
@@ -34,7 +37,8 @@ public class VirtuosaSpectralMod extends AbstractCardModifier {
         }
 
         card.tags.add(CustomTags.SPECTRAL);
-        // vfx
+
+        // TODO VFX for spectral cards, glow pink / blue (pink for sequestered, blue for spectral)
     }
 
     @Override
@@ -51,9 +55,7 @@ public class VirtuosaSpectralMod extends AbstractCardModifier {
     @Override
     public void atEndOfTurn(AbstractCard card, CardGroup group) {
         super.atEndOfTurn(card, group);
-        AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(card, group, true));
-        //group.moveToExhaustPile(card);
-        // spectral exhaust effects at pile
+        AbstractDungeon.actionManager.addToTop(new SpectralExhaustAction(card, group));
     }
 
     @Override
