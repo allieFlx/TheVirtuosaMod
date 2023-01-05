@@ -1,6 +1,7 @@
 package theVirtuosa.cards;
 
 import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -68,6 +69,12 @@ public class SpectralMirrorSpirit extends AbstractDynamicCard {
         // if this card is upgraded, copy an upgraded version of the card
         this.cardToCopy = c.makeStatEquivalentCopy();
         // change the appearance of this card to match / change description
+    }
+
+    @Override
+    public void render(SpriteBatch sb) {
+        super.render(sb);
+        // render copied card with spectral effect
     }
 
     //Upgraded stats.
