@@ -16,7 +16,7 @@ import static theVirtuosa.TheVirtuosa.makeCardPath;
 public class VirtuosaSplinter extends AbstractDynamicCard {
 
     /*
-     Deal 12 (18) damage. Apply
+     Deal 12 (18) damage. Apply 2 Spurs
      */
 
     // TEXT DECLARATION

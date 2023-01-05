@@ -39,10 +39,8 @@ public class CostedTransformCardInHandAction extends AbstractGameAction {
     public void update() {
         AbstractCard newCard = getTransformedCard();
 
-        //this.addToBot(new TransformCardInHandAction(p.hand.group.indexOf(this.card), newCard));
-
         this.addToBot(new TransformSpecificCardAction(card, p.hand, newCard));
-        
+
         this.isDone = true;
 
         this.tickDuration();

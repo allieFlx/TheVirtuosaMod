@@ -1,17 +1,10 @@
 package theVirtuosa.cards;
 
 import basemod.helpers.CardModifierManager;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.cardmods.VirtuosaMirrorSpiritMod;
-import theVirtuosa.cardmods.VirtuosaSpectralMod;
-import theVirtuosa.patches.CustomTags;
-import theVirtuosa.powers.VirtuosaResonancePower;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
@@ -57,12 +50,11 @@ public class SpectralMirrorSpirit extends AbstractDynamicCard {
     }
 
     //Upgraded stats.
+
+    @Override
+    public boolean canUpgrade() { return false; }
+
     @Override
     public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            // upgrade the copy
-            initializeDescription();
-        }
     }
 }

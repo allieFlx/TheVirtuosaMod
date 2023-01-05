@@ -65,6 +65,8 @@ public class SpectralExhaustAction extends AbstractGameAction {
             AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
         }
         // use BGTorchExtinguish sound for flames
+
+        // TODO spectral cards should go somewhere other than the exhaust pile?
         AbstractDungeon.player.exhaustPile.addToTop(c);
         AbstractDungeon.player.onCardDrawOrDiscard();
     }

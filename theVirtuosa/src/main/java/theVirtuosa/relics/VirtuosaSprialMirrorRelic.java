@@ -2,7 +2,9 @@ package theVirtuosa.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.cards.SpectralMirrorSpirit;
 import theVirtuosa.util.TextureLoader;
@@ -30,7 +32,9 @@ public class VirtuosaSprialMirrorRelic extends CustomRelic {
     @Override
     public void atTurnStart() {
         this.flash();
+        // sfx
         this.addToTop(new MakeTempCardInHandAction(new SpectralMirrorSpirit()));
+        this.addToTop(new SFXAction("APPEAR"));
     }
 
     // Description
