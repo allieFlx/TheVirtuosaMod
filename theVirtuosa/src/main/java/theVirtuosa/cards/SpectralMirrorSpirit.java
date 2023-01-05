@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
+import theVirtuosa.cardmods.VirtuosaMirrorSpiritMod;
 import theVirtuosa.cardmods.VirtuosaSpectralMod;
 import theVirtuosa.patches.CustomTags;
 import theVirtuosa.powers.VirtuosaResonancePower;
@@ -46,35 +47,16 @@ public class SpectralMirrorSpirit extends AbstractDynamicCard {
     public SpectralMirrorSpirit() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
-        CardModifierManager.addModifier(this, new VirtuosaSpectralMod());
+        CardModifierManager.addModifier(this, new VirtuosaMirrorSpiritMod());
     }
 
     // Actions the card should do.
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // play the card stored as a copy, otherwise do nothing
-        if (this.cardToCopy != null)
-        {
-            this.cardToCopy.use(p, m);
-        }
     }
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        // if there has been a card played this turn, return true, otherwise false
-        return this.cardToCopy != null;
-    }
-
-    @Override
-    public void triggerOnOtherCardPlayed(AbstractCard c) {
-        // if this card is upgraded, copy an upgraded version of the card
-        this.cardToCopy = c.makeStatEquivalentCopy();
-        // change the appearance of this card to match / change description
-    }
-
-    @Override
-    public void render(SpriteBatch sb) {
-        super.render(sb);
-        // render copied card with spectral effect
+        return false;
     }
 
     //Upgraded stats.

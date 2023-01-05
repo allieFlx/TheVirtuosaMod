@@ -3,6 +3,8 @@ package theVirtuosa.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.NinjaScroll;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.cards.SpectralMirrorSpirit;
 import theVirtuosa.util.TextureLoader;
@@ -24,13 +26,13 @@ public class VirtuosaSprialMirrorRelic extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic2.png"));
 
     public VirtuosaSprialMirrorRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.CLINK);
     }
 
     @Override
     public void atTurnStart() {
         this.flash();
-        this.addToBot(new MakeTempCardInHandAction(new SpectralMirrorSpirit()));
+        this.addToTop(new MakeTempCardInHandAction(new SpectralMirrorSpirit()));
     }
 
     // Description

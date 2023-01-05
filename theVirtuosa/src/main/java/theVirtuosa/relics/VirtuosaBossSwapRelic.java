@@ -30,7 +30,7 @@ public class VirtuosaBossSwapRelic extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
 
     public VirtuosaBossSwapRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.HEAVY);
+        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.FLAT);
     }
 
     @Override

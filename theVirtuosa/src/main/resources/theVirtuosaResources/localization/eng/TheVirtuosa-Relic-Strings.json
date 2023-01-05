@@ -17,7 +17,7 @@
     "NAME": "Spiral Mirror",
     "FLAVOR": "You can see the figure of someone else in this mirror. They want to get out.",
     "DESCRIPTIONS": [
-      "At the start of each turn, add a #ySpectral card to your hand that copies the last card played this turn."
+      "At the start of each turn, add a #ySpectral card to your hand that copies the last card played."
     ]
   },
   "theVirtuosa:PlaceholderRelic": {
