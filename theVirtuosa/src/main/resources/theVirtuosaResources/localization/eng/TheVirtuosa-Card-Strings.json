@@ -27,6 +27,10 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
+  "theVirtuosa:VirtuosaSplinter": {
+    "NAME": "Splinter",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! *Spurs."
+  },
   "theVirtuosa:VirtuosaAxeKick": {
     "NAME": "Axe Kick",
     "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block."

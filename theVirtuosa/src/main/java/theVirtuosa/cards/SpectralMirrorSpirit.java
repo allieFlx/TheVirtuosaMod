@@ -26,7 +26,7 @@ public class SpectralMirrorSpirit extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(SpectralMirrorSpirit.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("VirtuosaMirrorSpirit_BETA.png");
 
     // /TEXT DECLARATION/
 
@@ -39,7 +39,6 @@ public class SpectralMirrorSpirit extends AbstractDynamicCard {
     public static final CardColor COLOR = CardColor.COLORLESS;
 
     private static final int COST = -2;
-    private AbstractCard cardToCopy = null;
 
     // /STAT DECLARATION/
 
@@ -49,8 +48,6 @@ public class SpectralMirrorSpirit extends AbstractDynamicCard {
 
         CardModifierManager.addModifier(this, new VirtuosaMirrorSpiritMod());
     }
-
-    // Actions the card should do.
 
     public void use(AbstractPlayer p, AbstractMonster m) {
     }

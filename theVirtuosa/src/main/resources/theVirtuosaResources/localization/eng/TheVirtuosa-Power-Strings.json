@@ -3,6 +3,10 @@
         "NAME": "Brambles",
         "DESCRIPTIONS": ["When you deal attack damage, the enemy loses #b", " #yStrength."]
 },
+"theVirtuosa:VirtuosaTempThornsPower": {
+        "NAME": "Spurs",
+        "DESCRIPTIONS": ["When attacked, deals #b", " damage."]
+},
 "theVirtuosa:VirtuosaVengeancePower": {
         "NAME": "Vengeance",
         "DESCRIPTIONS": ["When you receive attack damage this turn, gain #b", " temporary #yStrength."]

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import org.apache.commons.lang3.StringUtils;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.actions.SpectralExhaustAction;
+import theVirtuosa.actions.TransformSpecificCardAction;
 import theVirtuosa.patches.CustomTags;
 
 public class VirtuosaMirrorSpiritMod extends AbstractCardModifier {
@@ -35,8 +36,9 @@ public class VirtuosaMirrorSpiritMod extends AbstractCardModifier {
         super.onOtherCardPlayed(card, otherCard, group);
         AbstractCard mirrorCopy = otherCard.makeStatEquivalentCopy();
         CardModifierManager.addModifier(mirrorCopy, new VirtuosaMirrorSpiritMod());
-        // TODO index out of bounds
-        AbstractDungeon.actionManager.addToBottom(new TransformCardInHandAction(group.group.indexOf(card), mirrorCopy));
+
+        // bug fixed, changed from addToBot -> addToTop
+        AbstractDungeon.actionManager.addToTop(new TransformSpecificCardAction(card, group, mirrorCopy));
     }
 
     @Override

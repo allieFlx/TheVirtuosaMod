@@ -3,8 +3,6 @@ package theVirtuosa.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.relics.NinjaScroll;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.cards.SpectralMirrorSpirit;
 import theVirtuosa.util.TextureLoader;
