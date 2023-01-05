@@ -16,7 +16,7 @@ public class VirtuosaStartingRelic extends CustomRelic {
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
      *
-     * At the start of each combat, gain 1 Strength (i.e. Vajra)
+     * At the start of each combat, gain 3 Regen
      */
 
     // ID, images, text.
@@ -30,7 +30,6 @@ public class VirtuosaStartingRelic extends CustomRelic {
     }
 
 
-    // Gain 1 Strength on on equip.
     @Override
     public void atBattleStart() {
         flash();

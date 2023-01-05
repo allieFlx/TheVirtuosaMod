@@ -7,10 +7,17 @@
     ]
   },
   "theVirtuosa:VirtuosaBossSwapRelic": {
-    "NAME": "Petrified Songbird",
-    "FLAVOR": "A hymn seems to emmanate deep within it.",
+    "NAME": "Marble Gall",
+    "FLAVOR": "A hymn seems to emanate deep within the oaken growth.",
     "DESCRIPTIONS": [
       "At the start of each turn, gain #b1 #yResonance."
+    ]
+  },
+  "theVirtuosa:VirtuosaSpiralMirrorRelic": {
+    "NAME": "Spiral Mirror",
+    "FLAVOR": "You can see the figure of someone else in this mirror. They want to get out.",
+    "DESCRIPTIONS": [
+      "At the start of each turn, add a #ySpectral card to your hand that copies the last card played this turn."
     ]
   },
   "theVirtuosa:PlaceholderRelic": {

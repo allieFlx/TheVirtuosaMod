@@ -64,6 +64,7 @@ public class SpectralExhaustAction extends AbstractGameAction {
         if (this.group == this.p.hand) {
             AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
         }
+        // use BGTorchExtinguish sound for flames
         AbstractDungeon.player.exhaustPile.addToTop(c);
         AbstractDungeon.player.onCardDrawOrDiscard();
     }

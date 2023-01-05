@@ -7,6 +7,10 @@
     "NAME": "Sprite",
     "DESCRIPTION": "Gain !M! thevirtuosa:Resonance. Draw a card."
   },
+  "theVirtuosa:SpectralMirrorSpirit": {
+    "NAME": "Mirror Spirit",
+    "DESCRIPTION": "Unplayable. NL Copies the last card played this turn."
+  },
   "theVirtuosa:SpectralReverberatingStrike": {
     "NAME": "Reverberating Strike",
     "DESCRIPTION": "thevirtuosa:Spectral. NL Deal !D! damage."
