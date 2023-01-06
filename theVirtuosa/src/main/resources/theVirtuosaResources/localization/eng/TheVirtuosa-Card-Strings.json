@@ -93,6 +93,11 @@
     "DESCRIPTION": "Gain !B! Block. NL When thevirtuosa:Revealed, NL gain [E] .",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL When thevirtuosa:Revealed, NL gain [E] [E] ."
   },
+  "theVirtuosa:VirtuosaSynthesis": {
+    "NAME": "Synthesis",
+    "DESCRIPTION": "Next turn, NL gain [E] and draw 2 cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Next turn, NL gain [E] [E] and draw 2 cards. NL Exhaust."
+  },
   "theVirtuosa:VirtuosaShredder": {
     "NAME": "Shredder",
     "DESCRIPTION": "Deal !D! damage !M! times. NL Exhaust."

@@ -2,14 +2,14 @@ package theVirtuosa.cardmods;
 
 import basemod.BaseMod;
 import basemod.abstracts.AbstractCardModifier;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import basemod.abstracts.CustomCard;
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardModifierPatches.CardModifierRender;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
-import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import org.apache.commons.lang3.StringUtils;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.actions.SpectralExhaustAction;
@@ -39,6 +39,28 @@ public class VirtuosaSpectralMod extends AbstractCardModifier {
         card.tags.add(CustomTags.SPECTRAL);
 
         // TODO VFX for spectral cards, glow pink / blue (pink for sequestered, blue for spectral)
+
+
+        // >> doesnt work for non-custom cards >>
+        // TODO shader vfx that works for all cards
+        String img_s;
+        String img_l;
+        switch (card.type)
+        {
+            case ATTACK:
+                img_s = TheVirtuosa.ATTACK_SPECTRAL;
+                img_l = TheVirtuosa.ATTACK_SPECTRAL_PORTRAIT;
+                break;
+            case POWER:
+                img_s = TheVirtuosa.POWER_SPECTRAL;
+                img_l = TheVirtuosa.POWER_SPECTRAL_PORTRAIT;
+                break;
+            default:
+                img_s = TheVirtuosa.SKILL_SPECTRAL;
+                img_l = TheVirtuosa.SKILL_SPECTRAL_PORTRAIT;
+                break;
+        }
+        ((CustomCard)card).setBackgroundTexture(img_s, img_l);
     }
 
     @Override
@@ -67,6 +89,11 @@ public class VirtuosaSpectralMod extends AbstractCardModifier {
         // remove vfx
         if (!this.replaceExhaust) { card.exhaust = false; }
         card.tags.remove(CustomTags.SPECTRAL);
+    }
+
+    @Override
+    public void onRender(AbstractCard card, SpriteBatch sb) {
+        super.onRender(card, sb);
     }
 
     public AbstractCardModifier makeCopy() {
