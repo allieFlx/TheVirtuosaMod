@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.characters.TheVirtuosaCharacter;
+import theVirtuosa.powers.VirtuosaHelplessPower;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
@@ -57,8 +58,7 @@ public class VirtuosaMaim extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
                 AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        // TODO helpless power
-        this.addToBot(new ApplyPowerAction(m, p, new NoBlockPower(m, magicNumber, false), magicNumber));
+        this.addToBot(new ApplyPowerAction(m, p, new VirtuosaHelplessPower(m, magicNumber), magicNumber));
         this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false), magicNumber));
         this.addToBot(new ApplyPowerAction(m, p, new WeakPower(m, magicNumber, false), magicNumber));
     }

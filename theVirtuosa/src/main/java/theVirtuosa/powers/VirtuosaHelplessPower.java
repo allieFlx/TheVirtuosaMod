@@ -27,6 +27,8 @@ public class VirtuosaHelplessPower extends AbstractPower implements CloneablePow
     private static final Texture tex84 = TextureLoader.getTexture("theVirtuosaResources/images/powers/placeholder_power84.png");
     private static final Texture tex32 = TextureLoader.getTexture("theVirtuosaResources/images/powers/placeholder_power32.png");
 
+    // TODO Helpless keyword
+
     public VirtuosaHelplessPower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
@@ -34,7 +36,7 @@ public class VirtuosaHelplessPower extends AbstractPower implements CloneablePow
         this.owner = owner;
         this.amount = amount;
 
-        type = PowerType.BUFF;
+        type = PowerType.DEBUFF;
         isTurnBased = true;
 
         // We load those textures here.
@@ -51,7 +53,7 @@ public class VirtuosaHelplessPower extends AbstractPower implements CloneablePow
             this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
         }
     }
-    //TODO description
+
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];

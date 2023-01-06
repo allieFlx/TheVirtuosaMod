@@ -43,6 +43,7 @@ public class VirtuosaSpectralMod extends AbstractCardModifier {
 
         // >> doesnt work for non-custom cards >>
         // TODO shader vfx that works for all cards
+        /*
         String img_s;
         String img_l;
         switch (card.type)
@@ -61,6 +62,8 @@ public class VirtuosaSpectralMod extends AbstractCardModifier {
                 break;
         }
         ((CustomCard)card).setBackgroundTexture(img_s, img_l);
+
+         */
     }
 
     @Override
