@@ -102,6 +102,10 @@
     "NAME": "Shredder",
     "DESCRIPTION": "Deal !D! damage !M! times. NL Exhaust."
   },
+  "theVirtuosa:VirtuosaMaim": {
+    "NAME": "Maim",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! *Helpless, Vulnerable, and Weak."
+  },
   "theVirtuosa:VirtuosaArpeggio": {
     "NAME": "Arpeggio",
     "DESCRIPTION": "Draw a 1, 2, and 3 cost card. NL Exhaust.",

@@ -7,6 +7,10 @@
         "NAME": "Spurs",
         "DESCRIPTIONS": ["When attacked, deals #b", " damage."]
 },
+"theVirtuosa:VirtuosaHelplessPower": {
+        "NAME": "Helpless",
+        "DESCRIPTIONS": ["At the start of your turn, this enemy loses all block. Lasts for #b", " turns."]
+},
 "theVirtuosa:VirtuosaVengeancePower": {
         "NAME": "Vengeance",
         "DESCRIPTIONS": ["When you receive attack damage this turn, gain #b", " temporary #yStrength."]
