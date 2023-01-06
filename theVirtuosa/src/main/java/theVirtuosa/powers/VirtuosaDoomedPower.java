@@ -7,12 +7,17 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.green.PiercingWail;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.city.TheCollector;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.EndTurnDeathPower;
+import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.util.TextureLoader;
@@ -47,7 +52,8 @@ public class VirtuosaDoomedPower extends AbstractPower implements CloneablePower
     public void atStartOfTurn() {
         this.flash();
         // TODO: VFX other than lightning
-        this.addToBot(new VFXAction(new LightningEffect(this.owner.hb.cX, this.owner.hb.cY)));
+        this.addToBot(new SFXAction("ATTACK_PIERCING_WAIL", -0.2F));
+        this.addToBot(new VFXAction(new CollectorCurseEffect(this.owner.hb.cX, this.owner.hb.cY), 1.0F));
         this.addToBot(new LoseHPAction(this.owner, this.owner, 99999));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "VirtuosaDoomedPower"));
     }
