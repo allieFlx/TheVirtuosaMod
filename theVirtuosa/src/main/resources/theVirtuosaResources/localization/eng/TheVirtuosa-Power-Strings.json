@@ -9,7 +9,7 @@
 },
 "theVirtuosa:VirtuosaHelplessPower": {
         "NAME": "Helpless",
-        "DESCRIPTIONS": ["Cannot gain *Block for #b", " turns."]
+        "DESCRIPTIONS": ["Cannot gain #yBlock for #b", " turns."]
 },
 "theVirtuosa:VirtuosaVengeancePower": {
         "NAME": "Vengeance",
