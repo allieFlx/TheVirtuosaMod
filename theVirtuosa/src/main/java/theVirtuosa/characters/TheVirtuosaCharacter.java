@@ -169,10 +169,6 @@ public class TheVirtuosaCharacter extends CustomPlayer {
         retVal.add(VirtuosaGrimRefrain.ID);
         retVal.add(VirtuosaCursedArm.ID);
 
-        // testing only
-        retVal.add(VirtuosaLimbFromLimb.ID);
-        retVal.add(VirtuosaRevealingLight.ID);
-
         return retVal;
     }
 

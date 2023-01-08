@@ -1,5 +1,6 @@
 package theVirtuosa.cards;
 
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -53,18 +54,8 @@ public class VirtuosaArpeggio extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new SFXAction("CROAK_RISE", 0.2F));
         this.addToBot(new CostedDrawPileToHandAction());
-        /*
-        for (int i=1; i<4; i++)
-        {
-            final int cardCost = i;
-            this.addToBot(new MoveCardsAction(
-                    this.p.hand,
-                    this.p.drawPile,
-                    card -> card.cost == cardCost
-            ));
-        }
-        */
     }
 
     // Upgraded stats.

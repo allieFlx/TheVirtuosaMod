@@ -480,6 +480,12 @@ public class TheVirtuosa implements
     public void receiveAddAudio(){
         BaseMod.addAudio(makeID("RESONANCE_1"), getModID() + "Resources/audio/sound/resonance01.ogg");
         BaseMod.addAudio(makeID("VIRTUOSA_SELECT"), getModID() + "Resources/audio/sound/virtuosa_select.ogg");
+        BaseMod.addAudio(makeID("CROAK_FALL"), getModID() + "Resources/audio/sound/croak_arp_fall.ogg");
+        BaseMod.addAudio(makeID("CROAK_RISE"), getModID() + "Resources/audio/sound/croak_arp_rise.ogg");
+        BaseMod.addAudio(makeID("CROAK_DOWN"), getModID() + "Resources/audio/sound/croak_fall.ogg");
+        BaseMod.addAudio(makeID("CROAK_HOLLOW"), getModID() + "Resources/audio/sound/croak_hollow.ogg");
+        BaseMod.addAudio(makeID("CROAK_UP"), getModID() + "Resources/audio/sound/croak_rise.ogg");
+        BaseMod.addAudio(makeID("CROAK_SHRILL"), getModID() + "Resources/audio/sound/croak_shrill.ogg");
     }
     
     // ================ LOAD THE KEYWORDS ===================
