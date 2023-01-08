@@ -48,6 +48,10 @@
     "NAME": "Heartening Verse",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! thevirtuosa:Resonance. NL Remove !M! Vulnerable."
   },
+  "theVirtuosa:VirtuosaMend": {
+    "NAME": "Mend",
+    "DESCRIPTION": "Heal !M! HP. NL Remove !M! Frail. NL Exhaust."
+  },
   "theVirtuosa:VirtuosaForebodingBlade": {
     "NAME": "Foreboding Blade",
     "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! thevirtuosa:Spectral *Strikes into your draw pile."
