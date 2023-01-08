@@ -155,8 +155,12 @@
     "EXTENDED_DESCRIPTION": [" NL (Deals ", " damage.)"]
   },
   "theVirtuosa:VirtuosaBraceUpNoCopy": {
-    "NAME": "Brace Up",
-    "DESCRIPTION": "Gain !B! Block. NL Draw a card. NL When this is added to your deck, add an additional copy."
+    "NAME": "Bolster",
+    "DESCRIPTION": "Gain !B! Block. NL When this is added to your deck, add an additional copy."
+  },
+  "theVirtuosa:VirtuosaHide": {
+    "NAME": "Hide",
+    "DESCRIPTION": "Gain !B! Block. NL Add a copy of this card into your draw pile."
   },
   "theVirtuosa:VirtuosaQuestingBlade": {
     "NAME": "Questing Blade",
