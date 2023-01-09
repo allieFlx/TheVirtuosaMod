@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.purple.Blasphemy;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -20,6 +21,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.watcher.EndTurnDeathPower;
 import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 import theVirtuosa.TheVirtuosa;
+import theVirtuosa.actions.CodaRemoveAction;
 import theVirtuosa.util.TextureLoader;
 
 public class VirtuosaCodaPower extends AbstractPower implements CloneablePowerInterface {
@@ -92,8 +94,10 @@ public class VirtuosaCodaPower extends AbstractPower implements CloneablePowerIn
     public void onRemove() {
         // TODO patches / actions to reset costs upon removal
         //  could do cost modification using card modifiers
+        this.addToBot(new CodaRemoveAction());
         this.addToBot(new SFXAction(TheVirtuosa.makeID("CROAK_SHRILL"), -0.2F));
         this.addToBot(new VFXAction(new CollectorCurseEffect(this.owner.hb.cX, this.owner.hb.cY), 1.0F));
+        this.addToBot(new WaitAction(1.0F));
         this.addToBot(new LoseHPAction(this.owner, this.owner, 99999));
     }
 
