@@ -35,6 +35,11 @@
     "NAME": "Axe Kick",
     "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block."
   },
+  "theVirtuosa:VirtuosaTrill": {
+    "NAME": "Trill",
+    "DESCRIPTION": "Gain 5 Res. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "Gain 5 Res. NL Draw !M! cards."
+  },
   "theVirtuosa:VirtuosaCarve": {
     "NAME": "Carve",
     "DESCRIPTION": "Deal !D! damage. NL Remove !M! Weak."
