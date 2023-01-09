@@ -39,13 +39,15 @@ public class VirtuosaCoda extends AbstractDynamicCard{
     public static final CardColor COLOR = TheVirtuosaCharacter.Enums.COLOR_BROWN;
 
     private static final int COST = 3;
-    private static final int UPGRADE_COST = 2;
+    private static final int MAGIC = 10;
+    private static final int UPGRADE_MAGIC = 5;
 
     // /STAT DECLARATION/
 
 
     public VirtuosaCoda() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        baseMagicNumber = magicNumber = MAGIC;
 
         GraveField.grave.set(this, true); // << this is how you do stslib keywords. no need to prefix in strings json
     }
@@ -54,6 +56,9 @@ public class VirtuosaCoda extends AbstractDynamicCard{
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
+        this.addToBot(new ApplyPowerAction(p, p, new VirtuosaCodaPower(p, magicNumber), magicNumber));
+
+        /*
         boolean powerExists = false;
         Iterator var4 = p.powers.iterator();
 
@@ -66,8 +71,10 @@ public class VirtuosaCoda extends AbstractDynamicCard{
         }
 
         if (!powerExists) {
-            this.addToBot(new ApplyPowerAction(p, p, new VirtuosaCodaPower(p)));
+            this.addToBot(new ApplyPowerAction(p, p, new VirtuosaCodaPower(p, magicNumber), magicNumber));
         }
+
+         */
     }
 
     //Upgraded stats.
@@ -75,7 +82,7 @@ public class VirtuosaCoda extends AbstractDynamicCard{
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            upgradeMagicNumber(UPGRADE_MAGIC);
             initializeDescription();
         }
     }

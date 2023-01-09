@@ -29,7 +29,7 @@
 },
 "theVirtuosa:VirtuosaCodaPower": {
         "NAME": "Coda",
-        "DESCRIPTIONS": ["Attacks cost #b0. At the start of your turn, become #yDoomed."]
+        "DESCRIPTIONS": ["Attacks cost #b0. After you play #b", " Attacks, die.", "Attack, die."]
 },
 "theVirtuosa:VirtuosaDoomedPower": {
         "NAME": "Doomed",

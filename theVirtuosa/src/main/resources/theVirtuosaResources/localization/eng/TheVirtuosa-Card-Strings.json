@@ -186,7 +186,7 @@
   },
   "theVirtuosa:VirtuosaCoda": {
     "NAME": "Coda",
-    "DESCRIPTION": "Grave. NL Attacks cost 0. NL Die in 2 turns."
+    "DESCRIPTION": "Grave. NL Attacks cost 0. NL After you play !M! Attacks, die."
   },
   "theVirtuosa:VirtuosaTrickery": {
     "NAME": "Trickery",

@@ -32,14 +32,6 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
-//TODO: DON'T MASS RENAME/REFACTOR
-//TODO: DON'T MASS RENAME/REFACTOR
-//TODO: DON'T MASS RENAME/REFACTOR
-//TODO: DON'T MASS RENAME/REFACTOR
-// Please don't just mass replace "theDefault" with "yourMod" everywhere.
-// It'll be a bigger pain for you. You only need to replace it in 4 places.
-// I comment those places below, under the place where you set your ID.
-
 //TODO: FIRST THINGS FIRST: RENAME YOUR PACKAGE AND ID NAMES FIRST-THING!!!
 // Right click the package (Open the project pane on the left. Folder with black dot on it. The name's at the very top) -> Refactor -> Rename, and name it whatever you wanna call your mod.
 // Scroll down in this file. Change the ID from "theDefault:" to "yourModName:" or whatever your heart desires (don't use spaces). Dw, you'll see it.
@@ -195,7 +187,7 @@ public class TheVirtuosa implements
         // The actual mod Button is added below in receivePostInitialize()
         theVirtuosaDefaultSettings.setProperty(ENABLE_PLACEHOLDER_SETTINGS, "FALSE"); // This is the default setting. It's actually set...
         try {
-            SpireConfig config = new SpireConfig("defaultMod", "theVirtuosaConfig", theVirtuosaDefaultSettings); // ...right here
+            SpireConfig config = new SpireConfig("theVirtuosa", "theVirtuosaConfig", theVirtuosaDefaultSettings); // ...right here
             // the "fileName" parameter is the name of the file MTS will create where it will save our setting.
             config.load(); // Load the setting and set the boolean to equal it
             enablePlaceholder = config.getBool(ENABLE_PLACEHOLDER_SETTINGS);
@@ -265,7 +257,7 @@ public class TheVirtuosa implements
     public void receiveEditCharacters() {
         logger.info("Beginning to edit characters. " + "Add " + TheVirtuosaCharacter.Enums.THE_VIRTUOSA.toString());
         
-        BaseMod.addCharacter(new TheVirtuosaCharacter("the Default", TheVirtuosaCharacter.Enums.THE_VIRTUOSA),
+        BaseMod.addCharacter(new TheVirtuosaCharacter("the Virtuosa", TheVirtuosaCharacter.Enums.THE_VIRTUOSA),
                 THE_VIRTUOSA_BUTTON, THE_VIRTUOSA_PORTRAIT, TheVirtuosaCharacter.Enums.THE_VIRTUOSA);
         
         receiveEditPotions();
@@ -298,7 +290,7 @@ public class TheVirtuosa implements
             enablePlaceholder = button.enabled; // The boolean true/false will be whether the button is enabled or not
             try {
                 // And based on that boolean, set the settings and save them
-                SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theVirtuosaDefaultSettings);
+                SpireConfig config = new SpireConfig("theVirtuosa", "theVirtuosaConfig", theVirtuosaDefaultSettings);
                 config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
                 config.save();
             } catch (Exception e) {

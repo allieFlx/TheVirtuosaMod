@@ -3,7 +3,12 @@ package theVirtuosa.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.purple.Blasphemy;
@@ -13,6 +18,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.watcher.EndTurnDeathPower;
+import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.util.TextureLoader;
 
@@ -29,11 +35,12 @@ public class VirtuosaCodaPower extends AbstractPower implements CloneablePowerIn
     private static final Texture tex84 = TextureLoader.getTexture("theVirtuosaResources/images/powers/coda_power84.png");
     private static final Texture tex32 = TextureLoader.getTexture("theVirtuosaResources/images/powers/coda_power32.png");
 
-    public VirtuosaCodaPower(final AbstractCreature owner) {
+    public VirtuosaCodaPower(final AbstractCreature owner, int amount) {
         name = NAME;
         ID = POWER_ID;
 
         this.owner = owner;
+        this.amount = amount;
 
         type = PowerType.BUFF;
         isTurnBased = false;
@@ -52,28 +59,55 @@ public class VirtuosaCodaPower extends AbstractPower implements CloneablePowerIn
     // TODO must also patch AbstractPlayer class (onCardDrawOrDiscard()) to set costs to 0
     }
 
-    /* old version
     public void onUseCard(AbstractCard card, UseCardAction action) {
+        if (card.type == AbstractCard.CardType.ATTACK) {
+            this.flash();
+            if (this.amount == 0) {
+                // DIE!
+                this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+            } else {
+                this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
+            }
+        }
+        /*
         if (card.type == AbstractCard.CardType.ATTACK) {
             this.flash();
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -1), -1));
         }
+
+         */
     }
-     */
 
     @Override
     public void atStartOfTurn() {
+        /* intermediate version : "Attacks cost #b0. At the start of your turn, become #yDoomed."
+
         this.flash();
         this.addToBot(new ApplyPowerAction(this.owner, this.owner, new VirtuosaDoomedPower(this.owner)));
+
+         */
+    }
+
+    @Override
+    public void onRemove() {
+        // TODO patches / actions to reset costs upon removal
+        //  could do cost modification using card modifiers
+        this.addToBot(new SFXAction(TheVirtuosa.makeID("CROAK_SHRILL"), -0.2F));
+        this.addToBot(new VFXAction(new CollectorCurseEffect(this.owner.hb.cX, this.owner.hb.cY), 1.0F));
+        this.addToBot(new LoseHPAction(this.owner, this.owner, 99999));
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0];
+        if (amount == 1){
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+        } else {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        }
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new VirtuosaCodaPower(owner);
+        return new VirtuosaCodaPower(owner, amount);
     }
 }

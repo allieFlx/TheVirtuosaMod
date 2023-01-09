@@ -39,7 +39,7 @@ public class VirtuosaHearteningVerse extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int BLOCK = 7;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
+    private static final int UPGRADE_PLUS_BLOCK = 2;
     private static final int MAGIC = 1;
     private static final int UPGRADE_MAGIC = 1;
 
