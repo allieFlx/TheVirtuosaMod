@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.purple.Blasphemy;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -92,9 +93,10 @@ public class VirtuosaCodaPower extends AbstractPower implements CloneablePowerIn
 
     @Override
     public void onRemove() {
-        // TODO patches / actions to reset costs upon removal
-        //  could do cost modification using card modifiers
         this.addToBot(new CodaRemoveAction());
+        // TODO must check if monsters are basically dead, we shouldnt kill the player if they just beat a boss
+        if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) { return; }
+
         this.addToBot(new SFXAction(TheVirtuosa.makeID("CROAK_SHRILL"), -0.2F));
         this.addToBot(new VFXAction(new CollectorCurseEffect(this.owner.hb.cX, this.owner.hb.cY), 1.0F));
         this.addToBot(new WaitAction(1.0F));

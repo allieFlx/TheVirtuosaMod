@@ -37,8 +37,8 @@
   },
   "theVirtuosa:VirtuosaTrill": {
     "NAME": "Trill",
-    "DESCRIPTION": "Gain 5 Res. NL Draw a card.",
-    "UPGRADE_DESCRIPTION": "Gain 5 Res. NL Draw !M! cards."
+    "DESCRIPTION": "Gain 5 thevirtuosa:Resonance. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "Gain 5 thevirtuosa:Resonance. NL Draw !M! cards."
   },
   "theVirtuosa:VirtuosaCarve": {
     "NAME": "Carve",

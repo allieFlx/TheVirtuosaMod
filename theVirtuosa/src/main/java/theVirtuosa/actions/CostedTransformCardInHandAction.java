@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.TransformCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.colorless.Discovery;
 import com.megacrit.cardcrawl.cards.curses.Necronomicurse;
 import com.megacrit.cardcrawl.cards.status.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -52,7 +53,6 @@ public class CostedTransformCardInHandAction extends AbstractGameAction {
             // targetCost = 0;
             return new VoidCard();
         }
-
         ArrayList<AbstractCard> list = new ArrayList();
         Iterator var3;
         AbstractCard c;
@@ -83,7 +83,7 @@ public class CostedTransformCardInHandAction extends AbstractGameAction {
 
                     while(var3.hasNext()) {
                         c = (AbstractCard)var3.next();
-                        if (!Objects.equals(c.cardID, this.card.cardID) && c.cost == targetCost) {
+                        if (!Objects.equals(c.cardID, this.card.cardID) && c.cost == targetCost && !c.hasTag(AbstractCard.CardTags.HEALING)) {
                             list.add(c);
                         }
                     }
@@ -104,7 +104,7 @@ public class CostedTransformCardInHandAction extends AbstractGameAction {
 
                 while(var3.hasNext()) {
                     c = (AbstractCard)var3.next();
-                    if (!Objects.equals(c.cardID, this.card.cardID) && c.cost == targetCost) {
+                    if (!Objects.equals(c.cardID, this.card.cardID) && c.cost == targetCost&& !c.hasTag(AbstractCard.CardTags.HEALING)) {
                         list.add(c);
                     }
                 }
@@ -113,7 +113,7 @@ public class CostedTransformCardInHandAction extends AbstractGameAction {
 
                 while(var3.hasNext()) {
                     c = (AbstractCard)var3.next();
-                    if (!Objects.equals(c.cardID, this.card.cardID) && c.cost == targetCost) {
+                    if (!Objects.equals(c.cardID, this.card.cardID) && c.cost == targetCost && !c.hasTag(AbstractCard.CardTags.HEALING)) {
                         list.add(c);
                     }
                 }
@@ -122,7 +122,7 @@ public class CostedTransformCardInHandAction extends AbstractGameAction {
 
                 while(var3.hasNext()) {
                     c = (AbstractCard)var3.next();
-                    if (!Objects.equals(c.cardID, this.card.cardID) && c.cost == targetCost) {
+                    if (!Objects.equals(c.cardID, this.card.cardID) && c.cost == targetCost && !c.hasTag(AbstractCard.CardTags.HEALING)) {
                         list.add(c);
                     }
                 }
