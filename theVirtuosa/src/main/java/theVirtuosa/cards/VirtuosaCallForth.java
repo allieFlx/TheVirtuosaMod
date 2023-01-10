@@ -19,7 +19,7 @@ public class VirtuosaCallForth extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Unplayable. When you draw this, gain 4 (8) Block. Can be Upgraded any number of times.
+     * Unplayable.
      */
 
 
