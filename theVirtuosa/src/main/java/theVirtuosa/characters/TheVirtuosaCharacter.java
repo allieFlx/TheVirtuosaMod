@@ -103,7 +103,7 @@ public class TheVirtuosaCharacter extends CustomPlayer {
         super(name, setClass, orbTextures,
                 "theVirtuosaResources/images/char/defaultCharacter/orb/vfx.png", null,
                 new SpriterAnimation(
-                        "theVirtuosaResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
+                        "theVirtuosaResources/images/char/defaultCharacter/Spriter/theVirtuosaStill_BETA.scml"));
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
