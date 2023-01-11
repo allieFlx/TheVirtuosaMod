@@ -54,6 +54,8 @@ public class VirtuosaArpeggio extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // TODO incorrectly interacts with hand size modification
+
         this.addToBot(new SFXAction(TheVirtuosa.makeID("CROAK_RISE"), 0.2F));
         this.addToBot(new CostedDrawPileToHandAction());
     }

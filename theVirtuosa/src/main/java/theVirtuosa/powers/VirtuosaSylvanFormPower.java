@@ -25,8 +25,8 @@ public class VirtuosaSylvanFormPower extends AbstractPower implements CloneableP
     // TODO sort description in strings
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
-    private static final Texture tex84 = TextureLoader.getTexture("theVirtuosaResources/images/powers/sidheForm_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture("theVirtuosaResources/images/powers/sidheForm_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture("theVirtuosaResources/images/powers/sidheForm2_power84.png");
+    private static final Texture tex32 = TextureLoader.getTexture("theVirtuosaResources/images/powers/sidheForm2_power32.png");
 
     private int initialCardDrawPerTurn;
 
