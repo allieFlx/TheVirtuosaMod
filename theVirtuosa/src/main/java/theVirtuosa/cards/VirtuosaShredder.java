@@ -3,10 +3,12 @@ package theVirtuosa.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.green.Skewer;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
+import theVirtuosa.actions.ShredderAction;
 import theVirtuosa.characters.TheVirtuosaCharacter;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
@@ -33,8 +35,8 @@ public class VirtuosaShredder extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheVirtuosaCharacter.Enums.COLOR_BROWN;
 
-    private static final int COST = 1;
-    private static final int DAMAGE = 1;
+    private static final int COST = -1;
+    private static final int DAMAGE = 0;
     private static final int MAGIC = 12;
     private static final int UPGRADE_MAGIC = 3;
 
@@ -45,12 +47,15 @@ public class VirtuosaShredder extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+
         exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new ShredderAction(p, m, damage, magicNumber, this.damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse));
+        /*
         boolean alt = false;
         for (int i = 0; i < MAGIC; i++)
         {
@@ -68,6 +73,8 @@ public class VirtuosaShredder extends AbstractDynamicCard {
             }
             alt = !alt;
         }
+
+         */
     }
 
     //Upgraded stats.

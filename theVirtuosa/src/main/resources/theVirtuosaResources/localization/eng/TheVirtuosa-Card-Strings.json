@@ -109,7 +109,7 @@
   },
   "theVirtuosa:VirtuosaShredder": {
     "NAME": "Shredder",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Exhaust."
+    "DESCRIPTION": "Deal X damage !M! times. NL Exhaust."
   },
   "theVirtuosa:VirtuosaMaim": {
     "NAME": "Maim",
