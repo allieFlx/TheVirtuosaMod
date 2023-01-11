@@ -1,5 +1,6 @@
 package theVirtuosa.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
-public class VirtuosaSpitefulSlasher extends AbstractDynamicCard implements OnAddToDeckCard, SpawnModificationCard {
+public class VirtuosaSpitefulSlasher extends AbstractDynamicCard implements OnObtainCard, SpawnModificationCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -68,7 +69,7 @@ public class VirtuosaSpitefulSlasher extends AbstractDynamicCard implements OnAd
     }
 
     @Override
-    public void onAddToMasterDeck() {
+    public void onObtainCard() {
         // if there are multiple copies, it only replaces the first one
         AbstractDungeon.player.masterDeck.removeCard(VirtuosaCursedArm.ID);
     }

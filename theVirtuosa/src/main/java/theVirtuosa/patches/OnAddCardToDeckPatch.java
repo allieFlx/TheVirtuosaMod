@@ -7,11 +7,16 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theVirtuosa.interfaces.OnAddToDeckCard;
 
+/*
 @SpirePatch2(
         clz = Soul.class,
         method = "obtain"
 )
+
+ */
+@Deprecated
 public class OnAddCardToDeckPatch {
+    /*
     private static final Logger logger = LogManager.getLogger(OnAddCardToDeckPatch.class.getName());
 
     @SpirePrefixPatch
@@ -22,4 +27,6 @@ public class OnAddCardToDeckPatch {
             ((OnAddToDeckCard)card).onAddToMasterDeck();
         }
     }
+
+     */
 }

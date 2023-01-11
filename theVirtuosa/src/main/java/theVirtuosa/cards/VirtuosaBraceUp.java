@@ -1,5 +1,6 @@
 package theVirtuosa.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,7 +11,7 @@ import theVirtuosa.interfaces.OnAddToDeckCard;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
-public class VirtuosaBraceUp extends VirtuosaBraceUpNoCopy implements OnAddToDeckCard {
+public class VirtuosaBraceUp extends VirtuosaBraceUpNoCopy implements OnObtainCard {
 
     /*
      Gain x block. When added, add an additional copy.
@@ -34,7 +35,7 @@ public class VirtuosaBraceUp extends VirtuosaBraceUpNoCopy implements OnAddToDec
     }
 
     @Override
-    public void onAddToMasterDeck() {
+    public void onObtainCard() {
         // only obtain a second copy, not recursive
         if (this.upgraded)
         {

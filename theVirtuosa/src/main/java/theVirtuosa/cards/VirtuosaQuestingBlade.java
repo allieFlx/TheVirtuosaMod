@@ -1,5 +1,6 @@
 package theVirtuosa.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -13,7 +14,7 @@ import theVirtuosa.interfaces.OnAddToDeckCard;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
-public class VirtuosaQuestingBlade extends AbstractDynamicCard implements OnAddToDeckCard {
+public class VirtuosaQuestingBlade extends AbstractDynamicCard implements OnObtainCard {
 
     /*
      Deal X damage. When this is added to your deck, gain 30 (50) gold.
@@ -60,7 +61,7 @@ public class VirtuosaQuestingBlade extends AbstractDynamicCard implements OnAddT
     }
 
     @Override
-    public void onAddToMasterDeck() {
+    public void onObtainCard() {
         // play gold gain sound
         CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
         AbstractDungeon.player.gainGold(magicNumber);
