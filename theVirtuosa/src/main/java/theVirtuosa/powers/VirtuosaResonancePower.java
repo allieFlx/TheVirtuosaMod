@@ -25,7 +25,6 @@ public class VirtuosaResonancePower extends AbstractPower implements CloneablePo
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    // TODO sort description in strings
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     private static final Texture tex84 = TextureLoader.getTexture("theVirtuosaResources/images/powers/resonance_02_power84.png");

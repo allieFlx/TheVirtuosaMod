@@ -32,7 +32,6 @@ public class VirtuosaCodaPower extends AbstractPower implements CloneablePowerIn
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    // TODO sort description in strings
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     private static final Texture tex84 = TextureLoader.getTexture("theVirtuosaResources/images/powers/coda_power84.png");
@@ -59,7 +58,7 @@ public class VirtuosaCodaPower extends AbstractPower implements CloneablePowerIn
         if (card.type == AbstractCard.CardType.ATTACK) {
             card.setCostForTurn(-9);
         }
-    // TODO must also patch AbstractPlayer class (onCardDrawOrDiscard()) to set costs to 0
+    // must also patch AbstractPlayer class (onCardDrawOrDiscard()) to set costs to 0
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
@@ -93,8 +92,10 @@ public class VirtuosaCodaPower extends AbstractPower implements CloneablePowerIn
 
     @Override
     public void onRemove() {
+        // reset attack costs
         this.addToBot(new CodaRemoveAction());
-        // TODO must check if monsters are basically dead, we shouldnt kill the player if they just beat a boss
+
+        // we shouldnt kill the player if they just beat a boss
         if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) { return; }
 
         this.addToBot(new SFXAction(TheVirtuosa.makeID("CROAK_SHRILL"), -0.2F));

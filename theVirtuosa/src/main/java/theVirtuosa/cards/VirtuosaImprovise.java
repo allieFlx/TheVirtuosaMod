@@ -52,7 +52,7 @@ public class VirtuosaImprovise extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (p.drawPile.isEmpty()){ return; } // TODO: deck empty dialog?
+        if (p.drawPile.isEmpty()){ return; }
         AbstractCard c = p.drawPile.getRandomCard(true).makeCopy();
         c.setCostForTurn(-99);
         this.addToBot(new MakeTempCardInHandAction(c, true));

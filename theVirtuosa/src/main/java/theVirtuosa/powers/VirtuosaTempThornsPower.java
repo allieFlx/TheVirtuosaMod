@@ -61,7 +61,7 @@ public class VirtuosaTempThornsPower extends AbstractPower implements CloneableP
             this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
         }
     }
-    //TODO description
+
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];

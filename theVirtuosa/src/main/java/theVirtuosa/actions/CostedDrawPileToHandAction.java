@@ -26,7 +26,7 @@ public class CostedDrawPileToHandAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_MED) {
-            // TODO incorrectly interacts with hand size modification
+            // --incorrectly interacts with hand size modification--
             //  should be fixed. this was an error where hand sized is reduced but more than max amount of
             //  cards remain in hand
 

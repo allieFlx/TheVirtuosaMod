@@ -65,7 +65,7 @@ public class TheVirtuosaCharacter extends CustomPlayer {
     public static final int MAX_HP = 78;
     public static final int STARTING_GOLD = 99;
     public static final int CARD_DRAW = 5;
-    public static final int ORB_SLOTS = 0; // TODO << changed this from 3
+    public static final int ORB_SLOTS = 0; //<< changed this from 3
 
     // =============== /BASE STATS/ =================
 
@@ -165,7 +165,7 @@ public class TheVirtuosaCharacter extends CustomPlayer {
             retVal.add(VirtuosaDefend.ID);
         }
         // add Refrain
-        // TODO trial as starter cards, seems okay so far
+        // trial as starter cards, seems okay so far
         retVal.add(VirtuosaGrimRefrain.ID);
         retVal.add(VirtuosaCursedArm.ID);
 
@@ -219,7 +219,7 @@ public class TheVirtuosaCharacter extends CustomPlayer {
     @Override
     public int getAscensionMaxHPLoss() {
         return 5;
-    } // TODO << changed from 0
+    } // << changed from 0
 
     // Should return the card color enum to be associated with your character.
     @Override
@@ -247,7 +247,7 @@ public class TheVirtuosaCharacter extends CustomPlayer {
     }
 
     //Which card should be obtainable from the Match and Keep event?
-    // TODO >> one of the non-strike/defend starter cards
+    // >> one of the non-strike/defend starter cards
     //      testing Refrain
     @Override
     public AbstractCard getStartCardForEvent() {

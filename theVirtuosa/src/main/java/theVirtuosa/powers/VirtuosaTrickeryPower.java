@@ -26,7 +26,6 @@ public class VirtuosaTrickeryPower extends AbstractPower implements CloneablePow
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    // TODO sort description in strings
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     private static final Texture tex84 = TextureLoader.getTexture("theVirtuosaResources/images/powers/placeholder_power84.png");

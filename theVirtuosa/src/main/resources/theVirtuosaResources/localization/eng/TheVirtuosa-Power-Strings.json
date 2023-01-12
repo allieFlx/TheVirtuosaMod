@@ -1,7 +1,7 @@
 {
 "theVirtuosa:VirtuosaBramblesPower": {
         "NAME": "Brambles",
-        "DESCRIPTIONS": ["When you deal attack damage, the enemy loses #b", " #yStrength."]
+        "DESCRIPTIONS": ["Whenever you deal attack damage, target loses #b", " #yStrength."]
 },
 "theVirtuosa:VirtuosaTempThornsPower": {
         "NAME": "Spurs",

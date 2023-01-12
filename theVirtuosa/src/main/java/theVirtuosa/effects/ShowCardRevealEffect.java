@@ -20,7 +20,6 @@ public class ShowCardRevealEffect extends AbstractGameEffect {
     private boolean cardOffset;
     private boolean flash;
 
-    // TODO: glow / flash effect for revealed cards which match requirements
     public ShowCardRevealEffect(AbstractCard srcCard, boolean isFlash) {
         this.cardOffset = false;
         this.card = srcCard.makeStatEquivalentCopy();
@@ -40,7 +39,7 @@ public class ShowCardRevealEffect extends AbstractGameEffect {
         {
             this.card.flash();
         }
-        CardCrawlGame.sound.play("CARD_OBTAIN"); // TODO investigate other card sounds
+        CardCrawlGame.sound.play("CARD_OBTAIN");
         // changed from CARD_OBTAIN
     }
 

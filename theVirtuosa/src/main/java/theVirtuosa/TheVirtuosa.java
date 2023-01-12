@@ -32,27 +32,6 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
-//TODO: FIRST THINGS FIRST: RENAME YOUR PACKAGE AND ID NAMES FIRST-THING!!!
-// Right click the package (Open the project pane on the left. Folder with black dot on it. The name's at the very top) -> Refactor -> Rename, and name it whatever you wanna call your mod.
-// Scroll down in this file. Change the ID from "theDefault:" to "yourModName:" or whatever your heart desires (don't use spaces). Dw, you'll see it.
-// In the JSON strings (resources>localization>eng>[all them files] make sure they all go "yourModName:" rather than "theDefault", and change to "yourmodname" rather than "thedefault".
-// You can ctrl+R to replace in 1 file, or ctrl+shift+r to mass replace in specific files/directories, and press alt+c to make the replace case sensitive (Be careful.).
-// Start with the DefaultCommon cards - they are the most commented cards since I don't feel it's necessary to put identical comments on every card.
-// After you sorta get the hang of how to make cards, check out the card template which will make your life easier
-
-/*
- * With that out of the way:
- * Welcome to this super over-commented Slay the Spire modding base.
- * Use it to make your own mod of any type. - If you want to add any standard in-game content (character,
- * cards, relics), this is a good starting point.
- * It features 1 character with a minimal set of things: 1 card of each type, 1 debuff, couple of relics, etc.
- * If you're new to modding, you basically *need* the BaseMod wiki for whatever you wish to add
- * https://github.com/daviscook477/BaseMod/wiki - work your way through with this base.
- * Feel free to use this in any way you like, of course. MIT licence applies. Happy modding!
- *
- * And pls. Read the comments.
- */
-
 @SpireInitializer
 public class TheVirtuosa implements
         EditCardsSubscriber,
@@ -87,14 +66,8 @@ public class TheVirtuosa implements
     public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
     public static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
     public static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
-    
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-    // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
-  
+
+
     // Card backgrounds - The actual rectangular card.
     private static final String ATTACK_VIRTUOSA_BROWN = "theVirtuosaResources/images/512/bg_attack_default_chatreuse.png";
     private static final String SKILL_VIRTUOSA_BROWN = "theVirtuosaResources/images/512/bg_skill_default_chatreuse.png";
@@ -408,8 +381,8 @@ public class TheVirtuosa implements
         // The ID for this function isn't actually your modid as used for prefixes/by the getModID() method.
         // It's the mod id you give MTS in ModTheSpire.json - by default your artifact ID in your pom.xml
 
-        //TODO: Rename the "DefaultMod" with the modid in your ModTheSpire.json file
-        //TODO: The artifact mentioned in ModTheSpire.json is the artifactId in pom.xml you should've edited earlier
+        //Rename the "DefaultMod" with the modid in your ModTheSpire.json file
+        //The artifact mentioned in ModTheSpire.json is the artifactId in pom.xml you should've edited earlier
         new AutoAdd("TheVirtuosa") // ${project.artifactId}
             .packageFilter(AbstractVirtuosaCard.class) // filters to any class in the same package as AbstractDefaultCard, nested packages included
             .setDefaultSeen(true)
