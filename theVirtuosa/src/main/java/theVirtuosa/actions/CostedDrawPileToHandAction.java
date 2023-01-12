@@ -26,6 +26,10 @@ public class CostedDrawPileToHandAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_MED) {
+            // TODO incorrectly interacts with hand size modification
+            //  should be fixed. this was an error where hand sized is reduced but more than max amount of
+            //  cards remain in hand
+
             if (this.p.drawPile.isEmpty()) {
                 this.isDone = true;
                 return;
@@ -40,13 +44,13 @@ public class CostedDrawPileToHandAction extends AbstractGameAction {
             AbstractCard card;
             while(var2.hasNext()) {
                 card = (AbstractCard)var2.next();
-                if (card.cost == 1 & !has1) {
+                if (card.cost == 1 && !has1) {
                     tmp.addToBottom(card);
                     has1 = true;
-                } else if (card.cost == 2 & !has2) {
+                } else if (card.cost == 2 && !has2) {
                     tmp.addToBottom(card);
                     has2 = true;
-                } else if (card.cost == 3 & !has3) {
+                } else if (card.cost == 3 && !has3) {
                     tmp.addToBottom(card);
                     has3 = true;
                 }
@@ -61,7 +65,7 @@ public class CostedDrawPileToHandAction extends AbstractGameAction {
                     tmp.shuffle();
                     card = tmp.getBottomCard();
                     tmp.removeCard(card);
-                    if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
+                    if (this.p.hand.size() >= BaseMod.MAX_HAND_SIZE) {
                         this.p.drawPile.moveToDiscardPile(card);
                         this.p.createHandIsFullDialog();
                     } else {
