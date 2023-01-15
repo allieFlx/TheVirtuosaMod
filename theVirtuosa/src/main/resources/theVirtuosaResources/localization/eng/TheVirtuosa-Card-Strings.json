@@ -17,7 +17,8 @@
   },
   "theVirtuosa:VirtuosaReverberatingStrike": {
     "NAME": "Reverberating Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Add a thevirtuosa:Spectral copy of this card to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Fill your hand with thevirtuosa:Spectral copies of this card.",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage."]
   },
   "theVirtuosa:VirtuosaStrike": {
     "NAME": "Strike",

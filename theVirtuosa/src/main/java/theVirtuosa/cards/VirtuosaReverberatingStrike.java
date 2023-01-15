@@ -8,7 +8,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.actions.FillHandWithCopiesAction;
@@ -31,6 +33,8 @@ public class VirtuosaReverberatingStrike extends AbstractDynamicCard {
 
     public static final String ID = TheVirtuosa.makeID(VirtuosaReverberatingStrike.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String COPY_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION[0];
 
     // /TEXT DECLARATION/
 
@@ -46,14 +50,28 @@ public class VirtuosaReverberatingStrike extends AbstractDynamicCard {
     private static final int DAMAGE = 6;
     private static final int UPGRADE_PLUS_DMG = 3;
 
+    private boolean isCopy;
     // /STAT DECLARATION/
 
 
     public VirtuosaReverberatingStrike() {
+        this(false);
+    }
+
+    public VirtuosaReverberatingStrike(boolean isCopy){
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
 
         this.tags.add(CardTags.STRIKE);
+
+        this.isCopy = isCopy;
+        if (this.isCopy) {
+            this.rawDescription = COPY_DESCRIPTION;
+            CardModifierManager.addModifier(this, new VirtuosaSpectralMod());
+        }
+        else {
+            this.cardsToPreview = new VirtuosaReverberatingStrike(true);
+        }
     }
 
     // Actions the card should do.
@@ -62,13 +80,55 @@ public class VirtuosaReverberatingStrike extends AbstractDynamicCard {
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                         AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
+        if (!this.isCopy)
+        {
+            AbstractCard spectralCopy = this.makeSpectralCopy();
+            this.addToBot(new FillHandWithSpecificCardAction(spectralCopy));
+        }
+
+        /*
         AbstractCard spectralCopy = this.makeStatEquivalentCopy();
         CardModifierManager.addModifier(spectralCopy, new VirtuosaSpectralMod());
 
         this.addToBot(new MakeTempCardInHandAction(spectralCopy));
 
+
+         */
         // this.addToBot(new FillHandWithSpecificCardAction(spectralCopy));
         // this.addToBot(new FillHandWithCopiesAction(this, new SpectralReverberatingStrike()));
+    }
+
+    private AbstractCard makeSpectralCopy(){
+        AbstractCard copy = new VirtuosaReverberatingStrike(true);
+
+        copy.name = this.name;
+        copy.target = this.target;
+        copy.upgraded = this.upgraded;
+        copy.timesUpgraded = this.timesUpgraded;
+        copy.baseDamage = this.baseDamage;
+        copy.baseBlock = this.baseBlock;
+        copy.baseMagicNumber = this.baseMagicNumber;
+        copy.cost = this.cost;
+        copy.costForTurn = this.costForTurn;
+        copy.isCostModified = this.isCostModified;
+        copy.isCostModifiedForTurn = this.isCostModifiedForTurn;
+        copy.inBottleLightning = this.inBottleLightning;
+        copy.inBottleFlame = this.inBottleFlame;
+        copy.inBottleTornado = this.inBottleTornado;
+        copy.isSeen = this.isSeen;
+        copy.isLocked = this.isLocked;
+        copy.freeToPlayOnce = this.freeToPlayOnce;
+
+        return copy;
+    }
+
+    @Override
+    public AbstractCard makeCopy() {
+        if (this.isCopy)
+        {
+            return this.makeSpectralCopy();
+        }
+        return new VirtuosaReverberatingStrike();
     }
 
     //Upgraded stats.
@@ -77,6 +137,7 @@ public class VirtuosaReverberatingStrike extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            if (this.isCopy) { this.rawDescription = COPY_DESCRIPTION;}
             initializeDescription();
         }
     }
