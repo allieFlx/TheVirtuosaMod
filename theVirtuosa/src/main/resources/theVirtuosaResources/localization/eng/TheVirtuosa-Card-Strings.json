@@ -11,6 +11,10 @@
     "NAME": "Mirror Spirit",
     "DESCRIPTION": "Unplayable. NL Copies the last card played this turn."
   },
+  "theVirtuosa:SpecialExorcism": {
+    "NAME": "Exorcism",
+    "DESCRIPTION": "Fleeting. NL Exhaust ALL Curses. NL Remove ALL your debuffs."
+  },
   "theVirtuosa:SpectralReverberatingStrike": {
     "NAME": "Reverberating Strike",
     "DESCRIPTION": "thevirtuosa:Spectral. NL Deal !D! damage."
