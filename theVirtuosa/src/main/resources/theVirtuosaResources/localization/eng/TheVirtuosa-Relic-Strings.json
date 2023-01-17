@@ -20,6 +20,13 @@
       "At the start of each turn, add a #ySpectral card to your hand that copies the last card played."
     ]
   },
+  "theVirtuosa:VirtuosaOakFlagonRelic": {
+    "NAME": "Oak Flagon",
+    "FLAVOR": "Drink and be merry.",
+    "DESCRIPTIONS": [
+      "Whenever you heal HP during combat, gain an equal amount of #yResonance."
+    ]
+  },
   "theVirtuosa:PlaceholderRelic": {
     "NAME": "Placeholder Energy Relic",
     "FLAVOR": "The snake is a friend.",

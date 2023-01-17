@@ -24,6 +24,7 @@ import org.apache.logging.log4j.Logger;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.cards.*;
 import theVirtuosa.relics.VirtuosaBossSwapRelic;
+import theVirtuosa.relics.VirtuosaOakFlagonRelic;
 import theVirtuosa.relics.VirtuosaSprialMirrorRelic;
 import theVirtuosa.relics.VirtuosaStartingRelic;
 
@@ -196,6 +197,7 @@ public class TheVirtuosaCharacter extends CustomPlayer {
         UnlockTracker.markRelicAsSeen(VirtuosaStartingRelic.ID);
         UnlockTracker.markRelicAsSeen(VirtuosaBossSwapRelic.ID);
         UnlockTracker.markRelicAsSeen(VirtuosaSprialMirrorRelic.ID);
+        UnlockTracker.markRelicAsSeen(VirtuosaOakFlagonRelic.ID);
 
         return retVal;
     }

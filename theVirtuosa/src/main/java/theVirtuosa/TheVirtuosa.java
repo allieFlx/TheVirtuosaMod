@@ -342,6 +342,7 @@ public class TheVirtuosa implements
         BaseMod.addRelicToCustomPool(new VirtuosaStartingRelic(), TheVirtuosaCharacter.Enums.COLOR_BROWN);
         BaseMod.addRelicToCustomPool(new VirtuosaBossSwapRelic(), TheVirtuosaCharacter.Enums.COLOR_BROWN);
         BaseMod.addRelicToCustomPool(new VirtuosaSprialMirrorRelic(), TheVirtuosaCharacter.Enums.COLOR_BROWN);
+        BaseMod.addRelicToCustomPool(new VirtuosaOakFlagonRelic(), TheVirtuosaCharacter.Enums.COLOR_BROWN);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         // BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
