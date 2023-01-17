@@ -49,6 +49,10 @@
     "NAME": "Carve",
     "DESCRIPTION": "Deal !D! damage. NL Remove !M! Weak."
   },
+  "theVirtuosa:VirtuosaMalevolence": {
+    "NAME": "Maleficence",
+    "DESCRIPTION": "Deal !D! damage. NL thevirtuosa:Reveal !M! cards. NL If none are Skills, double this card's damage this combat."
+  },
   "theVirtuosa:VirtuosaSpy": {
     "NAME": "Spy",
     "DESCRIPTION": "thevirtuosa:Reveal a card. NL Gain !B! Block and repeat for each [E] the thevirtuosa:Revealed card costs."
