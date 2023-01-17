@@ -129,6 +129,11 @@
     "NAME": "Vengeance",
     "DESCRIPTION": "Whenever you receive attack damage, gain 1 temporary Strength."
   },
+  "theVirtuosa:VirtuosaSamara": {
+    "NAME": "Samara",
+    "DESCRIPTION": "Whenever you thevirtuosa:Reveal a card, gain !M! Block.",
+    "UPGRADE_DESCRIPTION": "Innate NL Whenever you thevirtuosa:Reveal a card, gain !M! Block."
+  },
   "theVirtuosa:VirtuosaFairyChorus": {
     "NAME": "Fairy Chorus",
     "DESCRIPTION": "Shuffle !M! *Sprites into your draw pile. NL Draw a card.",

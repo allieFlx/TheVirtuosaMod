@@ -11,6 +11,10 @@
         "NAME": "Helpless",
         "DESCRIPTIONS": ["Cannot gain #yBlock for #b", " turns."]
 },
+"theVirtuosa:VirtuosaSamaraPower": {
+        "NAME": "Samara",
+        "DESCRIPTIONS": ["Whenever you #yReveal a card, gain #b", " #yBlock."]
+},
 "theVirtuosa:VirtuosaVengeancePower": {
         "NAME": "Vengeance",
         "DESCRIPTIONS": ["When you receive attack damage this turn, gain #b", " temporary #yStrength."]

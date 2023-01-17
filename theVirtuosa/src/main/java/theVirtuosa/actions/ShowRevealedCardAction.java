@@ -7,8 +7,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import theVirtuosa.effects.ShowCardRevealEffect;
 import theVirtuosa.interfaces.OnRevealCard;
+import theVirtuosa.powers.VirtuosaSamaraPower;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;
@@ -36,6 +38,12 @@ public class ShowRevealedCardAction extends AbstractGameAction {
             if (this.card instanceof OnRevealCard)
             {
                 ((OnRevealCard)this.card).onRevealed();
+            }
+
+            if (AbstractDungeon.player.hasPower(VirtuosaSamaraPower.POWER_ID))
+            {
+                AbstractPower pow = AbstractDungeon.player.getPower(VirtuosaSamaraPower.POWER_ID);
+                ((VirtuosaSamaraPower)pow).onCardRevealed();
             }
 
             this.duration -= Gdx.graphics.getDeltaTime();
