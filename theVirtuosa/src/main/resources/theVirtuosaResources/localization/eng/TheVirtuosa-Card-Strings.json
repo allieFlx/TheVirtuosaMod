@@ -49,6 +49,10 @@
     "NAME": "Carve",
     "DESCRIPTION": "Deal !D! damage. NL Remove !M! Weak."
   },
+  "theVirtuosa:VirtuosaSpy": {
+    "NAME": "Spy",
+    "DESCRIPTION": "thevirtuosa:Reveal a card. NL Gain !B! Block and repeat for each [E] the thevirtuosa:Revealed card costs."
+  },
   "theVirtuosa:VirtuosaMutate": {
     "NAME": "Mutate",
     "DESCRIPTION": "Gain !B! Block. NL Transform a card in your hand into one that costs 1 less for the rest of combat.",
