@@ -106,7 +106,7 @@ public class RevealCardsAction extends AbstractGameAction {
         }
         this.addToTop(new DiscardRevealedCardsAction(this.p, discardList));
 
-        if (this.callback != null) {
+        if (this.callback != null && !callbackList.isEmpty()) {
             this.callback.accept(callbackList);
         } else if (this.defaultCallback != null) {
             this.defaultCallback.accept(-1);

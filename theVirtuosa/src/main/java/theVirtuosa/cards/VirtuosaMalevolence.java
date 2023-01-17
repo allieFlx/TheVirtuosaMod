@@ -8,9 +8,12 @@ import com.megacrit.cardcrawl.cards.red.Rampage;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.actions.RevealCardsAction;
 import theVirtuosa.characters.TheVirtuosaCharacter;
+import theVirtuosa.patches.VirtuosaCodaApplyPowerPatch;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
@@ -54,7 +57,6 @@ public class VirtuosaMalevolence extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // TODO doubling doesnt work
 
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SMASH));
 
@@ -67,7 +69,7 @@ public class VirtuosaMalevolence extends AbstractDynamicCard {
                             // do nothing
                         },
                         def -> {
-                            this.addToBot(new ModifyDamageAction(this.uuid, this.damage));
+                            this.addToBot(new ModifyDamageAction(this.uuid, this.baseDamage));
                         }
                 )
         );
