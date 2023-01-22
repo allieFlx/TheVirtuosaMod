@@ -153,7 +153,7 @@
   },
   "theVirtuosa:VirtuosaBrambles": {
     "NAME": "Brambles",
-    "DESCRIPTION": "Each time you deal attack damage to an enemy this turn, they lose !M! Strength."
+    "DESCRIPTION": "Each time you deal attack damage to an enemy this turn, they lose !M! Strength this turn."
   },
   "theVirtuosa:VirtuosaImprovise": {
     "NAME": "Improvise",

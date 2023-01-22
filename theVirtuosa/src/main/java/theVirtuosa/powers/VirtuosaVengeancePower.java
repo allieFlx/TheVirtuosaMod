@@ -56,17 +56,6 @@ public class VirtuosaVengeancePower extends AbstractPower implements CloneablePo
         return super.onAttacked(info, damageAmount);
     }
 
-    /*
-    @Override
-    public void atStartOfTurn() {
-        this.flash();
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
-    }
-
-     */
-
-
-
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];

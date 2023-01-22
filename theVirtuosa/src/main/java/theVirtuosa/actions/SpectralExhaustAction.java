@@ -3,6 +3,7 @@ package theVirtuosa.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.optionCards.FameAndFortune;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -26,7 +27,7 @@ public class SpectralExhaustAction extends AbstractGameAction {
         this.group = group;
         this.setValues(this.p, AbstractDungeon.player, amount);
         this.actionType = ActionType.EXHAUST;
-        this.startingDuration = Settings.ACTION_DUR_FAST;
+        this.startingDuration = Settings.ACTION_DUR_XFAST;
         this.duration = this.startingDuration;
     }
     @Override

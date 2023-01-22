@@ -22,7 +22,7 @@ public class VirtuosaStrike extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(VirtuosaStrike.class.getSimpleName());
-    public static final String IMG = makeCardPath("VirtuosaStrike_BETA.png");
+    public static final String IMG = makeCardPath("VirtuosaStrike.png");
 
 
     // /TEXT DECLARATION/
@@ -55,7 +55,7 @@ public class VirtuosaStrike extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
-                        AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                        AbstractGameAction.AttackEffect.FIRE));
     }
 
 
