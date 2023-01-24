@@ -7,6 +7,10 @@
         "NAME": "Spurs",
         "DESCRIPTIONS": ["When attacked, deals #b", " damage."]
 },
+"theVirtuosa:VirtuosaDiscardHandPower": {
+        "NAME": "Discard Hand",
+        "DESCRIPTIONS": ["After you play", " #b", " cards"," a card", " this turn, discard your hand."]
+},
 "theVirtuosa:VirtuosaHelplessPower": {
         "NAME": "Helpless",
         "DESCRIPTIONS": ["Cannot gain #yBlock for #b", " turns."]

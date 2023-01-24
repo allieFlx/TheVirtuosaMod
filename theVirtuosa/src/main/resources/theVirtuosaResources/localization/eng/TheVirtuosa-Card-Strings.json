@@ -45,6 +45,11 @@
     "DESCRIPTION": "Gain 5 thevirtuosa:Resonance. NL Draw a card.",
     "UPGRADE_DESCRIPTION": "Gain 5 thevirtuosa:Resonance. NL Draw !M! cards."
   },
+  "theVirtuosa:VirtuosaDetermination": {
+    "NAME": "Determination",
+    "DESCRIPTION": "Draw cards until your hand is full. NL After you play a card this turn, discard your hand.",
+    "UPGRADE_DESCRIPTION": "Draw cards until your hand is full. NL After you play !M! cards this turn, discard your hand."
+  },
   "theVirtuosa:VirtuosaCarve": {
     "NAME": "Carve",
     "DESCRIPTION": "Deal !D! damage. NL Remove !M! Weak."
