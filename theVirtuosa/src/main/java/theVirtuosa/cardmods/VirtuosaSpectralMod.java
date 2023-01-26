@@ -4,7 +4,13 @@ import basemod.BaseMod;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.abstracts.CustomCard;
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardModifierPatches.CardModifierRender;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.glutils.ShaderProgram;
+import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
@@ -96,7 +102,36 @@ public class VirtuosaSpectralMod extends AbstractCardModifier {
 
     @Override
     public void onRender(AbstractCard card, SpriteBatch sb) {
-        super.onRender(card, sb);
+        /*
+        if (shader == null) {
+            try {
+                shader = new ShaderProgram(
+                        Gdx.files.internal(TheVirtuosa.makeShaderPath("spectral/vertex.vs")),
+                        Gdx.files.internal(TheVirtuosa.makeShaderPath("spectral/fragment.fs"))
+                );
+                if (!shader.isCompiled()) {
+                    System.err.println(shader.getLog());
+                }
+                if (shader.getLog().length() > 0) {
+                    System.out.println(shader.getLog());
+                }
+            } catch (GdxRuntimeException e) {
+                System.out.println("ERROR: Failed to init spectral shader:");
+                e.printStackTrace();
+            }
+        }
+
+        sb.setShader(shader);
+        // card.render(sb); // this caused an infinite loop...
+        // super.onRender(card, sb);
+        sb.setShader(null);
+
+        // TODO: doesnt actually interact with main render method for card
+        //  may have to patch render method
+
+         */
+
+        // should now be rendered in patch
     }
 
     public AbstractCardModifier makeCopy() {

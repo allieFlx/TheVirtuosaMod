@@ -127,6 +127,10 @@ public class TheVirtuosa implements
     public static String makeEventPath(String resourcePath) {
         return getModID() + "Resources/images/events/" + resourcePath;
     }
+
+    public static String makeShaderPath(String resourcePath) {
+        return getModID() + "Resources/shaders/" + resourcePath;
+    }
     
     // =============== /MAKE IMAGE PATHS/ =================
     
