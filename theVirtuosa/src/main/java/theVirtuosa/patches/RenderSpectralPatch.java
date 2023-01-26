@@ -6,34 +6,42 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.utils.GdxRuntimeException;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
+import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import javassist.CtBehavior;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.cardmods.VirtuosaSpectralMod;
 import theVirtuosa.powers.VirtuosaHelplessPower;
 
 @SpirePatch(
         clz = AbstractCard.class,
-        method = "render",
+        method = "renderImage",
         paramtypez = {
                 SpriteBatch.class,
+                boolean.class,
                 boolean.class
         }
 )
 public class RenderSpectralPatch
 {
     @SpirePrefixPatch
-    public static void Prefix(AbstractCard __instance, SpriteBatch sb, boolean selected)
+    public static void Prefix(AbstractCard __instance, SpriteBatch sb, boolean hovered, boolean selected)
     {
         // TODO: shader needs to more specifically target render elements
         //  i.e, not text, glow, or energy icon
         /// also, need to suppress warning on shaders
 
+
+    }
+
+    @SpireInsertPatch(
+            locator = RenderSpectralPatch.Locator.class,
+            localvars = {"sb"} // "var1"
+    )
+    public static void Insert(AbstractCard __instance, SpriteBatch sb) {
         if (CardModifierManager.hasModifier(__instance, VirtuosaSpectralMod.ID))
         {
             ShaderProgram shader = null;
@@ -59,8 +67,19 @@ public class RenderSpectralPatch
     }
 
     @SpirePostfixPatch
-    public static void Postfix(AbstractCard __instance, SpriteBatch sb, boolean selected)
+    public static void Postfix(AbstractCard __instance, SpriteBatch sb, boolean hovered, boolean selected)
     {
         sb.setShader(null);
+    }
+
+    private static class Locator extends SpireInsertLocator {
+        @Override
+        public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
+
+            Matcher finalMatcher = new Matcher.MethodCallMatcher(AbstractCard.class, "renderCardBg");
+
+            return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
+
+        }
     }
 }
