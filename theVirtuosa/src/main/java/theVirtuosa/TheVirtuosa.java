@@ -60,7 +60,7 @@ public class TheVirtuosa implements
     
     // Colors (RGB)
     // Character Color >> IS NOW BROWN
-    public static final Color VIRTUOSA_BROWN = CardHelper.getColor(191.0f, 255.0f, 0.0f);
+    public static final Color VIRTUOSA_BROWN = CardHelper.getColor(240.0f, 48.0f, 191.0f);
     
     // Potion Colors in RGB
     public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
