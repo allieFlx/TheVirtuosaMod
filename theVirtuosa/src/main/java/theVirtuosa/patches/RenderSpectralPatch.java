@@ -10,7 +10,9 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtBehavior;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.cardmods.VirtuosaSpectralMod;
@@ -31,9 +33,7 @@ public class RenderSpectralPatch
     public static void Prefix(AbstractCard __instance, SpriteBatch sb, boolean hovered, boolean selected)
     {
         // TODO: shader needs to more specifically target render elements
-        //  i.e, not text, glow, or energy icon
-        /// also, need to suppress warning on shaders
-
+        //  i.e, not shadow or highlight
 
     }
 
