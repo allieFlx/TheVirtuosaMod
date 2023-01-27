@@ -73,13 +73,13 @@ public class TheVirtuosa implements
     private static final String SKILL_VIRTUOSA_BROWN = "theVirtuosaResources/images/512/bg_skill_virtuosa_wood.png";
     private static final String POWER_VIRTUOSA_BROWN = "theVirtuosaResources/images/512/bg_power_virtuosa_wood.png";
     
-    private static final String ENERGY_ORB_VIRTUOSA_BROWN = "theVirtuosaResources/images/512/card_virtuosa_chartreuse_orb.png";
+    private static final String ENERGY_ORB_VIRTUOSA_BROWN = "theVirtuosaResources/images/512/card_virtuosa_rose_orb.png";
     private static final String CARD_ENERGY_ORB = "theVirtuosaResources/images/512/card_small_orb.png";
     
     private static final String ATTACK_VIRTUOSA_BROWN_PORTRAIT = "theVirtuosaResources/images/1024/bg_attack_virtuosa_wood.png";
     private static final String SKILL_VIRTUOSA_BROWN_PORTRAIT = "theVirtuosaResources/images/1024/bg_skill_virtuosa_wood.png";
     private static final String POWER_VIRTUOSA_BROWN_PORTRAIT = "theVirtuosaResources/images/1024/bg_power_virtuosa_wood.png";
-    private static final String ENERGY_ORB_VIRTUOSA_BROWN_PORTRAIT = "theVirtuosaResources/images/1024/card_virtuosa_chartreuse_orb.png";
+    private static final String ENERGY_ORB_VIRTUOSA_BROWN_PORTRAIT = "theVirtuosaResources/images/1024/card_virtuosa_rose_orb.png";
 
     public static final String ATTACK_SPECTRAL = "theVirtuosaResources/images/512/bg_attack_spectral.png";
     public static final String SKILL_SPECTRAL = "theVirtuosaResources/images/512/bg_skill_spectral.png";

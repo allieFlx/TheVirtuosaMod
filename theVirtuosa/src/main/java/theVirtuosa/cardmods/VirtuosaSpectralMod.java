@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
+import com.megacrit.cardcrawl.screens.ExhaustPileViewScreen;
 import org.apache.commons.lang3.StringUtils;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.actions.SpectralExhaustAction;
@@ -87,6 +88,9 @@ public class VirtuosaSpectralMod extends AbstractCardModifier {
     public void atEndOfTurn(AbstractCard card, CardGroup group) {
         super.atEndOfTurn(card, group);
         AbstractDungeon.actionManager.addToTop(new SpectralExhaustAction(card, group));
+
+        // send to spectral specific "spirit pile"
+        // the spirit pile is non-specific with what cards are there, only the count matters
     }
 
     @Override
@@ -98,40 +102,6 @@ public class VirtuosaSpectralMod extends AbstractCardModifier {
         // remove vfx
         if (!this.replaceExhaust) { card.exhaust = false; }
         card.tags.remove(CustomTags.SPECTRAL);
-    }
-
-    @Override
-    public void onRender(AbstractCard card, SpriteBatch sb) {
-        /*
-        if (shader == null) {
-            try {
-                shader = new ShaderProgram(
-                        Gdx.files.internal(TheVirtuosa.makeShaderPath("spectral/vertex.vs")),
-                        Gdx.files.internal(TheVirtuosa.makeShaderPath("spectral/fragment.fs"))
-                );
-                if (!shader.isCompiled()) {
-                    System.err.println(shader.getLog());
-                }
-                if (shader.getLog().length() > 0) {
-                    System.out.println(shader.getLog());
-                }
-            } catch (GdxRuntimeException e) {
-                System.out.println("ERROR: Failed to init spectral shader:");
-                e.printStackTrace();
-            }
-        }
-
-        sb.setShader(shader);
-        // card.render(sb); // this caused an infinite loop...
-        // super.onRender(card, sb);
-        sb.setShader(null);
-
-        // TODO: doesnt actually interact with main render method for card
-        //  may have to patch render method
-
-         */
-
-        // should now be rendered in patch
     }
 
     public AbstractCardModifier makeCopy() {
