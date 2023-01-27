@@ -34,6 +34,7 @@ public class RenderSpectralPatch
     {
         // TODO: shader needs to more specifically target render elements
         //  i.e, not shadow or highlight
+        //  shadow is fine, glow needs to occlude the actual shape of the card
 
     }
 
