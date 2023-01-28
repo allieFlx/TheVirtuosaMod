@@ -80,13 +80,6 @@ public class TheVirtuosa implements
     private static final String SKILL_VIRTUOSA_BROWN_PORTRAIT = "theVirtuosaResources/images/1024/bg_skill_virtuosa_wood.png";
     private static final String POWER_VIRTUOSA_BROWN_PORTRAIT = "theVirtuosaResources/images/1024/bg_power_virtuosa_wood.png";
     private static final String ENERGY_ORB_VIRTUOSA_BROWN_PORTRAIT = "theVirtuosaResources/images/1024/card_virtuosa_rose_orb.png";
-
-    public static final String ATTACK_SPECTRAL = "theVirtuosaResources/images/512/bg_attack_spectral.png";
-    public static final String SKILL_SPECTRAL = "theVirtuosaResources/images/512/bg_skill_spectral.png";
-    public static final String POWER_SPECTRAL = "theVirtuosaResources/images/512/bg_power_spectral.png";
-    public static final String ATTACK_SPECTRAL_PORTRAIT = "theVirtuosaResources/images/1024/bg_attack_spectral.png";
-    public static final String SKILL_SPECTRAL_PORTRAIT = "theVirtuosaResources/images/1024/bg_skill_spectral.png";
-    public static final String POWER_SPECTRAL_PORTRAIT = "theVirtuosaResources/images/1024/bg_power_spectral.png";
     
     // Character assets
     private static final String THE_VIRTUOSA_BUTTON = "theVirtuosaResources/images/charSelect/VirtuosaCharacterButton_BETA.png";
