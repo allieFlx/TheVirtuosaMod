@@ -76,7 +76,7 @@ public class VirtuosaMutate extends AbstractDynamicCard {
 
     private void transformInHand(AbstractCard card) {
         // this.addtobot (CostedTransformAction)
-        this.addToBot(new CostedTransformCardInHandAction(card, card.cost - 1));
+        this.addToTop(new CostedTransformCardInHandAction(card, card.cost - 1));
     }
 
     //Upgraded stats.
