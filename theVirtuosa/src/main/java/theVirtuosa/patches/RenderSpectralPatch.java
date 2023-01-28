@@ -19,6 +19,14 @@ import theVirtuosa.cardmods.VirtuosaSpectralMod;
 
 public class RenderSpectralPatch {
 
+    private static final ShaderProgram bgShader = new ShaderProgram(
+            Gdx.files.internal(TheVirtuosa.makeShaderPath("spectral/vertex.vs")),
+            Gdx.files.internal(TheVirtuosa.makeShaderPath("spectral/fragment.fs"))
+    );
+    private static final ShaderProgram ptShader = new ShaderProgram(
+            Gdx.files.internal(TheVirtuosa.makeShaderPath("spectralPortrait/vertex.vs")),
+            Gdx.files.internal(TheVirtuosa.makeShaderPath("spectralPortrait/fragment.fs"))
+    );
     private static final Texture TEXT_GLOW = ImageMaster.loadImage("theVirtuosaResources/images/512/spectral_card_glow.png");
 
     @SpirePatch(
@@ -33,13 +41,14 @@ public class RenderSpectralPatch {
     public static class MainRenderSpectralPatch {
         // TODO:
         //  glow has a weird strobe like effect when it spawns in
-        //  major perfomance issues when rendering many spectral cards at a time
+        //  fixed performance issues, may need to add error handling to shader load
 
         @SpireInsertPatch(
                 locator = PreBgLocator.class,
                 localvars = {"sb"} // "var1"
         )
         public static void BgShader(AbstractCard __instance, SpriteBatch sb) {
+            /*
             if (CardModifierManager.hasModifier(__instance, VirtuosaSpectralMod.ID)) {
                 ShaderProgram shader = null;
                 try {
@@ -61,6 +70,11 @@ public class RenderSpectralPatch {
                     sb.setShader(shader);
                 }
             }
+
+             */
+            if (CardModifierManager.hasModifier(__instance, VirtuosaSpectralMod.ID)) {
+                sb.setShader(bgShader);
+            }
         }
 
         @SpireInsertPatch(
@@ -68,6 +82,7 @@ public class RenderSpectralPatch {
                 localvars = {"sb"} // "var1"
         )
         public static void PortraitShader(AbstractCard __instance, SpriteBatch sb) {
+            /*
             if (CardModifierManager.hasModifier(__instance, VirtuosaSpectralMod.ID)) {
                 ShaderProgram shader = null;
                 try {
@@ -88,6 +103,11 @@ public class RenderSpectralPatch {
                 if (shader != null) {
                     sb.setShader(shader);
                 }
+            }
+
+             */
+            if (CardModifierManager.hasModifier(__instance, VirtuosaSpectralMod.ID)) {
+                sb.setShader(ptShader);
             }
         }
 
