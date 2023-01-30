@@ -75,6 +75,14 @@
     "NAME": "Mend",
     "DESCRIPTION": "Heal !M! HP. NL Remove !M! Frail. NL Exhaust."
   },
+  "theVirtuosa:VirtuosaFireDance": {
+    "NAME": "Fire Dance",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Shuffle a card from your discard pile into your draw pile."
+  },
+  "theVirtuosa:VirtuosaGraveDance": {
+    "NAME": "Grave Dance",
+    "DESCRIPTION": "Shuffle a card from your discard pile into your draw pile. NL Add a thevirtuosa:Spectral copy to your hand."
+  },
   "theVirtuosa:VirtuosaForebodingBlade": {
     "NAME": "Foreboding Blade",
     "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! thevirtuosa:Spectral *Strikes into your draw pile."
