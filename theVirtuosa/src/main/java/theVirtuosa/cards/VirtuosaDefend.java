@@ -21,7 +21,7 @@ public class VirtuosaDefend extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(VirtuosaDefend.class.getSimpleName());
-    public static final String IMG = makeCardPath("VirtuosaDefend3.png");
+    public static final String IMG = makeCardPath("VirtuosaDefend.png");
 
     // /TEXT DECLARATION/
 
