@@ -7,6 +7,14 @@
         "NAME": "Spurs",
         "DESCRIPTIONS": ["When attacked, deals #b", " damage."]
 },
+"theVirtuosa:VirtuosaRequiemPower": {
+         "NAME": "Requiem",
+         "DESCRIPTIONS": [
+                 "This turn, your #ySpectral cards are played twice.",
+                 "For the next #b",
+                 " turns, your #ySpectral cards are played twice."
+         ]
+},
 "theVirtuosa:VirtuosaDiscardHandPower": {
         "NAME": "Discard Hand",
         "DESCRIPTIONS": ["After you play", " #b", " cards"," a card", " this turn, discard your hand."]

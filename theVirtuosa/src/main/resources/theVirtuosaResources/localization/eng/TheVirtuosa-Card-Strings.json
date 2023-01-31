@@ -83,6 +83,10 @@
     "NAME": "Grave Dance",
     "DESCRIPTION": "Shuffle a card from your discard pile into your draw pile. NL Add a thevirtuosa:Spectral copy to your hand."
   },
+  "theVirtuosa:VirtuosaRequiem": {
+    "NAME": "Requiem",
+    "DESCRIPTION": "This turn, your thevirtuosa:Spectral cards are played twice."
+  },
   "theVirtuosa:VirtuosaForebodingBlade": {
     "NAME": "Foreboding Blade",
     "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! thevirtuosa:Spectral *Strikes into your draw pile."
