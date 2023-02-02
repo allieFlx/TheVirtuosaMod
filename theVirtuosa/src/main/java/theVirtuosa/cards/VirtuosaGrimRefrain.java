@@ -27,7 +27,7 @@ public class VirtuosaGrimRefrain extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(VirtuosaGrimRefrain.class.getSimpleName());
-    public static final String IMG = makeCardPath("VirtuosaRefrain_BETA.png");
+    public static final String IMG = makeCardPath("VirtuosaRefrain.png");
 
     // /TEXT DECLARATION/
 
