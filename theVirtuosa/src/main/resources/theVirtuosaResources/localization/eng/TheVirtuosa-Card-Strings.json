@@ -71,6 +71,10 @@
     "NAME": "Heartening Verse",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! thevirtuosa:Resonance. NL Remove !M! Vulnerable."
   },
+  "theVirtuosa:VirtuosaGhostArmor": {
+    "NAME": "Spirit Ward",
+    "DESCRIPTION": "Gain !B! Block. NL If you played a thevirtuosa:Spectral card this turn, gain [E] [E] ."
+  },
   "theVirtuosa:VirtuosaMend": {
     "NAME": "Mend",
     "DESCRIPTION": "Heal !M! HP. NL Remove !M! Frail. NL Exhaust."
