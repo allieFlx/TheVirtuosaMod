@@ -8,9 +8,16 @@
   },
   "theVirtuosa:VirtuosaBossSwapRelic": {
     "NAME": "Marble Gall",
-    "FLAVOR": "A hymn seems to emanate deep within the oaken growth.",
+    "FLAVOR": "Power emanates deep within the oaken growth.",
     "DESCRIPTIONS": [
-      "At the start of each turn, gain #b1 #yResonance."
+      "???"
+    ]
+  },
+  "theVirtuosa:VirtuosaRunicForkRelic": {
+    "NAME": "Runic Fork",
+    "FLAVOR": "The runes are indecipherable.",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain #b1 #yResonance plus #b1 for each turn elapsed this combat."
     ]
   },
   "theVirtuosa:VirtuosaSpiralMirrorRelic": {

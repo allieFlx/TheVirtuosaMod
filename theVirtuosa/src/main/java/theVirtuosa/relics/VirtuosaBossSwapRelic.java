@@ -21,7 +21,7 @@ public class VirtuosaBossSwapRelic extends CustomRelic {
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
      *
-     * At the start of each turn, gain 1 Resonance
+     * Regen alt
      */
 
     // ID, images, text.
@@ -46,12 +46,8 @@ public class VirtuosaBossSwapRelic extends CustomRelic {
             super.obtain();
         }
     }
-    @Override
-    public void atTurnStart() {
-        flash();
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VirtuosaResonancePower(AbstractDungeon.player, 1), 1));
-        AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-    }
+
+    // TODO: marble gall regen effect
 
     public boolean canSpawn() {
         return AbstractDungeon.player.hasRelic(VirtuosaStartingRelic.ID);
