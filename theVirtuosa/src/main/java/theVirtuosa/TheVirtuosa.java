@@ -11,11 +11,13 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theVirtuosa.cards.*;
@@ -40,7 +42,11 @@ public class TheVirtuosa implements
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
         AddAudioSubscriber,
-        PostInitializeSubscriber {
+        PostBattleSubscriber,
+        PostDungeonUpdateSubscriber,
+        PostInitializeSubscriber,
+        StartGameSubscriber
+{
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
     public static final Logger logger = LogManager.getLogger(TheVirtuosa.class.getName());
@@ -94,7 +100,11 @@ public class TheVirtuosa implements
     // Atlas and JSON files for the Animations
     public static final String THE_VIRTUOSA_SKELETON_ATLAS = "theVirtuosaResources/images/char/defaultCharacter/skeleton.atlas";
     public static final String THE_VIRTUOSA_SKELETON_JSON = "theVirtuosaResources/images/char/defaultCharacter/skeleton.json";
-    
+
+    // ===========
+
+    public static CardGroup spectralPile;
+
     // =============== MAKE IMAGE PATHS =================
     
     public static String makeCardPath(String resourcePath) {
@@ -475,12 +485,29 @@ public class TheVirtuosa implements
             }
         }
     }
-    
+
+    // =======
+
+    @Override
+    public void receiveStartGame() {
+        spectralPile = new CardGroup(CardGroup.CardGroupType.DRAW_PILE);
+    }
+
     // ================ /LOAD THE KEYWORDS/ ===================    
     
     // this adds "ModName:" before the ID of any card/relic/power etc.
     // in order to avoid conflicts if any other mod uses the same ID.
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
+    }
+
+    @Override
+    public void receivePostBattle(AbstractRoom abstractRoom) {
+        spectralPile.clear();
+    }
+
+    @Override
+    public void receivePostDungeonUpdate() {
+
     }
 }
