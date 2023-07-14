@@ -12,6 +12,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import theVirtuosa.TheVirtuosa;
+import theVirtuosa.patches.VirtuosaCodaApplyPowerPatch;
 
 import java.util.Iterator;
 
@@ -20,6 +24,7 @@ public class SpectralExhaustAction extends AbstractGameAction {
     private AbstractCard card;
     private CardGroup group;
     private float startingDuration;
+    private static final Logger logger = LogManager.getLogger(SpectralExhaustAction.class.getName());
 
     public SpectralExhaustAction(AbstractCard card, CardGroup group) {
         this.p = AbstractDungeon.player;
@@ -68,7 +73,11 @@ public class SpectralExhaustAction extends AbstractGameAction {
         // use BGTorchExtinguish sound for flames
 
         // TODO spectral cards should go somewhere other than the exhaust pile?
-        AbstractDungeon.player.exhaustPile.addToTop(c);
+        //  end of turn spectral cards correctly go to spectral pile
+        //  need to intercept regular exhaust to also go there
+        // -- // AbstractDungeon.player.exhaustPile.addToTop(c);
+        TheVirtuosa.spectralPile.addToTop(c);
+        logger.info("Card added to spectral pile, now contains " + TheVirtuosa.spectralPile.size() + " cards.");
         AbstractDungeon.player.onCardDrawOrDiscard();
     }
 
