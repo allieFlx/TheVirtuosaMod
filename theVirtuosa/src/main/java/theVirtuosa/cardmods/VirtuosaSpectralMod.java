@@ -3,6 +3,7 @@ package theVirtuosa.cardmods;
 import basemod.BaseMod;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.abstracts.CustomCard;
+import basemod.helpers.CardModifierManager;
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardModifierPatches.CardModifierRender;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -11,6 +12,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.utils.GdxRuntimeException;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
@@ -87,7 +90,8 @@ public class VirtuosaSpectralMod extends AbstractCardModifier {
     @Override
     public void atEndOfTurn(AbstractCard card, CardGroup group) {
         super.atEndOfTurn(card, group);
-        AbstractDungeon.actionManager.addToTop(new SpectralExhaustAction(card, group));
+        AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(card, group));
+        //AbstractDungeon.actionManager.addToTop(new SpectralExhaustAction(card, group));
 
         // send to spectral specific "spirit pile"
         // the spirit pile is non-specific with what cards are there, only the count matters
@@ -102,6 +106,14 @@ public class VirtuosaSpectralMod extends AbstractCardModifier {
         // remove vfx
         if (!this.replaceExhaust) { card.exhaust = false; }
         card.tags.remove(CustomTags.SPECTRAL);
+    }
+
+    @Override
+    public void onExhausted(AbstractCard card) {
+        AbstractCard specCopy = card.makeStatEquivalentCopy();
+        TheVirtuosa.spectralPile.addToTop(specCopy);
+
+        // CardModifierManager.removeSpecificModifier(card, this, false);
     }
 
     public AbstractCardModifier makeCopy() {

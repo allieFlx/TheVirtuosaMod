@@ -19,11 +19,13 @@ import theVirtuosa.patches.VirtuosaCodaApplyPowerPatch;
 
 import java.util.Iterator;
 
+@Deprecated
 public class SpectralExhaustAction extends AbstractGameAction {
     private AbstractPlayer p;
     private AbstractCard card;
     private CardGroup group;
     private float startingDuration;
+    private boolean includeExhaust;
     private static final Logger logger = LogManager.getLogger(SpectralExhaustAction.class.getName());
 
     public SpectralExhaustAction(AbstractCard card, CardGroup group) {
@@ -34,6 +36,7 @@ public class SpectralExhaustAction extends AbstractGameAction {
         this.actionType = ActionType.EXHAUST;
         this.startingDuration = Settings.ACTION_DUR_XFAST;
         this.duration = this.startingDuration;
+        this.includeExhaust = includeExhaust;
     }
     @Override
     public void update() {
@@ -65,7 +68,6 @@ public class SpectralExhaustAction extends AbstractGameAction {
 
         c.triggerOnExhaust();
         this.resetCardBeforeMoving(c);
-        //AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
         // TODO effect if in hand is exhaust, otherwise do blue fire on draw and discard piles
         if (this.group == this.p.hand) {
             AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
@@ -73,7 +75,7 @@ public class SpectralExhaustAction extends AbstractGameAction {
         // use BGTorchExtinguish sound for flames
 
         // TODO spectral cards should go somewhere other than the exhaust pile?
-        //  end of turn spectral cards correctly go to spectral pile
+        //   end of turn spectral cards correctly go to spectral pile
         //  need to intercept regular exhaust to also go there
         // -- // AbstractDungeon.player.exhaustPile.addToTop(c);
         TheVirtuosa.spectralPile.addToTop(c);
@@ -93,5 +95,4 @@ public class SpectralExhaustAction extends AbstractGameAction {
         c.stopGlowing();
         this.group.group.remove(c);
     }
-
 }
