@@ -3,18 +3,11 @@ package theVirtuosa.cardmods;
 import basemod.BaseMod;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.actions.common.TransformCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.curses.Necronomicurse;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.LocalizedStrings;
-import org.apache.commons.lang3.StringUtils;
 import theVirtuosa.TheVirtuosa;
-import theVirtuosa.actions.SpectralExhaustAction;
 import theVirtuosa.actions.TransformSpecificCardAction;
-import theVirtuosa.patches.CustomTags;
 
 public class VirtuosaMirrorSpiritMod extends AbstractCardModifier {
     public static String ID = TheVirtuosa.makeID(VirtuosaMirrorSpiritMod.class.getSimpleName());

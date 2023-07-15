@@ -2,27 +2,14 @@ package theVirtuosa.cardmods;
 
 import basemod.BaseMod;
 import basemod.abstracts.AbstractCardModifier;
-import basemod.abstracts.CustomCard;
-import basemod.helpers.CardModifierManager;
-import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardModifierPatches.CardModifierRender;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.graphics.glutils.ShaderProgram;
-import com.badlogic.gdx.utils.GdxRuntimeException;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
-import com.megacrit.cardcrawl.screens.ExhaustPileViewScreen;
 import org.apache.commons.lang3.StringUtils;
 import theVirtuosa.TheVirtuosa;
-import theVirtuosa.actions.SpectralExhaustAction;
 import theVirtuosa.patches.CustomTags;
 
 public class VirtuosaSpectralMod extends AbstractCardModifier {

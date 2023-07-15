@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theVirtuosa.TheVirtuosa;
-import theVirtuosa.actions.SpectralExhaustAction;
 import theVirtuosa.cardmods.VirtuosaSpectralMod;
 
 import java.util.Iterator;
