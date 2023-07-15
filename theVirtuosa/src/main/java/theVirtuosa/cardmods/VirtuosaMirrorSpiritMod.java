@@ -22,7 +22,9 @@ public class VirtuosaMirrorSpiritMod extends AbstractCardModifier {
     //TODO if card moves to another pile, transform back into initial MirrorSpirit card
 
     public void onInitialApplication(AbstractCard card) {
-        CardModifierManager.addModifier(card, new VirtuosaSpectralMod());
+        if (!CardModifierManager.hasModifier(card, VirtuosaSpectralMod.ID)) {
+            CardModifierManager.addModifier(card, new VirtuosaSpectralMod());
+        }
     }
 
     @Override

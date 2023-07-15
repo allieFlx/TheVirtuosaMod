@@ -77,8 +77,8 @@ public class VirtuosaSpectralMod extends AbstractCardModifier {
     @Override
     public void atEndOfTurn(AbstractCard card, CardGroup group) {
         super.atEndOfTurn(card, group);
+        // TODO pile blue flame effects
         AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(card, group));
-        //AbstractDungeon.actionManager.addToTop(new SpectralExhaustAction(card, group));
 
         // send to spectral specific "spirit pile"
         // the spirit pile is non-specific with what cards are there, only the count matters

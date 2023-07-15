@@ -55,7 +55,7 @@ public class SpectralExhaustPatch
             __instance.group.remove(c);
 
             // ---
-
+            // TODO: Spectral exhaust from hand effect
             if (__instance == AbstractDungeon.player.hand) {
                 AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
             }
