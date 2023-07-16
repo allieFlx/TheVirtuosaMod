@@ -27,7 +27,7 @@ public class VirtuosaFireDance extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(VirtuosaFireDance.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("VirtuosaFireDance_BETA.png");
 
     // /TEXT DECLARATION/
 
