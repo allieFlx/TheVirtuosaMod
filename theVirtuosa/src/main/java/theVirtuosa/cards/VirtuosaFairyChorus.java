@@ -67,14 +67,7 @@ public class VirtuosaFairyChorus extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-
-            /*
-            AbstractCard card = new SpectralSprite();
-            card.upgraded = true;
-
-             */
             this.cardsToPreview.upgrade();
-
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

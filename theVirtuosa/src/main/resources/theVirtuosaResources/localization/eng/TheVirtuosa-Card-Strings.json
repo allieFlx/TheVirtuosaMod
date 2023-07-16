@@ -85,7 +85,8 @@
   },
   "theVirtuosa:VirtuosaGraveDance": {
     "NAME": "Grave Dance",
-    "DESCRIPTION": "Shuffle a card from your discard pile into your draw pile. NL Add a thevirtuosa:Spectral copy to your hand."
+    "DESCRIPTION": "Shuffle a card from your discard pile into your draw pile. NL Add a thevirtuosa:Spectral copy to your hand.",
+    "UPGRADE_DESCRIPTION": "Shuffle a card from your discard pile into your draw pile. NL Add !M! thevirtuosa:Spectral copies to your hand."
   },
   "theVirtuosa:VirtuosaRequiem": {
     "NAME": "Requiem",
