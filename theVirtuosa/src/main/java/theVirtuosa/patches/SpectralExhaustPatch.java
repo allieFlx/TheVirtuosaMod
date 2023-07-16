@@ -23,11 +23,10 @@ import java.util.Iterator;
 )
 public class SpectralExhaustPatch
 {
-    private static final Logger logger = LogManager.getLogger(SpectralExhaustPatch.class.getName());
+    // private static final Logger logger = LogManager.getLogger(SpectralExhaustPatch.class.getName());
     @SpirePrefixPatch
     public static SpireReturn<?> spectralCheck(CardGroup __instance, AbstractCard c) {
         if (CardModifierManager.hasModifier(c, VirtuosaSpectralMod.ID)) {
-            logger.info("Interrupted exhaust: " + c.name);
             // ---
             Iterator var2 = AbstractDungeon.player.relics.iterator();
 
@@ -63,7 +62,6 @@ public class SpectralExhaustPatch
             // ---
 
             TheVirtuosa.spectralPile.addToTop(c);
-            logger.info("Card added to spectral pile, now contains " + TheVirtuosa.spectralPile.size() + " cards.");
             AbstractDungeon.player.onCardDrawOrDiscard();
             // ---
             return SpireReturn.Return(null);
