@@ -25,7 +25,7 @@ public class VirtuosaSharpNote extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(VirtuosaSharpNote.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("VirtuosaSharpNote_BETA.png");
 
     // /TEXT DECLARATION/
 
