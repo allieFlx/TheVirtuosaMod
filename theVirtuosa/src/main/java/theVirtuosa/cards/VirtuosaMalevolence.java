@@ -1,10 +1,12 @@
 package theVirtuosa.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.red.Rampage;
+import com.megacrit.cardcrawl.cards.red.SwordBoomerang;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -41,9 +43,9 @@ public class VirtuosaMalevolence extends AbstractDynamicCard {
     public static final CardColor COLOR = TheVirtuosaCharacter.Enums.COLOR_BROWN;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 3;
+    private static final int UPGRADE_PLUS_DMG = 1;
     private static final int MAGIC = 3;
-    // private static final int UPGRADE_MAGIC = 1;
 
     // /STAT DECLARATION/
 
@@ -57,9 +59,9 @@ public class VirtuosaMalevolence extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        this.addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SMASH));
-
+        for(int i = 0; i < this.magicNumber; ++i) {
+            this.addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SMASH));
+        }
         this.addToBot(
                 new RevealCardsAction(
                         magicNumber,
@@ -80,6 +82,7 @@ public class VirtuosaMalevolence extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
     }

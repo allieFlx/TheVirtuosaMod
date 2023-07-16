@@ -56,7 +56,7 @@
   },
   "theVirtuosa:VirtuosaMalevolence": {
     "NAME": "Maleficence",
-    "DESCRIPTION": "Deal !D! damage. NL thevirtuosa:Reveal !M! cards. NL If none are Skills, double this card's damage this combat."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL thevirtuosa:Reveal !M! cards. NL If none are Skills, double this card's damage this combat."
   },
   "theVirtuosa:VirtuosaSpy": {
     "NAME": "Spy",
@@ -69,7 +69,7 @@
   },
   "theVirtuosa:VirtuosaHearteningVerse": {
     "NAME": "Heartening Verse",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! thevirtuosa:Resonance. NL Remove !M! Vulnerable."
+    "DESCRIPTION": "Gain !B! Block. NL Remove !M! Vulnerable."
   },
   "theVirtuosa:VirtuosaGhostArmor": {
     "NAME": "Spirit Ward",

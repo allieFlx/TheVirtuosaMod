@@ -38,7 +38,7 @@ public class VirtuosaForebodingBlade extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 9;
-    private static final int UPGRADE_PLUS_DAMAGE = 5;
+    private static final int UPGRADE_PLUS_DAMAGE = 3;
     private static final int MAGIC = 3;
     private static final int UPGRADE_MAGIC = 2;
 

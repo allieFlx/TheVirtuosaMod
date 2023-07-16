@@ -38,7 +38,7 @@ public class VirtuosaHearteningVerse extends AbstractDynamicCard {
     public static final CardColor COLOR = TheVirtuosaCharacter.Enums.COLOR_BROWN;
 
     private static final int COST = 1;
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 8;
     private static final int UPGRADE_PLUS_BLOCK = 2;
     private static final int MAGIC = 1;
     private static final int UPGRADE_MAGIC = 1;
@@ -59,8 +59,7 @@ public class VirtuosaHearteningVerse extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new VirtuosaResonancePower(p, magicNumber)));
+        // AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VirtuosaResonancePower(p, magicNumber)));
         AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "Vulnerable", magicNumber));
     }
 
