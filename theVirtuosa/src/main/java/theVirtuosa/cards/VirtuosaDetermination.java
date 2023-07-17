@@ -31,7 +31,7 @@ public class VirtuosaDetermination extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(VirtuosaDetermination.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("VirtuosaDetermination_BETA.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
