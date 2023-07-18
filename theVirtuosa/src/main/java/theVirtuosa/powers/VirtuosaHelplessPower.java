@@ -27,8 +27,6 @@ public class VirtuosaHelplessPower extends AbstractPower implements CloneablePow
     private static final Texture tex84 = TextureLoader.getTexture("theVirtuosaResources/images/powers/helpless_power84.png");
     private static final Texture tex32 = TextureLoader.getTexture("theVirtuosaResources/images/powers/helpless_power32.png");
 
-    // TODO Helpless keyword
-
     public VirtuosaHelplessPower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
