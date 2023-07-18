@@ -18,6 +18,14 @@
     "DESCRIPTION": "Spectral cards disappear after being played or at the end of your turn."
   },
   {
+    "PROPER_NAME": "Helpless",
+    "NAMES": [
+      "Helpless",
+      "helpless"
+    ],
+    "DESCRIPTION": "Helpless creatures cannot gain Block."
+  },
+  {
     "PROPER_NAME": "Resonance",
     "NAMES": [
       "Resonance",

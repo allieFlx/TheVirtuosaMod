@@ -92,6 +92,10 @@
     "NAME": "Requiem",
     "DESCRIPTION": "This turn, your thevirtuosa:Spectral cards are played twice."
   },
+  "theVirtuosa:VirtuosaFellingStrike": {
+    "NAME": "Felling Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! thevirtuosa:Helpless."
+  },
   "theVirtuosa:VirtuosaForebodingBlade": {
     "NAME": "Foreboding Blade",
     "DESCRIPTION": "Deal !D! damage. NL Shuffle !M! thevirtuosa:Spectral *Strikes into your draw pile."
@@ -148,7 +152,7 @@
   },
   "theVirtuosa:VirtuosaMaim": {
     "NAME": "Maim",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! *Helpless, Vulnerable, and Weak."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! thevirtuosa:Helpless, Vulnerable, and Weak."
   },
   "theVirtuosa:VirtuosaArpeggio": {
     "NAME": "Arpeggio",
