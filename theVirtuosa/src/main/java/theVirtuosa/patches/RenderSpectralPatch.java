@@ -24,8 +24,8 @@ public class RenderSpectralPatch {
             Gdx.files.internal(TheVirtuosa.makeShaderPath("spectral/fragment.fs"))
     );
     private static final ShaderProgram ptShader = new ShaderProgram(
-            Gdx.files.internal(TheVirtuosa.makeShaderPath("spectralPortrait/vertex.vs")),
-            Gdx.files.internal(TheVirtuosa.makeShaderPath("spectralPortrait/fragment.fs"))
+            Gdx.files.internal(TheVirtuosa.makeShaderPath("spectralSoftLight/vertex.vs")),
+            Gdx.files.internal(TheVirtuosa.makeShaderPath("spectralSoftLight/fragment.fs"))
     );
     private static final Texture TEXT_GLOW = ImageMaster.loadImage("theVirtuosaResources/images/512/spectral_card_glow.png");
 
