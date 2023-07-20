@@ -9,10 +9,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.GainStrengthPower;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.*;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.util.TextureLoader;
 
@@ -47,7 +44,7 @@ public class VirtuosaVengeancePower extends AbstractPower implements CloneablePo
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (damageAmount > 0)
+        if (damageAmount > 0 && info.type != DamageInfo.DamageType.HP_LOSS)
         {
             this.flash();
             this.addToTop(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
