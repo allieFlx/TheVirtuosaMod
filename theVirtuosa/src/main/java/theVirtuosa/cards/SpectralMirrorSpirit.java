@@ -19,7 +19,7 @@ public class SpectralMirrorSpirit extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(SpectralMirrorSpirit.class.getSimpleName());
-    public static final String IMG = makeCardPath("VirtuosaMirrorSpirit_BETA.png");
+    public static final String IMG = makeCardPath("SpectralMirrorSpirit.png");
 
     // /TEXT DECLARATION/
 
