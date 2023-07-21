@@ -24,6 +24,10 @@ public class VirtuosaFaeBargain extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
+    // TODO: bug / interaction
+    //  Choosing No Present after playing Determination discards the hand but still gains block
+    //  that would have been gained from exhausting it - feature or fix?
+
     public static final String ID = TheVirtuosa.makeID(VirtuosaFaeBargain.class.getSimpleName());
     public static final String IMG = makeCardPath("Skill.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
