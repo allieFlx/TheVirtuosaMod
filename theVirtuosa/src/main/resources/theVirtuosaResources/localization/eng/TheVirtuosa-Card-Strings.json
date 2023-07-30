@@ -190,6 +190,12 @@
     "DESCRIPTION": "thevirtuosa:Reveal !M! cards. NL Put !theVirtuosa:SecondMagic! into your hand. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["Select cards to keep in hand."]
   },
+  "theVirtuosa:VirtuosaPurifyingLight": {
+    "NAME": "Purifying Light",
+    "DESCRIPTION": "thevirtuosa:Reveal 3 cards. NL Exhaust 1 then put the rest into your hand.",
+    "UPGRADE_DESCRIPTION": "thevirtuosa:Reveal 3 cards. NL Exhaust any number then put the rest into your hand.",
+    "EXTENDED_DESCRIPTION": ["Select a card to exhaust.", "Select cards to exhaust."]
+  },
   "theVirtuosa:VirtuosaTakeRoot": {
     "NAME": "Take Root",
     "DESCRIPTION": "Gain !M! Malleable."
