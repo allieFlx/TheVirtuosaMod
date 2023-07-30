@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.RegenPower;
+import com.megacrit.cardcrawl.powers.RegenerateMonsterPower;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.util.TextureLoader;
 
@@ -67,6 +69,7 @@ public class CommonPower extends AbstractPower implements CloneablePowerInterfac
     // At the end of the turn, remove gained Dexterity.
     @Override
     public void atEndOfTurn(final boolean isPlayer) {
+
         int count = 0;
         for (final AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
             // This is how you iterate through arrays (like the one above) and card groups like

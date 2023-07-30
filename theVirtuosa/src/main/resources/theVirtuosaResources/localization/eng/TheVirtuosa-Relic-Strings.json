@@ -8,9 +8,9 @@
   },
   "theVirtuosa:VirtuosaBossSwapRelic": {
     "NAME": "Marble Gall",
-    "FLAVOR": "Power emanates deep within the oaken growth.",
+    "FLAVOR": "Power emanates deep within the blackened oaken growth.",
     "DESCRIPTIONS": [
-      "???"
+      "Gain [E] at the start of your turn. At the start of combat, gain #b1 #yRot."
     ]
   },
   "theVirtuosa:VirtuosaRunicForkRelic": {

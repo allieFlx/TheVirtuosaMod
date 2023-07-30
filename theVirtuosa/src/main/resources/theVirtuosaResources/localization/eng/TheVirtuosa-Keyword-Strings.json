@@ -18,6 +18,16 @@
     "DESCRIPTION": "Spectral cards disappear after being played or at the end of your turn."
   },
   {
+    "PROPER_NAME": "Rot",
+    "NAMES": [
+      "Rot",
+      "rot",
+      "Rotten",
+      "rotten"
+    ],
+    "DESCRIPTION": "Rotten creatures lose HP at the start of their turn."
+  },
+  {
     "PROPER_NAME": "Helpless",
     "NAMES": [
       "Helpless",

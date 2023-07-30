@@ -7,6 +7,10 @@
         "NAME": "Spurs",
         "DESCRIPTIONS": ["When attacked, deals #b", " damage."]
 },
+"theVirtuosa:VirtuosaRotPower": {
+        "NAME": "Rot",
+        "DESCRIPTIONS": ["At the start of your turn, lose #b", " HP."]
+},
 "theVirtuosa:VirtuosaRequiemPower": {
          "NAME": "Requiem",
          "DESCRIPTIONS": [

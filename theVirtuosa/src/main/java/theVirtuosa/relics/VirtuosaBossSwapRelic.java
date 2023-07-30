@@ -5,13 +5,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.RegenPower;
-import com.megacrit.cardcrawl.relics.FrozenCore;
-import com.megacrit.cardcrawl.rewards.chests.BossChest;
-import com.megacrit.cardcrawl.screens.select.BossRelicSelectScreen;
-import com.megacrit.cardcrawl.screens.stats.BossRelicChoiceStats;
+import com.megacrit.cardcrawl.relics.TheSpecimen;
 import theVirtuosa.TheVirtuosa;
-import theVirtuosa.powers.VirtuosaResonancePower;
+import theVirtuosa.powers.VirtuosaRotPower;
 import theVirtuosa.util.TextureLoader;
 
 import static theVirtuosa.TheVirtuosa.makeRelicOutlinePath;
@@ -21,7 +17,8 @@ public class VirtuosaBossSwapRelic extends CustomRelic {
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
      *
-     * Regen alt
+     * Marble Gall
+     * Regen alt: Gain [E] each turn. At the start of each combat, gain 3 Rot.
      */
 
     // ID, images, text.
@@ -47,7 +44,20 @@ public class VirtuosaBossSwapRelic extends CustomRelic {
         }
     }
 
-    // TODO: marble gall regen effect
+    public void onEquip() {
+        ++AbstractDungeon.player.energy.energyMaster;
+    }
+
+    public void onUnequip() {
+        --AbstractDungeon.player.energy.energyMaster;
+    }
+
+    public void atBattleStart() {
+        flash();
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                new VirtuosaRotPower(AbstractDungeon.player, 1), 1));
+        AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+    }
 
     public boolean canSpawn() {
         return AbstractDungeon.player.hasRelic(VirtuosaStartingRelic.ID);
