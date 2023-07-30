@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import theVirtuosa.TheVirtuosa;
 import theVirtuosa.interfaces.OnRevealCard;
 import theVirtuosa.patches.OnAddCardToDeckPatch;
 
@@ -27,7 +28,6 @@ public class RevealCardsAction extends AbstractGameAction {
     //  if false, return callback as normal
     //  if true, only return cards where isMovedOnReveal is false
     public RevealCardsAction(int amount, Predicate<AbstractCard> predicate, Consumer<ArrayList<AbstractCard>> callback, boolean isMovingCallback, Consumer<Integer> defaultCallback) {
-
         this.p = AbstractDungeon.player;
         this.predicate = predicate;
         this.callback = callback;
@@ -36,6 +36,11 @@ public class RevealCardsAction extends AbstractGameAction {
         this.setValues(this.p, AbstractDungeon.player, amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
+
+        if (AbstractDungeon.player.hasRelic(TheVirtuosa.makeID("VirtuosaGoldenTorcRelic"))) {
+            AbstractDungeon.player.getRelic(TheVirtuosa.makeID("VirtuosaGoldenTorcRelic")).flash();
+            this.amount += 1;
+        }
     }
 
     public RevealCardsAction(int amount, Predicate<AbstractCard> predicate, Consumer<ArrayList<AbstractCard>> callback, Consumer<Integer> defaultCallback) {

@@ -5,7 +5,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.relics.TheSpecimen;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.powers.VirtuosaRotPower;
 import theVirtuosa.util.TextureLoader;

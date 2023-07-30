@@ -196,6 +196,7 @@ public class TheVirtuosaCharacter extends CustomPlayer {
         UnlockTracker.markRelicAsSeen(VirtuosaRunicForkRelic.ID);
         UnlockTracker.markRelicAsSeen(VirtuosaSprialMirrorRelic.ID);
         UnlockTracker.markRelicAsSeen(VirtuosaOakFlagonRelic.ID);
+        UnlockTracker.markRelicAsSeen(VirtuosaGoldenTorcRelic.ID);
 
         return retVal;
     }

@@ -34,6 +34,13 @@
       "Whenever you heal HP during combat, gain an equal amount of #yResonance."
     ]
   },
+  "theVirtuosa:VirtuosaGoldenTorcRelic": {
+    "NAME": "Golden Torc",
+    "FLAVOR": "A heavy weight around ancient necks.",
+    "DESCRIPTIONS": [
+      "Whenever you #yReveal, #yReveal #b1 additional card."
+    ]
+  },
   "theVirtuosa:PlaceholderRelic": {
     "NAME": "Placeholder Energy Relic",
     "FLAVOR": "The snake is a friend.",
