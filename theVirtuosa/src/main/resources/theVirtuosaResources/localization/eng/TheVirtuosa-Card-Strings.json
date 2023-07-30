@@ -261,6 +261,10 @@
     "DESCRIPTION": "Choose one: NL Exhaust your discard pile, your hand, or your draw pile. NL Gain !B! Block for each card Exhausted. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [" NL (Gain ", " Block)"]
   },
+  "theVirtuosa:VirtuosaCocoon": {
+    "NAME": "Cocoon",
+    "DESCRIPTION": "Skip your next turn. NL ???"
+  },
   "theVirtuosa:BargainNoPast": {
     "NAME": "No Past",
     "DESCRIPTION": "Exhaust your discard pile."
