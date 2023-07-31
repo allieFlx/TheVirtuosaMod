@@ -2,5 +2,17 @@
 "theVirtuosa:PlaceholderPotion": {
         "NAME": "Placeholder Potion",
         "DESCRIPTIONS": ["Gain ", " At the end of your turn, lose ", " Strength."]
+},
+"theVirtuosa:VirtuosaNaturalTonicPotion": {
+        "NAME": "Natural Tonic",
+        "DESCRIPTIONS": ["Gain #b", " #yMalleable"]
+},
+"theVirtuosa:VirtuosaMeadOfPoetryPotion": {
+        "NAME": "Mead of Poetry",
+        "DESCRIPTIONS": ["Gain #b", " #yResonance"]
+},
+"theVirtuosa:VirtuosaUnspokenWaterPotion": {
+        "NAME": "Unspoken Water",
+        "DESCRIPTIONS": ["Remove all of your debuffs."]
 }
 }

@@ -24,6 +24,9 @@ import org.apache.logging.log4j.Logger;
 import theVirtuosa.cards.*;
 import theVirtuosa.characters.TheVirtuosaCharacter;
 import theVirtuosa.events.IdentityCrisisEvent;
+import theVirtuosa.potions.VirtuosaMeadOfPoetryPotion;
+import theVirtuosa.potions.VirtuosaNaturalTonicPotion;
+import theVirtuosa.potions.VirtuosaUnspokenWaterPotion;
 import theVirtuosa.relics.*;
 import theVirtuosa.util.IDCheckDontTouchPls;
 import theVirtuosa.util.TextureLoader;
@@ -322,6 +325,12 @@ public class TheVirtuosa implements
         // Remember, you can press ctrl+P inside parentheses like addPotions)
         // BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheVirtuosa.Enums.THE_VIRTUOSA);
         // TODO ^ class specific potions
+
+        BaseMod.addPotion(VirtuosaNaturalTonicPotion.class, Color.LIME, Color.CHARTREUSE, null, VirtuosaNaturalTonicPotion.POTION_ID, TheVirtuosaCharacter.Enums.THE_VIRTUOSA);
+        BaseMod.addPotion(VirtuosaMeadOfPoetryPotion.class, Color.ORANGE, Color.BROWN, Color.WHITE, VirtuosaMeadOfPoetryPotion.POTION_ID, TheVirtuosaCharacter.Enums.THE_VIRTUOSA);
+        BaseMod.addPotion(VirtuosaUnspokenWaterPotion.class, Color.SKY, Color.WHITE, null, VirtuosaUnspokenWaterPotion.POTION_ID, TheVirtuosaCharacter.Enums.THE_VIRTUOSA);
+
+
         logger.info("Done editing potions");
     }
     
