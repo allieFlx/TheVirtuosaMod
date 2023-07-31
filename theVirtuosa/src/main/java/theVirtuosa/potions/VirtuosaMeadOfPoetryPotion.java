@@ -44,12 +44,12 @@ public class VirtuosaMeadOfPoetryPotion extends CustomPotion {
 
     @Override
     public int getPotency(final int potency) {
-        return 5;
+        return 6;
     }
 
     public void upgradePotion()
     {
-      potency += 5;
+      potency += 6;
       tips.clear();
       tips.add(new PowerTip(name, description));
     }
