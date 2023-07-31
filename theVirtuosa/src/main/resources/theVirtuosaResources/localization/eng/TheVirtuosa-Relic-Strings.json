@@ -41,6 +41,13 @@
       "Whenever you #yReveal, #yReveal #b1 additional card."
     ]
   },
+  "theVirtuosa:VirtuosaCairnRelic": {
+    "NAME": "Cairn",
+    "FLAVOR": "The stones whisper in the wind, guiding lost souls to their final rest.",
+    "DESCRIPTIONS": [
+      "Whenever you play a #ySpectral card, gain #b3 #yBlock."
+    ]
+  },
   "theVirtuosa:PlaceholderRelic": {
     "NAME": "Placeholder Energy Relic",
     "FLAVOR": "The snake is a friend.",
