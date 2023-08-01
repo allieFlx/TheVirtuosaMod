@@ -51,8 +51,6 @@ public class VirtuosaHearteningVerse extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
-
-        this.tags.add(CustomTags.GAIN_RESONANCE);
     }
 
     // Actions the card should do.

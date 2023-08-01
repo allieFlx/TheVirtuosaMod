@@ -68,7 +68,7 @@
     "EXTENDED_DESCRIPTION": ["Select a card to transform."]
   },
   "theVirtuosa:VirtuosaHearteningVerse": {
-    "NAME": "Heartening Verse",
+    "NAME": "Hearten",
     "DESCRIPTION": "Gain !B! Block. NL Remove !M! Vulnerable."
   },
   "theVirtuosa:VirtuosaGhostArmor": {
@@ -264,6 +264,10 @@
   "theVirtuosa:VirtuosaCocoon": {
     "NAME": "Cocoon",
     "DESCRIPTION": "Skip your next turn. NL ???"
+  },
+  "theVirtuosa:VirtuosaVorpalSword": {
+    "NAME": "Vorpal Sword",
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain a boon."
   },
   "theVirtuosa:BargainNoPast": {
     "NAME": "No Past",
