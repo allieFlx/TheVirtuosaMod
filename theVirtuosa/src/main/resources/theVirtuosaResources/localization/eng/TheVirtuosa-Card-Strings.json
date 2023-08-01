@@ -269,6 +269,10 @@
     "NAME": "Vorpal Sword",
     "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain a boon."
   },
+  "theVirtuosa:SpecialFomorianEye": {
+    "NAME": "Fomorian Eye",
+    "DESCRIPTION": "Retain NL Play a card from any pile. NL Purge."
+  },
   "theVirtuosa:BargainNoPast": {
     "NAME": "No Past",
     "DESCRIPTION": "Exhaust your discard pile."
@@ -280,6 +284,18 @@
   "theVirtuosa:BargainNoFuture": {
     "NAME": "No Future",
     "DESCRIPTION": "Exhaust your draw pile."
+  },
+  "theVirtuosa:ChoiceVisionsOfEternity": {
+    "NAME": "Visions of Eternity",
+    "DESCRIPTION": "Play a card from your draw pile."
+  },
+  "theVirtuosa:ChoiceVisionsOfFlame": {
+    "NAME": "Visions of Flame",
+    "DESCRIPTION": "Play a card from your exhaust pile."
+  },
+  "theVirtuosa:ChoiceVisionsOfRuin": {
+    "NAME": "Visions of Ruin",
+    "DESCRIPTION": "Play a card from your discard pile."
   },
   "theVirtuosa:DefaultCommonAttack": {
     "NAME": "Strike2",

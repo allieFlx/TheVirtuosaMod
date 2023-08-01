@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.unique.IncreaseMaxHpAction;
+import com.megacrit.cardcrawl.actions.unique.SummonGremlinAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -54,6 +55,7 @@ public class VorpalSwordAction extends AbstractGameAction
                     this.addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player, this.magic));
                 } else if (((AbstractMonster)this.target).type == AbstractMonster.EnemyType.BOSS) {
                     // do boss effect - summon leshy
+                    // if the boss IS Leshy, player gains Leshy's head relic, which bestows Leshy's Eye card.
                 }
             }
 
