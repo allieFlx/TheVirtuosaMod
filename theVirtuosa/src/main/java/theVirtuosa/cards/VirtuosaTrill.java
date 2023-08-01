@@ -1,5 +1,6 @@
 package theVirtuosa.cards;
 
+import basemod.AutoAdd;
 import basemod.devcommands.draw.Draw;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -19,6 +20,8 @@ import java.util.Iterator;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
+@AutoAdd.Ignore
+@Deprecated
 public class VirtuosaTrill extends AbstractDynamicCard {
 
     /*

@@ -11,6 +11,7 @@ import theVirtuosa.characters.TheVirtuosaCharacter;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 @AutoAdd.Ignore
+@Deprecated
 public class VirtuosaBraceUpNoCopy extends AbstractDynamicCard {
 
     /*

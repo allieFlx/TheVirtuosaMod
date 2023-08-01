@@ -1,5 +1,6 @@
 package theVirtuosa.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -19,6 +20,8 @@ import theVirtuosa.patches.VirtuosaCodaApplyPowerPatch;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
+@AutoAdd.Ignore
+@Deprecated
 public class VirtuosaMalevolence extends AbstractDynamicCard {
 
     /*

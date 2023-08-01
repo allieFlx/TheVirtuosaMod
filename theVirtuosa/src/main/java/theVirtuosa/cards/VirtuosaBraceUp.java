@@ -1,5 +1,6 @@
 package theVirtuosa.cards;
 
+import basemod.AutoAdd;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.OnObtainCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
@@ -11,6 +12,8 @@ import theVirtuosa.interfaces.OnAddToDeckCard;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
+@AutoAdd.Ignore
+@Deprecated
 public class VirtuosaBraceUp extends VirtuosaBraceUpNoCopy implements OnObtainCard {
 
     /*
