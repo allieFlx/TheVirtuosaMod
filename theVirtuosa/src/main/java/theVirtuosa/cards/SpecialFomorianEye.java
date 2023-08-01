@@ -6,6 +6,8 @@ import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.PurgeField;
 import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.actions.ExorcismAction;
@@ -19,13 +21,16 @@ public class SpecialFomorianEye extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     *  Retain NL Choose one: Play a card from your draw pile, discard pile, or exhaust pile. Purge.
+     *  (Retain.) Play a card not in your hand. Purge.
      */
 
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(SpecialFomorianEye.class.getSimpleName());
     public static final String IMG = makeCardPath("Skill.png");
+
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -45,7 +50,6 @@ public class SpecialFomorianEye extends AbstractDynamicCard {
     public SpecialFomorianEye() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
-        this.retain = true; // upgrade only
         PurgeField.purge.set(this, true);
     }
 
@@ -68,11 +72,13 @@ public class SpecialFomorianEye extends AbstractDynamicCard {
     }
 
     //Upgraded stats.
-
-    @Override
-    public boolean canUpgrade() { return false; }
-
     @Override
     public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            this.retain = true;
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
+        }
     }
 }

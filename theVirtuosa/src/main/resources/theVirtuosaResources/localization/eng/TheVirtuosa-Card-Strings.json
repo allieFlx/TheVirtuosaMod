@@ -271,7 +271,8 @@
   },
   "theVirtuosa:SpecialFomorianEye": {
     "NAME": "Fomorian Eye",
-    "DESCRIPTION": "Retain NL Play a card from any pile. NL Purge."
+    "DESCRIPTION": "Play a card not in your hand. NL Purge.",
+    "UPGRADE_DESCRIPTION": "Retain NL Play a card not in your hand. NL Purge."
   },
   "theVirtuosa:BargainNoPast": {
     "NAME": "No Past",

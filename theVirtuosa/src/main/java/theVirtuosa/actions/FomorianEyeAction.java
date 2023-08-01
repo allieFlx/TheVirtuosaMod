@@ -23,17 +23,14 @@ public class FomorianEyeAction extends AbstractGameAction {
         this.group = group;
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
-        logger.info("Init Fomarian Eye");
     }
 
     @Override
     public void update() {
         if (this.duration == this.startDuration) {
             if (this.group.isEmpty()) {
-                logger.info("Fomo Eye: Group was empty");
                 this.isDone = true;
             } else {
-                logger.info("Fomo Eye: select cards");
                 CardGroup temp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
                 Iterator var6 = this.group.group.iterator();
 
@@ -49,7 +46,6 @@ public class FomorianEyeAction extends AbstractGameAction {
             }
         } else {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                logger.info("Fomo Eye: card selected");
                 Iterator var1 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
 
                 while(var1.hasNext()) {
