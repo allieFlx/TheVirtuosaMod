@@ -48,6 +48,13 @@
       "Whenever you play a #ySpectral card, gain #b3 #yBlock."
     ]
   },
+  "theVirtuosa:VirtuosaMagicFluteRelic": {
+    "NAME": "Magic Flute",
+    "FLAVOR": "Doot doot!",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yResonance, gain #b1 additional #yResonance."
+    ]
+  },
   "theVirtuosa:PlaceholderRelic": {
     "NAME": "Placeholder Energy Relic",
     "FLAVOR": "The snake is a friend.",
