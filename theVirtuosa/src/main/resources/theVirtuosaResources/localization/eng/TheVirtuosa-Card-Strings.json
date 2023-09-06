@@ -1,4 +1,8 @@
 {
+  "theVirtuosa:SpecialLostInTheWoods": {
+    "NAME": "Lost In The Woods",
+    "DESCRIPTION": "Exhaust. NL After you play a non-Curse card, shuffle a copy of this into your draw pile."
+  },
   "theVirtuosa:SpectralBasicAttack": {
     "NAME": "Spectral Strike",
     "DESCRIPTION": "thevirtuosa:Spectral. NL Deal !D! damage."
