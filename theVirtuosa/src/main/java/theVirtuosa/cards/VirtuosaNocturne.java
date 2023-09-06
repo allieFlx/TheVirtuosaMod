@@ -29,7 +29,7 @@ public class VirtuosaNocturne extends AbstractDynamicCard implements OnRevealCar
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(VirtuosaNocturne.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("VirtuosaNocturne.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
