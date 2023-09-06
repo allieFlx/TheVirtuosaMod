@@ -10,6 +10,7 @@
     "NAME": "Marble Gall",
     "FLAVOR": "Power emanates deep within the blackened oaken growth.",
     "DESCRIPTIONS": [
+      "Replaces [#ed6acc]Forest [#ed6acc]Charm. ",
       "Gain [E] at the start of your turn. At the start of combat, gain #b1 #yRot."
     ]
   },

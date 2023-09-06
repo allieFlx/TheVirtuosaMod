@@ -16,6 +16,7 @@ import theVirtuosa.characters.TheVirtuosaCharacter;
 import java.util.ArrayList;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
+@AutoAdd.Ignore
 public class SpecialFomorianEye extends AbstractDynamicCard {
 
     /*

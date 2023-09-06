@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.RingOfTheSerpent;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.powers.VirtuosaRotPower;
 import theVirtuosa.util.TextureLoader;
@@ -17,7 +18,7 @@ public class VirtuosaBossSwapRelic extends CustomRelic {
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
      *
      * Marble Gall
-     * Regen alt: Gain [E] each turn. At the start of each combat, gain 3 Rot.
+     * Regen alt: Replaces Forest Charm. Gain [E] each turn. At the start of each combat, gain 3 Rot.
      */
 
     // ID, images, text.
@@ -63,7 +64,7 @@ public class VirtuosaBossSwapRelic extends CustomRelic {
     }
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + DESCRIPTIONS[1];
     }
 
 }
