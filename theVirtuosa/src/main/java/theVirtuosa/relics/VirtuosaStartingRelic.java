@@ -22,8 +22,8 @@ public class VirtuosaStartingRelic extends CustomRelic {
     // ID, images, text.
     public static final String ID = TheVirtuosa.makeID("VirtuosaStartingRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic2.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic2.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("forestCharm.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("forestCharm.png"));
 
     public VirtuosaStartingRelic() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
