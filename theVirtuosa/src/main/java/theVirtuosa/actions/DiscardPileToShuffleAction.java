@@ -20,17 +20,27 @@ public class DiscardPileToShuffleAction extends AbstractGameAction {
     public static final String[] TEXT;
     private AbstractPlayer p;
     private Consumer<AbstractCard> callback;
+    private int amount;
 
-    public DiscardPileToShuffleAction(AbstractCreature source, Consumer<AbstractCard> callback) {
+    public DiscardPileToShuffleAction(AbstractCreature source, Consumer<AbstractCard> callback, int amount) {
         this.p = AbstractDungeon.player;
         this.callback = callback;
         this.setValues((AbstractCreature)null, source, this.amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FASTER;
+        this.amount = amount;
     }
 
     public DiscardPileToShuffleAction(AbstractCreature source) {
-        this(source, null);
+        this(source, null, 1);
+    }
+
+    public DiscardPileToShuffleAction(AbstractCreature source, int amount) {
+        this(source, null, amount);
+    }
+
+    public DiscardPileToShuffleAction(AbstractCreature source, Consumer<AbstractCard> callback) {
+        this(source, callback, 1);
     }
 
     public void update() {
@@ -43,18 +53,25 @@ public class DiscardPileToShuffleAction extends AbstractGameAction {
                     return;
                 }
 
-                if (this.p.discardPile.size() == 1) {
-                    AbstractCard tmp = this.p.discardPile.getTopCard();
-                    this.p.discardPile.removeCard(tmp);
-                    this.p.discardPile.moveToDeck(tmp, true);
-                    if (this.callback != null)
-                    {
-                        this.callback.accept(tmp);
+                if (this.p.discardPile.size() == this.amount) {
+                    ArrayList<AbstractCard> tmp = new ArrayList<>();
+                    tmp.addAll(this.p.discardPile.group);
+                    Iterator var3 = tmp.iterator();
+
+                    while(var3.hasNext()) {
+                        AbstractCard c = (AbstractCard)var3.next();
+                        this.p.discardPile.removeCard(c);
+                        this.p.hand.moveToDeck(c, true);
+                        if (this.callback != null)
+                        {
+                            this.callback.accept(c);
+                        }
                     }
                 }
 
                 if (this.p.discardPile.group.size() > this.amount) {
-                    AbstractDungeon.gridSelectScreen.open(this.p.discardPile, 1, TEXT[0], false, false, false, false);
+                    String uiText = this.amount == 1 ? TEXT[0] : TEXT[1] + this.amount + TEXT[2];
+                    AbstractDungeon.gridSelectScreen.open(this.p.discardPile, this.amount, uiText, false, false, false, false);
                     this.tickDuration();
                     return;
                 }

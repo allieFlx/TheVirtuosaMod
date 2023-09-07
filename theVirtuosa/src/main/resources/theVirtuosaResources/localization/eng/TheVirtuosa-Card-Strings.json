@@ -249,8 +249,8 @@
   },
   "theVirtuosa:VirtuosaTrickery": {
     "NAME": "Trickery",
-    "DESCRIPTION": "At the start of your turn, shuffle a card into your draw pile and draw a card.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, shuffle !M! cards into your draw pile and draw !M! cards."
+    "DESCRIPTION": "At the start of your turn, shuffle a card from your discard pile into your draw pile and draw a card.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, shuffle !M! cards from your discard pile into your draw pile and draw !M! cards."
   },
   "theVirtuosa:VirtuosaSylvanForm": {
     "NAME": "Sidhe Form",

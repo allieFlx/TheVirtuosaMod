@@ -38,9 +38,9 @@
 "theVirtuosa:VirtuosaTrickeryPower": {
         "NAME": "Trickery",
         "DESCRIPTIONS": ["At the start of your turn, shuffle #b",
-                " card into your draw pile and draw #b",
+                " card from your discard pile into your draw pile and draw #b",
                 " card.",
-                " cards into your draw pile and draw #b",
+                " cards from your discard pile into your draw pile and draw #b",
                 " cards."]
 },
 "theVirtuosa:VirtuosaMossShieldPower": {

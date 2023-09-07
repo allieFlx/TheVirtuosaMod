@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ToolsOfTheTradePower;
 import theVirtuosa.TheVirtuosa;
+import theVirtuosa.actions.DiscardPileToShuffleAction;
 import theVirtuosa.actions.ShuffleCardsAction;
 import theVirtuosa.util.TextureLoader;
 
@@ -56,7 +57,8 @@ public class VirtuosaTrickeryPower extends AbstractPower implements CloneablePow
                 AbstractDungeon.player.drawPile.shuffle()));
 
          */
-        this.addToBot(new ShuffleCardsAction(AbstractDungeon.player.hand, this.amount));
+        //this.addToBot(new ShuffleCardsAction(AbstractDungeon.player.hand, this.amount));
+        this.addToBot(new DiscardPileToShuffleAction(this.owner, this.amount));
         this.addToBot(new DrawCardAction(this.owner, this.amount));
     }
 
