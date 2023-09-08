@@ -3,6 +3,15 @@
         "NAME": "Brambles",
         "DESCRIPTIONS": ["Whenever you deal attack damage, target loses #b", " #yStrength."]
 },
+"theVirtuosa:VirtuosaParryPower": {
+        "NAME": "Parry",
+        "DESCRIPTIONS": [
+                "The first time you are attacked this turn, ",
+                "#yReveal a card. If it is an Attack, take no damage.",
+                "#yReveal #b",
+                " cards. If it is an Attack, take no damage."
+        ]
+},
 "theVirtuosa:VirtuosaTempThornsPower": {
         "NAME": "Spurs",
         "DESCRIPTIONS": ["When attacked, deals #b", " damage."]

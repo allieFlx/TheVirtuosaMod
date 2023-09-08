@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theVirtuosa.TheVirtuosa;
-import theVirtuosa.characters.TheVirtuosaCharacter;
 import theVirtuosa.interfaces.OnRevealCard;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,16 +18,19 @@ public class RevealCardsAction extends AbstractGameAction {
     private Consumer<ArrayList<AbstractCard>> callback;
     private boolean isMovingCallback;
     private Consumer<Integer> defaultCallback;
+    private boolean suppressMessage;
 
     // boolean parameter for the caller: is the caller attempting to move cards in the callback?
     //  if false, return callback as normal
     //  if true, only return cards where isMovedOnReveal is false
-    public RevealCardsAction(int amount, Predicate<AbstractCard> predicate, Consumer<ArrayList<AbstractCard>> callback, boolean isMovingCallback, Consumer<Integer> defaultCallback) {
+    public RevealCardsAction(int amount, Predicate<AbstractCard> predicate, Consumer<ArrayList<AbstractCard>> callback,
+                             boolean isMovingCallback, Consumer<Integer> defaultCallback, boolean suppressMessage) {
         this.p = AbstractDungeon.player;
         this.predicate = predicate;
         this.callback = callback;
         this.isMovingCallback = isMovingCallback;
         this.defaultCallback = defaultCallback;
+        this.suppressMessage = suppressMessage;
         this.setValues(this.p, AbstractDungeon.player, amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
@@ -40,22 +42,25 @@ public class RevealCardsAction extends AbstractGameAction {
     }
 
     public RevealCardsAction(int amount, Predicate<AbstractCard> predicate, Consumer<ArrayList<AbstractCard>> callback, Consumer<Integer> defaultCallback) {
-        this(amount, predicate, callback, false, defaultCallback);
+        this(amount, predicate, callback, false, defaultCallback, false);
     }
     public RevealCardsAction(int amount, Predicate<AbstractCard> predicate, Consumer<ArrayList<AbstractCard>> callback, boolean isMovingCallback) {
-        this(amount, predicate, callback, isMovingCallback, null);
+        this(amount, predicate, callback, isMovingCallback, null, false);
     }
 
     public RevealCardsAction(int amount, Predicate<AbstractCard> predicate, Consumer<ArrayList<AbstractCard>> callback) {
-        this(amount, predicate, callback, false, null);
+        this(amount, predicate, callback, false, null, false);
     }
     
     @Override
     public void update() {
         if (this.p.drawPile.isEmpty()) {
-            TheVirtuosa.createDrawPileEmptyDialog();
+            if (!this.suppressMessage){
+                TheVirtuosa.createDrawPileEmptyDialog();
+            }
             if (this.defaultCallback != null) {
-                this.defaultCallback.accept(-1);}
+                this.defaultCallback.accept(-1);
+            }
             this.isDone = true;
             return;
         }

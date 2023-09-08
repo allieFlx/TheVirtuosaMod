@@ -1,29 +1,38 @@
 package theVirtuosa.cards;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
+import theVirtuosa.actions.EnergyGainIfSpectralAction;
+import theVirtuosa.cardmods.VirtuosaSpectralMod;
 import theVirtuosa.characters.TheVirtuosaCharacter;
-import theVirtuosa.powers.VirtuosaBramblesPower;
+import theVirtuosa.powers.VirtuosaParryPower;
+
+import java.util.Iterator;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
-public class VirtuosaBrambles extends AbstractDynamicCard {
+public class VirtuosaParry extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Each time you deal attack damage to an enemy this turn, they lose 1 (2) Strength.
+     * The first time you would receive attack damage this turn, Reveal a card. If it's an attack, take no damage.
      */
+
 
     // TEXT DECLARATION
 
-    public static final String ID = TheVirtuosa.makeID(VirtuosaBrambles.class.getSimpleName());
-    public static final String IMG = makeCardPath("VirtuosaBrambles_BETA.png");
+    public static final String ID = TheVirtuosa.makeID(VirtuosaParry.class.getSimpleName());
+    public static final String IMG = makeCardPath("Skill.png");
 
     // /TEXT DECLARATION/
+
 
     // STAT DECLARATION
 
@@ -32,14 +41,14 @@ public class VirtuosaBrambles extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheVirtuosaCharacter.Enums.COLOR_BROWN;
 
-    private static final int COST = 0;
-    private static final int MAGIC = 2;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int COST = 1;
+    private static final int MAGIC = 1;
+
 
     // /STAT DECLARATION/
 
 
-    public VirtuosaBrambles() {
+    public VirtuosaParry() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
     }
@@ -47,16 +56,14 @@ public class VirtuosaBrambles extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new VirtuosaBramblesPower(p, magicNumber), magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new VirtuosaParryPower(p, magicNumber), magicNumber));
     }
 
-    // Upgraded stats.
+    //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_MAGIC);
             initializeDescription();
         }
     }
