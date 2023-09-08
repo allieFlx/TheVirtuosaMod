@@ -160,8 +160,8 @@
   },
   "theVirtuosa:VirtuosaArpeggio": {
     "NAME": "Arpeggio",
-    "DESCRIPTION": "Draw a 1, 2, and 3 cost card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw a 1, 2, and 3 Cost card."
+    "DESCRIPTION": "Put a 1, 2, and 3 cost card into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Put a 1, 2, and 3 Cost card into your hand. NL Exhaust."
   },
   "theVirtuosa:VirtuosaVengeance": {
     "NAME": "Vengeance",

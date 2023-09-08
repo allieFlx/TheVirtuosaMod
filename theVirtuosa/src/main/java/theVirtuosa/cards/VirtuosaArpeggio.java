@@ -63,7 +63,7 @@ public class VirtuosaArpeggio extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.exhaust = false;
+            this.isInnate = true;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

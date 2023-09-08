@@ -2,7 +2,6 @@ package theVirtuosa.cards;
 
 import basemod.BaseMod;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
-import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theVirtuosa.TheVirtuosa;
+import theVirtuosa.actions.RevealedCardsToHandAction;
 import theVirtuosa.actions.RevealCardsAction;
 import theVirtuosa.characters.TheVirtuosaCharacter;
 
@@ -59,7 +59,8 @@ public class VirtuosaPurifyingLight extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new RevealCardsAction(magicNumber, c -> true, cardGroup ->
+                new RevealCardsAction(magicNumber, c -> true, cardGroup -> {
+                    this.addToTop(new RevealedCardsToHandAction(cardGroup));
                     this.addToTop(new SelectCardsAction(
                             cardGroup,
                             this.upgraded ? cardGroup.size() : 1,
@@ -74,20 +75,9 @@ public class VirtuosaPurifyingLight extends AbstractDynamicCard {
                                     p.drawPile.moveToExhaustPile(c);
                                     cardGroup.remove(c);
                                 });
-                                // --
-                                int iniSize = cardGroup.size();
-                                ArrayList<AbstractCard> drawCards = new ArrayList<>(cardGroup);
-                                logger.info("Putting rest into hand.");
-                                drawCards.forEach(c -> {
-                                    if (p.hand.size() < BaseMod.MAX_HAND_SIZE)
-                                    {
-                                        p.drawPile.moveToHand(c);
-                                        cardGroup.remove(c);
-                                    }
-                                });
-                                if (cardGroup.size() > iniSize - cards.size()) { p.createHandIsFullDialog(); }
                             }
-                    )),
+                    ));
+                },
                         true
                 )
         );
