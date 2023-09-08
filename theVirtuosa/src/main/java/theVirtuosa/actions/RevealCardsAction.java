@@ -5,13 +5,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.UIStrings;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import theVirtuosa.TheVirtuosa;
+import theVirtuosa.characters.TheVirtuosaCharacter;
 import theVirtuosa.interfaces.OnRevealCard;
-import theVirtuosa.patches.OnAddCardToDeckPatch;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.function.Consumer;
@@ -57,6 +53,7 @@ public class RevealCardsAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.p.drawPile.isEmpty()) {
+            TheVirtuosa.createDrawPileEmptyDialog();
             if (this.defaultCallback != null) {
                 this.defaultCallback.accept(-1);}
             this.isDone = true;

@@ -13,12 +13,15 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theVirtuosa.cards.*;
@@ -106,6 +109,7 @@ public class TheVirtuosa implements
     public static final String THE_VIRTUOSA_SKELETON_JSON = "theVirtuosaResources/images/char/defaultCharacter/skeleton.json";
 
     // ===========
+    private static String MSG_DRAW_PILE_EMPTY;
 
     public static CardGroup spectralPile;
 
@@ -457,7 +461,7 @@ public class TheVirtuosa implements
 
         BaseMod.loadCustomStringsFile(UIStrings.class,
                 getModID() + "Resources/localization/eng/TheVirtuosa-UI-Strings.json");
-        
+
         logger.info("Done edittting strings");
     }
     
@@ -503,6 +507,7 @@ public class TheVirtuosa implements
 
     @Override
     public void receiveStartGame() {
+        MSG_DRAW_PILE_EMPTY = CardCrawlGame.languagePack.getUIString("theVirtuosa:DrawPileEmptyDialog").TEXT[0];
         spectralPile = new CardGroup(CardGroup.CardGroupType.DRAW_PILE);
     }
 
@@ -522,5 +527,17 @@ public class TheVirtuosa implements
     @Override
     public void receivePostDungeonUpdate() {
 
+    }
+
+    // ========= //
+
+    public static void createDrawPileEmptyDialog()
+    {
+        AbstractDungeon.effectList.add(new ThoughtBubble(
+                AbstractDungeon.player.dialogX,
+                AbstractDungeon.player.dialogY,
+                3.0F,
+                MSG_DRAW_PILE_EMPTY,
+                true));
     }
 }

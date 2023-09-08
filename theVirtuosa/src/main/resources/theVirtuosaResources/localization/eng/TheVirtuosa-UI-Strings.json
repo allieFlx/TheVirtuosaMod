@@ -8,5 +8,8 @@
 },
 "theVirtuosa:DiscardPileToShuffleAction": {
   "TEXT": ["Choose a Card to Shuffle into your Draw Pile", "Choose ", " Cards to Shuffle into your Draw Pile"]
-  }
+},
+"theVirtuosa:DrawPileEmptyDialog": {
+  "TEXT": ["My #rDraw #rPile #ris #rEmpty..."]
+}
 }
