@@ -75,6 +75,7 @@ public class VirtuosaParryPower extends AbstractPower implements CloneablePowerI
                     c -> c.type == AbstractCard.CardType.ATTACK,
                     negate -> {
                         CardCrawlGame.sound.playA(makeID("VIRTUOSA_SELECT"), +0.2F);
+                        // TODO: vfx
                     },
                     false,
                     def -> this.addToTop(new DamageAction(

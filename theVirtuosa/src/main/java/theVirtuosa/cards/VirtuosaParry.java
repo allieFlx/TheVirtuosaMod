@@ -27,7 +27,6 @@ public class VirtuosaParry extends AbstractDynamicCard {
      * The first time you would receive attack damage this turn, Reveal a card. If it's an attack, take no damage.
      */
 
-    // TODO: upgrade???
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(VirtuosaParry.class.getSimpleName());
