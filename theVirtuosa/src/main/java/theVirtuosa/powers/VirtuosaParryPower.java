@@ -66,6 +66,7 @@ public class VirtuosaParryPower extends AbstractPower implements CloneablePowerI
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
         if (this.amount > 0 && info.type == DamageInfo.DamageType.NORMAL && damageAmount > 0)
         {
+            info.base = damageAmount;
             damageAmount = 0;
             --this.amount;
             this.flash();

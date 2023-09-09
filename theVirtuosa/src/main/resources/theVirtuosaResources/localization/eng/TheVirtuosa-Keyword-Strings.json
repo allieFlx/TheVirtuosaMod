@@ -54,6 +54,16 @@
     "DESCRIPTION": "When you Reveal a card it is taken from the top of your draw pile, acted on, and then discarded."
   },
   {
+    "PROPER_NAME": "True Damage",
+    "NAMES": [
+      "True Damage",
+      "true_damage",
+      "True",
+      "true"
+    ],
+    "DESCRIPTION": "Ignores Block and cannot be increased or reduced in any way."
+  },
+  {
     "NAMES": [
       "keyword",
       "keywords"

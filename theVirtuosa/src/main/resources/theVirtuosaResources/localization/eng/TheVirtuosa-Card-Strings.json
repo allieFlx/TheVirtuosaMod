@@ -45,6 +45,11 @@
     "NAME": "Splinter",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! *Spurs."
   },
+  "theVirtuosa:VirtuosaShadowBlade": {
+    "NAME": "Shadow Blade",
+    "DESCRIPTION": "Deal !M! thevirtuosa:True_Damage.",
+    "UPGRADE_DESCRIPTION": "Deal !M! thevirtuosa:True_Damage. NL When thevirtuosa:Revealed, add a thevirtuosa:Spectral copy of this to your hand."
+  },
   "theVirtuosa:VirtuosaAxeKick": {
     "NAME": "Axe Kick",
     "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block."
