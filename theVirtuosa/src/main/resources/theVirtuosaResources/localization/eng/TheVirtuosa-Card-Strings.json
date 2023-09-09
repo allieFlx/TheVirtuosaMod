@@ -59,6 +59,10 @@
     "DESCRIPTION": "Gain 5 thevirtuosa:Resonance. NL Draw a card.",
     "UPGRADE_DESCRIPTION": "Gain 5 thevirtuosa:Resonance. NL Draw !M! cards."
   },
+  "theVirtuosa:VirtuosaUproot": {
+    "NAME": "Uproot",
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle any number of cards from your hand into your draw pile."
+  },
   "theVirtuosa:VirtuosaDetermination": {
     "NAME": "Determination",
     "DESCRIPTION": "Draw cards until your hand is full. NL After you play a card this turn, discard your hand.",
