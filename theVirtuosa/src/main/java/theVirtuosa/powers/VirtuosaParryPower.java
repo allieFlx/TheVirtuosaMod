@@ -27,7 +27,6 @@ import static theVirtuosa.TheVirtuosa.makeID;
 
 public class VirtuosaParryPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
-    private boolean triggered;
 
     public static final String POWER_ID = TheVirtuosa.makeID("VirtuosaParryPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -43,7 +42,6 @@ public class VirtuosaParryPower extends AbstractPower implements CloneablePowerI
 
         this.owner = owner;
         this.amount = amount;
-        this.triggered = false;
 
         type = PowerType.BUFF;
         isTurnBased = false;
@@ -57,34 +55,34 @@ public class VirtuosaParryPower extends AbstractPower implements CloneablePowerI
 
     public void updateDescription() {
         if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0] + DESCRIPTIONS[1];
+            this.description = DESCRIPTIONS[0];
         } else {
-            this.description = DESCRIPTIONS[0] + DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3];
+            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         }
 
     }
 
     @Override
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-
-        if (!this.triggered && info.type == DamageInfo.DamageType.NORMAL && damageAmount > 0)
+        if (this.amount > 0 && info.type == DamageInfo.DamageType.NORMAL && damageAmount > 0)
         {
             damageAmount = 0;
-            this.triggered = true;
+            --this.amount;
             this.flash();
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+            this.addToTop(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
             this.addToTop(new RevealCardsAction(
-                    this.amount,
+                    1,
                     c -> c.type == AbstractCard.CardType.ATTACK,
                     negate -> {
                         CardCrawlGame.sound.playA(makeID("VIRTUOSA_SELECT"), +0.2F);
                     },
                     false,
-                    def -> this.addToTop(new DamageAction(this.owner, info)),
+                    def -> this.addToTop(new DamageAction(
+                            this.owner,
+                            new DamageInfo(info.owner, info.base, DamageInfo.DamageType.THORNS))
+                    ),
                     true
             ));
-            // always set to 0, add a subsequent action using the same damage info
-            // bug: triggers when blocking
         }
 
         return damageAmount;

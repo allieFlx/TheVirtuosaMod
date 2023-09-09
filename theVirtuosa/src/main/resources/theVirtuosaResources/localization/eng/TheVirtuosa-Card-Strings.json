@@ -38,7 +38,8 @@
   },
   "theVirtuosa:VirtuosaParry": {
     "NAME": "Parry",
-    "DESCRIPTION": "The first time you are attacked this turn, thevirtuosa:Reveal a card. If it is an Attack, take no damage."
+    "DESCRIPTION": "The first time you are attacked this turn, thevirtuosa:Reveal a card. If it is an Attack, take no damage. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "The first time you are attacked this turn, thevirtuosa:Reveal a card. If it is an Attack, take no damage."
   },
   "theVirtuosa:VirtuosaSplinter": {
     "NAME": "Splinter",
