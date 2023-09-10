@@ -56,7 +56,7 @@
         "DESCRIPTIONS": ["The next #b", " times you lose HP, lose half as much."]
 },
 "theVirtuosa:VirtuosaCodaPower": {
-        "NAME": "Coda",
+        "NAME": "Swan Song",
         "DESCRIPTIONS": ["Attacks cost #b0. After you play #b", " Attacks, die.", "Attack, die."]
 },
 "theVirtuosa:VirtuosaDoomedPower": {
