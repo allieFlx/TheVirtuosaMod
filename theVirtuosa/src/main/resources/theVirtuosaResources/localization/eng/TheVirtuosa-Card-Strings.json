@@ -32,6 +32,10 @@
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
   },
+  "theVirtuosa:VirtuosaSlasher": {
+    "NAME": "Slasher",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times."
+  },
   "theVirtuosa:VirtuosaDefend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
