@@ -1,6 +1,8 @@
 package theVirtuosa.cards;
 
 import basemod.AutoAdd;
+import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.PurgeField;
 import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
@@ -16,7 +18,8 @@ import theVirtuosa.characters.TheVirtuosaCharacter;
 import java.util.ArrayList;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
-@AutoAdd.Ignore
+@NoCompendium
+@NoPools
 public class SpecialFomorianEye extends AbstractDynamicCard {
 
     /*

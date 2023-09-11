@@ -1,13 +1,16 @@
 package theVirtuosa.cards;
 
 import basemod.helpers.CardModifierManager;
+import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.cardmods.VirtuosaMirrorSpiritMod;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
-
+@NoCompendium
+@NoPools
 public class SpectralMirrorSpirit extends AbstractDynamicCard {
 
     /*

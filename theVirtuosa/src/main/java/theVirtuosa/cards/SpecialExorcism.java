@@ -1,6 +1,7 @@
 package theVirtuosa.cards;
 
 import basemod.helpers.CardModifierManager;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -9,7 +10,7 @@ import theVirtuosa.actions.ExorcismAction;
 import theVirtuosa.cardmods.VirtuosaMirrorSpiritMod;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
-
+@NoCompendium
 public class SpecialExorcism extends AbstractDynamicCard {
 
     /*

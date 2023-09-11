@@ -328,7 +328,6 @@ public class TheVirtuosa implements
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
         // BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheVirtuosa.Enums.THE_VIRTUOSA);
-        // TODO ^ class specific potions
 
         BaseMod.addPotion(VirtuosaNaturalTonicPotion.class, Color.LIME, Color.CHARTREUSE, null, VirtuosaNaturalTonicPotion.POTION_ID, TheVirtuosaCharacter.Enums.THE_VIRTUOSA);
         BaseMod.addPotion(VirtuosaMeadOfPoetryPotion.class, Color.ORANGE, Color.BROWN, Color.WHITE, VirtuosaMeadOfPoetryPotion.POTION_ID, TheVirtuosaCharacter.Enums.THE_VIRTUOSA);

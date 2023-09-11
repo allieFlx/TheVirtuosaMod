@@ -1,6 +1,8 @@
 package theVirtuosa.cards;
 
 import basemod.AutoAdd;
+import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -13,7 +15,8 @@ import java.util.ArrayList;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
-@AutoAdd.Ignore
+@NoCompendium
+@NoPools
 public class VirtuosaCounterfeitSword extends AbstractDynamicCard {
 
     /*
@@ -22,6 +25,9 @@ public class VirtuosaCounterfeitSword extends AbstractDynamicCard {
      * Deal 21 (27) damage.
      */
 
+    // TODO: bug when reopening game with this card in master deck
+    //  replaced with Madness (no reference?)
+    //  potentially an issue with all autoadd.ignore cards
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(VirtuosaCounterfeitSword.class.getSimpleName());

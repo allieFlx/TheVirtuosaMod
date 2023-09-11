@@ -59,9 +59,7 @@ public class VirtuosaSequester extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // choose a card, give it temporary retain
         // apply special VFX to retained cards
-        // TODO sequester+ only applied retain to the first card selected
         AbstractDungeon.actionManager.addToBottom(new SelectCardsInHandAction(
                 magicNumber,
                 PROMPT,
