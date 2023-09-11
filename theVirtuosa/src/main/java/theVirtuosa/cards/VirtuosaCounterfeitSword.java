@@ -24,10 +24,6 @@ public class VirtuosaCounterfeitSword extends AbstractDynamicCard {
      *
      * Deal 21 (27) damage.
      */
-
-    // TODO: bug when reopening game with this card in master deck
-    //  replaced with Madness (no reference?)
-    //  potentially an issue with all autoadd.ignore cards
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(VirtuosaCounterfeitSword.class.getSimpleName());
@@ -52,6 +48,8 @@ public class VirtuosaCounterfeitSword extends AbstractDynamicCard {
     public VirtuosaCounterfeitSword() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
+
+        this.tags.add(CardTags.HEALING);
     }
 
     // Actions the card should do.

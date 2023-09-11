@@ -54,6 +54,7 @@ public class SpecialFomorianEye extends AbstractDynamicCard {
     public SpecialFomorianEye() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
+        this.tags.add(CardTags.HEALING);
         PurgeField.purge.set(this, true);
     }
 
