@@ -128,7 +128,8 @@
   },
   "theVirtuosa:VirtuosaOutForBlood": {
     "NAME": "Bloodrush",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy does not intend to attack, apply 1 Vulnerable and draw a card."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy does not intend to attack, apply 1 Vulnerable and draw a card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If the enemy does not intend to attack, apply 1 Vulnerable and draw !M! cards."
   },
   "theVirtuosa:VirtuosaCursedArm": {
     "NAME": "Cursed Arm",

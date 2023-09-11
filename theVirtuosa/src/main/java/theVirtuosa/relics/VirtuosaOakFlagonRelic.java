@@ -40,7 +40,7 @@ public class VirtuosaOakFlagonRelic extends CustomRelic {
             this.addToTop(new ApplyPowerAction(
                     AbstractDungeon.player,
                     AbstractDungeon.player,
-                    new VirtuosaResonancePower(AbstractDungeon.player, healAmount),
+                    new VirtuosaResonancePower(AbstractDungeon.player, 1),
                     healAmount));
         }
         return healAmount;

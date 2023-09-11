@@ -32,7 +32,7 @@
     "NAME": "Oak Flagon",
     "FLAVOR": "Drink and be merry.",
     "DESCRIPTIONS": [
-      "Whenever you heal HP during combat, gain an equal amount of #yResonance."
+      "Whenever you heal HP during combat, gain #b1 #yResonance."
     ]
   },
   "theVirtuosa:VirtuosaGoldenTorcRelic": {
