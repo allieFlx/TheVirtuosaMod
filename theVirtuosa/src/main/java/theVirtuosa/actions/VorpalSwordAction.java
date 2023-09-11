@@ -38,7 +38,7 @@ public class VorpalSwordAction extends AbstractGameAction
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FASTER && this.target != null) {
-            AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.BLUNT_HEAVY));
+            AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.SLASH_HEAVY));
             this.target.damage(this.info);
             if (((AbstractMonster)this.target).isDying || this.target.currentHealth <= 0) {
                 // do magic shit

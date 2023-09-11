@@ -1,37 +1,37 @@
 package theVirtuosa.cards;
 
-import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import basemod.AutoAdd;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
-import theVirtuosa.actions.VorpalSwordAction;
 import theVirtuosa.characters.TheVirtuosaCharacter;
 
 import java.util.ArrayList;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
-public class VirtuosaVorpalSword extends AbstractDynamicCard implements SpawnModificationCard {
+@AutoAdd.Ignore
+public class VirtuosaCounterfeitSword extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Deal 21 (27) damage. If this kills an enemy, gain a boon.
+     * Deal 21 (27) damage.
      */
 
     // TEXT DECLARATION
 
-    public static final String ID = TheVirtuosa.makeID(VirtuosaVorpalSword.class.getSimpleName());
+    public static final String ID = TheVirtuosa.makeID(VirtuosaCounterfeitSword.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
 
     // /TEXT DECLARATION/
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheVirtuosaCharacter.Enums.COLOR_BROWN;
@@ -39,41 +39,27 @@ public class VirtuosaVorpalSword extends AbstractDynamicCard implements SpawnMod
     private static final int COST = 2;
     private static final int DAMAGE = 21;
     private static final int UPGRADE_PLUS_DMG = 6;
-    private static final int MAGIC = 3;
-    private static final int UPGRADE_MAGIC = 1;
 
     // /STAT DECLARATION/
 
 
-    public VirtuosaVorpalSword() {
+    public VirtuosaCounterfeitSword() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
-
-        this.tags.add(CardTags.HEALING);
     }
 
+    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new VorpalSwordAction(m, new DamageInfo(p, damage, this.damageTypeForTurn), magicNumber));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
 
-    @Override
-    public boolean canSpawn(ArrayList<AbstractCard> currentRewardCards) {
-        for(AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.cardID.equals(this.cardID)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
+    //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeMagicNumber(UPGRADE_MAGIC);
             initializeDescription();
         }
     }

@@ -287,9 +287,13 @@
     "NAME": "Cocoon",
     "DESCRIPTION": "Skip your next turn. NL ???"
   },
+  "theVirtuosa:VirtuosaCounterfeitSword": {
+    "NAME": "Counterfeit Sword",
+    "DESCRIPTION": "Deal !D! damage."
+  },
   "theVirtuosa:VirtuosaVorpalSword": {
     "NAME": "Vorpal Sword",
-    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain a boon."
+    "DESCRIPTION": "thevirtuosa:Unique. NL Deal !D! damage. NL If this kills an enemy, gain a boon."
   },
   "theVirtuosa:SpecialFomorianEye": {
     "NAME": "Fomorian Eye",

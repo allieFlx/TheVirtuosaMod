@@ -10,6 +10,14 @@
     "DESCRIPTION": "Reshuffle cards are shuffled into your draw pile after you play them."
   },
   {
+    "PROPER_NAME": "Unique",
+    "NAMES": [
+      "Unique",
+      "unique"
+    ],
+    "DESCRIPTION": "Only one copy of this card can exist."
+  },
+  {
     "PROPER_NAME": "Spectral",
     "NAMES": [
       "Spectral",
