@@ -1,6 +1,6 @@
 # The Virtuosa - A character mod for Slay the Spire 
 The
-Virtuosa is a bardic nightingale suffering the Leshy's curse.
+Virtuosa is a bardic nightingale transformed by a Fomorian curse.
 
 Features some of the following mechanics:
 
