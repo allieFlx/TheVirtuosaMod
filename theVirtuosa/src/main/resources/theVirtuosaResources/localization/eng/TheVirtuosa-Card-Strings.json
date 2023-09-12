@@ -147,6 +147,11 @@
     "NAME": "Leaves Of Three",
     "DESCRIPTION": "Unplayable. NL When you draw this, deal !D! damage to a random enemy three times."
   },
+  "theVirtuosa:VirtuosaGnarledHorn": {
+    "NAME": "Gnarled Horn",
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain [E] .",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain [E] [E] ."
+  },
   "theVirtuosa:VirtuosaSharpNote": {
     "NAME": "Sharp Note",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! thevirtuosa:Resonance."
