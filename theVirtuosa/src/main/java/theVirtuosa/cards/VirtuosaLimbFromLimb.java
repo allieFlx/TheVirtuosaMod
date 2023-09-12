@@ -49,7 +49,7 @@ public class VirtuosaLimbFromLimb extends AbstractDynamicCard {
     public static final CardColor COLOR = TheVirtuosaCharacter.Enums.COLOR_BROWN;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 7;
     private static final int MAGIC = 3;
     private static final int UPGRADE_MAGIC = 1;
 
