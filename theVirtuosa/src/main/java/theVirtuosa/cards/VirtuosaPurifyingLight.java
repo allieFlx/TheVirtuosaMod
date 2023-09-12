@@ -31,7 +31,7 @@ public class VirtuosaPurifyingLight extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TheVirtuosa.makeID(VirtuosaPurifyingLight.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("VirtuosaPurifyingLight_BETA.png");
 
     private static final Logger logger = LogManager.getLogger(VirtuosaPurifyingLight.class.getName());
     // /TEXT DECLARATION/
