@@ -169,6 +169,11 @@
     "DESCRIPTION": "Gain !B! Block. NL When thevirtuosa:Revealed, NL gain [E] .",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL When thevirtuosa:Revealed, NL gain [E] [E] ."
   },
+  "theVirtuosa:VirtuosaSeance": {
+    "NAME": "Seance",
+    "DESCRIPTION": "Put a thevirtuosa:Spectral copy of the top card of your draw pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Put !M! thevirtuosa:Spectral copies of the top card of your draw pile into your hand."
+  },
   "theVirtuosa:VirtuosaSynthesis": {
     "NAME": "Synthesis",
     "DESCRIPTION": "Next turn, NL gain [E] and draw 2 cards. NL Exhaust.",
