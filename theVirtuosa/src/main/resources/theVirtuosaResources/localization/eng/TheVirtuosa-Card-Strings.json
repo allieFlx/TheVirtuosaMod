@@ -149,8 +149,7 @@
   },
   "theVirtuosa:VirtuosaGnarledHorn": {
     "NAME": "Gnarled Horn",
-    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain [E] .",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain [E] [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, gain [E]  and draw a card."
   },
   "theVirtuosa:VirtuosaSharpNote": {
     "NAME": "Sharp Note",
