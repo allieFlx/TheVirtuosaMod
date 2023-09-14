@@ -67,8 +67,8 @@
     "NAME": "Uproot",
     "DESCRIPTION": "Deal !D! damage. NL Shuffle any number of cards from your hand into your draw pile."
   },
-  "theVirtuosa:VirtuosaDetermination": {
-    "NAME": "Determination",
+  "theVirtuosa:VirtuosaPursue": {
+    "NAME": "Pursue",
     "DESCRIPTION": "Draw cards until your hand is full. NL After you play a card this turn, discard your hand.",
     "UPGRADE_DESCRIPTION": "Draw cards until your hand is full. NL After you play !M! cards this turn, discard your hand."
   },

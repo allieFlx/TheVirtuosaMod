@@ -2,24 +2,18 @@ package theVirtuosa.cards;
 
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.unique.ExpertiseAction;
-import com.megacrit.cardcrawl.cards.purple.Scrawl;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
 import theVirtuosa.characters.TheVirtuosaCharacter;
-import theVirtuosa.patches.CustomTags;
 import theVirtuosa.powers.VirtuosaDiscardHandPower;
-import theVirtuosa.powers.VirtuosaResonancePower;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
-public class VirtuosaDetermination extends AbstractDynamicCard {
+public class VirtuosaPursue extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -30,7 +24,7 @@ public class VirtuosaDetermination extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = TheVirtuosa.makeID(VirtuosaDetermination.class.getSimpleName());
+    public static final String ID = TheVirtuosa.makeID(VirtuosaPursue.class.getSimpleName());
     public static final String IMG = makeCardPath("VirtuosaDetermination_BETA.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -54,7 +48,7 @@ public class VirtuosaDetermination extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
 
-    public VirtuosaDetermination() {
+    public VirtuosaPursue() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
     }
