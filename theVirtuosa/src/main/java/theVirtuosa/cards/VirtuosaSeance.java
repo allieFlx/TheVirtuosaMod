@@ -57,7 +57,7 @@ public class VirtuosaSeance extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard topCard = p.drawPile.getTopCard();
+        AbstractCard topCard = p.drawPile.getTopCard().makeStatEquivalentCopy();
         CardModifierManager.addModifier(topCard, new VirtuosaSpectralMod());
         this.addToBot(new MakeTempCardInHandAction(topCard, magicNumber));
     }
