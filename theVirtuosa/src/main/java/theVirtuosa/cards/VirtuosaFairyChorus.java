@@ -1,5 +1,6 @@
 package theVirtuosa.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
@@ -16,6 +17,8 @@ import java.util.ArrayList;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
 
+@Deprecated
+@AutoAdd.Ignore
 public class VirtuosaFairyChorus extends AbstractDynamicCard {
 
     /*

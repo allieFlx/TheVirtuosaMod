@@ -1,5 +1,6 @@
 package theVirtuosa.cards;
 
+import basemod.AutoAdd;
 import basemod.helpers.CardModifierManager;
 import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -12,7 +13,9 @@ import theVirtuosa.patches.CustomTags;
 import theVirtuosa.powers.VirtuosaResonancePower;
 
 import static theVirtuosa.TheVirtuosa.makeCardPath;
-@NoCompendium
+
+@Deprecated
+@AutoAdd.Ignore
 public class SpectralSprite extends AbstractDynamicCard {
 
     /*
