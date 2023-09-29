@@ -19,6 +19,27 @@
         "NAME": "Rot",
         "DESCRIPTIONS": ["At the start of your turn, lose #b", " HP."]
 },
+"theVirtuosa:VirtuosaCocoonedPower": {
+        "NAME": "Cocooned",
+        "DESCRIPTIONS": [
+                "At the start of your turn, gain #b",
+                " Block and end your turn. Transform after #b",
+                " turn.",
+                " turns."
+        ]
+},
+"theVirtuosa:VirtuosaBloodmothFormPower": {
+        "NAME": "Bloodmoth Form",
+        "DESCRIPTIONS": ["Whenever you deal unblocked Attack damage, heal #b", " HP."]
+},
+"theVirtuosa:VirtuosaResolvePower": {
+        "NAME": "Resolve",
+        "DESCRIPTIONS": ["At the start of your next turn, heal #b", " HP."]
+},
+"theVirtuosa:VirtuosaAmbushPower": {
+        "NAME": "Ambush",
+        "DESCRIPTIONS": ["The first Attack you play ", "this", "next", " turn deals #b", " additional damage."]
+},
 "theVirtuosa:VirtuosaRequiemPower": {
          "NAME": "Requiem",
          "DESCRIPTIONS": [

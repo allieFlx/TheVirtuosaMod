@@ -3,6 +3,10 @@
     "NAME": "Lost In The Woods",
     "DESCRIPTION": "Unplayable. NL When thevirtuosa:Revealed, shuffle a copy of this into your draw pile."
   },
+  "theVirtuosa:SpecialBloodmothForm": {
+    "NAME": "Bloodmoth Form",
+    "DESCRIPTION": "Whenever an Attack deals unblocked damage, Heal !M! HP."
+  },
   "theVirtuosa:SpectralBasicAttack": {
     "NAME": "Spectral Strike",
     "DESCRIPTION": "thevirtuosa:Spectral. NL Deal !D! damage."
@@ -39,6 +43,10 @@
   "theVirtuosa:VirtuosaDefend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
+  },
+  "theVirtuosa:VirtuosaAmbush": {
+    "NAME": "Ambush",
+    "DESCRIPTION": "Gain !B! Block. NL The first Attack you play next turn deals !M! additional damage."
   },
   "theVirtuosa:VirtuosaParry": {
     "NAME": "Parry",
@@ -295,7 +303,7 @@
   },
   "theVirtuosa:VirtuosaCocoon": {
     "NAME": "Cocoon",
-    "DESCRIPTION": "Skip your next turn. NL ???"
+    "DESCRIPTION": "For 2 turns, gain !B! Block and skip your turn. On the turn after, enter *Bloodmoth *Form."
   },
   "theVirtuosa:VirtuosaCounterfeitSword": {
     "NAME": "Counterfeit Sword",
