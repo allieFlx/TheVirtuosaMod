@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theVirtuosa.effects.ShowCardRevealEffect;
 import theVirtuosa.interfaces.OnRevealCard;
+import theVirtuosa.patches.IncrementMomentumThisTurnPatch;
 import theVirtuosa.powers.VirtuosaSamaraPower;
 
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ public class ShowRevealedCardAction extends AbstractGameAction {
         this.card = card;
         this.flash = isFlash;
         this.actionType = ActionType.CARD_MANIPULATION;
-        this.startDuration = Settings.FAST_MODE ? Settings.ACTION_DUR_MED : Settings.ACTION_DUR_LONG;
+        this.startDuration = Settings.FAST_MODE ? Settings.ACTION_DUR_FAST : Settings.ACTION_DUR_MED;
         if (card instanceof OnRevealCard) { this.startDuration += ((OnRevealCard)card).revealEffectDelay(); }
         this.duration = this.startDuration;
     }
@@ -34,6 +35,8 @@ public class ShowRevealedCardAction extends AbstractGameAction {
         if (this.duration == this.startDuration) {
 
             AbstractDungeon.effectsQueue.add(new ShowCardRevealEffect(this.card, this.flash));
+
+            ++IncrementMomentumThisTurnPatch.CARDS_REVEALED;
 
             if (this.card instanceof OnRevealCard)
             {

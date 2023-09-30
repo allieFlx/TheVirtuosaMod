@@ -48,6 +48,12 @@
     "NAME": "Ambush",
     "DESCRIPTION": "Gain !B! Block. NL The first Attack you play next turn deals !M! additional damage."
   },
+  "theVirtuosa:VirtuosaMomentum": {
+    "NAME": "Momentum",
+    "DESCRIPTION": "Deal damage equal to twice the number of cards drawn this turn.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to twice the number of cards drawn or thevirtuosa:Revealed this turn.",
+    "EXTENDED_DESCRIPTION": [" NL (Deal !D! damage.)"]
+  },
   "theVirtuosa:VirtuosaParry": {
     "NAME": "Parry",
     "DESCRIPTION": "The first time you are attacked this turn, thevirtuosa:Reveal a card. If it is an Attack, take no damage. NL Exhaust.",
