@@ -29,7 +29,7 @@ public class CostedDrawPileToHandAction extends AbstractGameAction {
     @Override
     public void update() {
 
-        if (this.p.drawPile.isEmpty()) {
+        if (this.p.drawPile.isEmpty() || this.amount <= 0) {
             this.isDone = true;
             return;
         } else if (AbstractDungeon.player.hasPower("No Draw")) {
