@@ -1,10 +1,13 @@
 package theVirtuosa.actions;
 
 import basemod.BaseMod;
+import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.MoveCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.SoulGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,20 +23,24 @@ public class CostedDrawPileToHandAction extends AbstractGameAction {
         this.p = AbstractDungeon.player;
         this.setValues(this.p, this.p, 3);
         this.actionType = ActionType.CARD_MANIPULATION;
-        this.duration = Settings.ACTION_DUR_MED;
+        this.duration = Settings.ACTION_DUR_FAST;
     }
     
     @Override
     public void update() {
-        if (this.duration == Settings.ACTION_DUR_MED) {
-            // --incorrectly interacts with hand size modification--
-            //  should be fixed. this was an error where hand sized is reduced but more than max amount of
-            //  cards remain in hand
 
-            if (this.p.drawPile.isEmpty()) {
-                this.isDone = true;
-                return;
-            }
+        if (this.p.drawPile.isEmpty()) {
+            this.isDone = true;
+            return;
+        } else if (AbstractDungeon.player.hasPower("No Draw")) {
+            AbstractDungeon.player.getPower("No Draw").flash();
+            this.isDone = true;
+            return;
+        } else if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE) {
+            AbstractDungeon.player.createHandIsFullDialog();
+            this.isDone = true;
+            return;
+        } else if (this.duration == Settings.ACTION_DUR_FAST) {
             CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             Iterator var2 = this.p.drawPile.group.iterator();
 
@@ -55,38 +62,45 @@ public class CostedDrawPileToHandAction extends AbstractGameAction {
                     has3 = true;
                 }
             }
-
             if (tmp.size() == 0) {
                 this.isDone = true;
                 return;
             }
-            for(int i = 0; i < 3; ++i) {
-                if (!tmp.isEmpty()) {
-                    tmp.shuffle();
-                    card = tmp.getBottomCard();
-                    tmp.removeCard(card);
-                    if (this.p.hand.size() >= BaseMod.MAX_HAND_SIZE) {
-                        this.p.drawPile.moveToDiscardPile(card);
-                        this.p.createHandIsFullDialog();
-                    } else {
-                        card.unhover();
-                        card.lighten(true);
-                        card.setAngle(0.0F);
-                        card.drawScale = 0.12F;
-                        card.targetDrawScale = 0.75F;
-                        card.current_x = CardGroup.DRAW_PILE_X;
-                        card.current_y = CardGroup.DRAW_PILE_Y;
-                        this.p.drawPile.removeCard(card);
-                        AbstractDungeon.player.hand.addToTop(card);
-                        AbstractDungeon.player.hand.refreshHandLayout();
-                        AbstractDungeon.player.hand.applyPowers();
-                    }
-                }
-            }
 
-            this.isDone = true;
+            this.amount = tmp.size();
+            Iterator var3 = tmp.group.iterator();
+
+            while (var3.hasNext()) {
+                AbstractCard c = (AbstractCard)var3.next();
+                this.p.drawPile.removeCard(c);
+                this.p.drawPile.addToTop(c);
+            }
         }
 
-        this.tickDuration();
+        if (!SoulGroup.isActive()){
+
+            this.duration -= Gdx.graphics.getDeltaTime();
+
+            if (this.amount != 0 && this.duration < 0.0F) {
+                if (Settings.FAST_MODE) {
+                    this.duration = Settings.ACTION_DUR_XFAST;
+                } else {
+                    this.duration = Settings.ACTION_DUR_FASTER;
+                }
+
+                --this.amount;
+                if (!AbstractDungeon.player.drawPile.isEmpty()) {
+                    AbstractDungeon.player.draw();
+                    AbstractDungeon.player.hand.refreshHandLayout();
+                } else {
+                    this.isDone = true;
+                    return;
+                }
+
+                if (this.amount == 0) {
+                    this.isDone = true;
+                }
+            }
+        }
     }
 }
