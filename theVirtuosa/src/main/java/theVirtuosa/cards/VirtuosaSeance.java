@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theVirtuosa.TheVirtuosa;
+import theVirtuosa.actions.SeanceAction;
 import theVirtuosa.cardmods.VirtuosaSpectralMod;
 import theVirtuosa.characters.TheVirtuosaCharacter;
 import theVirtuosa.powers.VirtuosaParryPower;
@@ -57,9 +58,7 @@ public class VirtuosaSeance extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard topCard = p.drawPile.getTopCard().makeStatEquivalentCopy();
-        CardModifierManager.addModifier(topCard, new VirtuosaSpectralMod());
-        this.addToBot(new MakeTempCardInHandAction(topCard, magicNumber));
+        this.addToBot(new SeanceAction(magicNumber));
     }
 
     //Upgraded stats.
